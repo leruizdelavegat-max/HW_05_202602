@@ -1,11 +1,43 @@
 {
-  "_instrucciones": "Una clave por audio (mismo nombre que el archivo sin extensión, ej. data/audio/entrevistas/entrevista_01.wav). Usa null si el dato no se menciona. Borra este campo y el ejemplo cuando cargues tus datos reales.",
+  "_instrucciones": "Una clave por audio (mismo nombre que data/audio/entrevistas/<id>). Valores tomados de docs/guiones/. Si al grabar cambias un dato, actualízalo aquí. null = el dato no se menciona.",
   "entrevista_01": {
     "anios_experiencia": 5,
     "ultimo_puesto": "analista de datos",
     "tecnologias": ["python", "sql", "power bi"],
     "expectativa_salarial": 6500,
     "disponibilidad": "en 2 semanas",
+    "nivel_ingles": "intermedio"
+  },
+  "entrevista_02": {
+    "anios_experiencia": 8,
+    "ultimo_puesto": "desarrollador backend",
+    "tecnologias": ["java", "docker", "aws", "git"],
+    "expectativa_salarial": 9000,
+    "disponibilidad": "inmediata",
+    "nivel_ingles": "avanzado"
+  },
+  "entrevista_03": {
+    "anios_experiencia": 3,
+    "ultimo_puesto": "asistente de inteligencia de negocios",
+    "tecnologias": ["excel", "tableau", "sql"],
+    "expectativa_salarial": 4200,
+    "disponibilidad": "a partir del 15 de noviembre",
+    "nivel_ingles": "básico"
+  },
+  "entrevista_04": {
+    "anios_experiencia": 12,
+    "ultimo_puesto": "jefe de proyectos de datos",
+    "tecnologias": ["python", "spark", "azure"],
+    "expectativa_salarial": 15500,
+    "disponibilidad": "en un mes",
+    "nivel_ingles": "fluido"
+  },
+  "entrevista_05": {
+    "anios_experiencia": 2,
+    "ultimo_puesto": "analista junior de datos",
+    "tecnologias": ["python", "pandas", "streamlit", "git"],
+    "expectativa_salarial": null,
+    "disponibilidad": "inmediata",
     "nivel_ingles": "intermedio"
   }
 }
