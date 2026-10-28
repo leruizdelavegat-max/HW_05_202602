@@ -1,0 +1,28 @@
+# Secretos
+.env
+
+# Audio: la tarea prohíbe subirlo. Solo se versionan las transcripciones cacheadas.
+data/audio/
+data/audio_degraded/
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.opus
+*.flac
+
+# Pesos de modelos
+models/
+*.bin
+*.pt
+*.safetensors
+.cache/
+huggingface/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.streamlit/secrets.toml

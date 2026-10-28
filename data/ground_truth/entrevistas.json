@@ -1,0 +1,11 @@
+{
+  "_instrucciones": "Una clave por audio (mismo nombre que el archivo sin extensión, ej. data/audio/entrevistas/entrevista_01.wav). Usa null si el dato no se menciona. Borra este campo y el ejemplo cuando cargues tus datos reales.",
+  "entrevista_01": {
+    "anios_experiencia": 5,
+    "ultimo_puesto": "analista de datos",
+    "tecnologias": ["python", "sql", "power bi"],
+    "expectativa_salarial": 6500,
+    "disponibilidad": "en 2 semanas",
+    "nivel_ingles": "intermedio"
+  }
+}

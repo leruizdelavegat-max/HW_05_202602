@@ -1,0 +1,18 @@
+{
+  "_instrucciones": "Una clave por llamada (mismo nombre que data/audio/llamadas/<id>.wav). total_declarado = lo que se DICE en el audio; total_correcto = el cálculo real. Tipos de trampa: autocorreccion (producto + cantidad_final), total_erroneo, digitos (esperado). Requisito: >=3 autocorrecciones, >=3 totales erróneos y >=1 dirección/contrato con dígitos en total.",
+  "llamada_01": {
+    "items": [
+      {"producto": "pizza familiar", "cantidad": 3, "precio_unitario": 45},
+      {"producto": "gaseosa", "cantidad": 2, "precio_unitario": 8}
+    ],
+    "promocion": 10,
+    "total_declarado": 155,
+    "total_correcto": 141,
+    "direccion_o_contrato": "Av. Arequipa 1234",
+    "trampas": [
+      {"id": "t1", "tipo": "autocorreccion", "descripcion": "dos pizzas... no, mejor tres", "producto": "pizza", "cantidad_final": 3},
+      {"id": "t2", "tipo": "total_erroneo", "descripcion": "dice 155, lo correcto es 141"},
+      {"id": "t3", "tipo": "digitos", "descripcion": "dirección con número", "esperado": "Av. Arequipa 1234"}
+    ]
+  }
+}

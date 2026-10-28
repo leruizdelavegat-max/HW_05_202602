@@ -1,0 +1,68 @@
+# Configuración central del pipeline HW_05_202602.
+# Todos los scripts y app.py leen este archivo; no se hardcodean rutas ni modelos.
+
+paths:
+  audio_raw: data/audio            # NO se versiona (ver .gitignore)
+  audio_degraded: data/audio_degraded
+  references: data/references      # transcripciones manuales (texto exacto) -> para WER/CER
+  ground_truth: data/ground_truth  # campos esperados por audio
+  cache: cache/transcripts         # transcripciones cacheadas (SÍ se versionan)
+  results: results
+
+asr:
+  language: es
+  beam_size: 5
+  # Grid del benchmark: cada combinación modelo × dispositivo × precisión.
+  models: [small, medium]          # >= 2 tamaños de la familia Whisper
+  runs:
+    - {device: cpu,  compute_type: int8}
+    - {device: cpu,  compute_type: float32}
+    - {device: cuda, compute_type: float16}
+    - {device: cuda, compute_type: int8_float16}
+  # Transcripción que usa la extracción (Tarea 1) y la validación (Tarea 2)
+  default: {model: medium, device: cuda, compute_type: float16}
+
+metrics:
+  normalize_numbers: true          # "seis mil quinientos" == "6500" al calcular WER/CER
+
+extraction:
+  fields:
+    - anios_experiencia
+    - ultimo_puesto
+    - tecnologias
+    - expectativa_salarial
+    - disponibilidad
+    - nivel_ingles
+  technologies:                    # vocabulario para el extractor por reglas
+    - python
+    - sql
+    - excel
+    - power bi
+    - tableau
+    - r
+    - java
+    - javascript
+    - aws
+    - azure
+    - docker
+    - git
+    - spark
+    - pandas
+    - streamlit
+  llm:
+    model: claude-opus-5-5
+    effort: low
+    max_tokens: 4000
+
+calls:
+  domain: restaurante              # restaurante | telefonia
+  total_tolerance: 0.01            # diferencia permitida entre total calculado y declarado
+
+degradation:
+  sample_rate: 16000
+  # Escalera acumulativa: cada nivel parte del anterior.
+  levels:
+    L0: {type: original}
+    L1: {type: whatsapp, codec: libopus, bitrate: 16k}
+    L2: {type: phone, sample_rate: 8000, low_hz: 300, high_hz: 3400}
+    L3: {type: noise, snr_db: 10, seed: 42}   # justificar el SNR en el README
