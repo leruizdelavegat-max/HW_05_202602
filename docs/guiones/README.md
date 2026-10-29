@@ -40,8 +40,9 @@ unitario, promoción, dirección, **forma de pago** (tarjeta, efectivo, Yape) y 
 alta (`total_dicho`). También trae distractores: precios de tamaños que no se piden, promociones
 que no aplican, pisos, horas y minutos de entrega. El registro debe guardar el pedido final.
 
-Cada guion tiene entre 300 y 360 palabras, unos 2 a 2,5 minutos leyendo con calma. Si una
-grabación sale por debajo de 2 minutos, léela más despacio, con pausas naturales.
+Cada guion (entrevistas y llamadas) tiene entre 365 y 415 palabras: unos 2:20 min hablando rápido
+y unos 3 min leyendo con calma, dentro del rango de 2 a 4 minutos. Si una grabación sale por
+debajo de 2 minutos, repítela más despacio, con pausas naturales.
 `tests/test_guiones.py` comprueba el largo, las sumas y que precios, pago y direcciones aparezcan
 en el texto.
 

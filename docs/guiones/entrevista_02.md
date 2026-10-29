@@ -1,6 +1,6 @@
 # entrevista_02
 
-Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:50 min
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
 
 ## Registro esperado
 
@@ -66,6 +66,14 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:50 min
 **ENTREVISTADOR:** ¿Cómo reaccionas cuando algo falla en producción?
 
 **CANDIDATO:** Primero estabilizo el servicio, aunque sea con una solución temporal. Después buscamos la causa con calma y escribimos un resumen para que todo el equipo aprenda.
+
+**ENTREVISTADOR:** ¿Qué valoras más en un equipo de trabajo?
+
+**CANDIDATO:** Que se pueda preguntar sin miedo. En mi primer trabajo nadie revisaba lo que hacían los demás y los errores se descubrían cuando ya estaban en producción. Desde entonces prefiero equipos donde todo pasa por revisión, aunque tome un poco más de tiempo.
+
+**ENTREVISTADOR:** ¿Y por qué te interesa esta empresa en particular?
+
+**CANDIDATO:** Porque trabajan con pagos para pequeños negocios. Es justo lo que hacía, pero con un impacto más directo en la gente.
 
 **ENTREVISTADOR:** Muy bien. ¿Y cuándo podrías incorporarte?
 

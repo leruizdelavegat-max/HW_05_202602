@@ -36,6 +36,10 @@ Total correcto: 2 × 32 + 15 + 20 − 15 = **84**.
 
 **VENDEDOR:** Tenemos lasaña de carne, fetuccini a la huancaína con lomo, ravioles de ricota y risotto de hongos.
 
+**CLIENTE:** ¿Cuál me recomienda?
+
+**VENDEDOR:** La lasaña es la más pedida; la hacemos con la receta de la abuela del dueño. El risotto también sale mucho, pero demora un poco más.
+
 **CLIENTE:** ¿Y la lasaña cuánto está?
 
 **VENDEDOR:** La porción individual está a treinta y dos soles, y la bandeja para cuatro personas a ciento diez.
@@ -82,7 +86,9 @@ Total correcto: 2 × 32 + 15 + 20 − 15 = **84**.
 
 **CLIENTE:** Perfecto. ¿Pueden mandar cubiertos?
 
-**VENDEDOR:** Claro, le mandamos dos juegos de cubiertos y servilletas.
+**VENDEDOR:** Claro, le mandamos dos juegos de cubiertos y servilletas. ¿Le provoca algún postre? Tenemos tiramisú y panna cotta, a dieciséis soles cada uno.
+
+**CLIENTE:** Hoy no, gracias. Será para la próxima.
 
 **CLIENTE:** Gracias, muy amable. La última vez la lasaña llegó un poco fría.
 

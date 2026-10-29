@@ -1,6 +1,6 @@
 # entrevista_03
 
-Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:50 min
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
 
 ## Registro esperado
 
@@ -62,6 +62,14 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:50 min
 **ENTREVISTADOR:** ¿Prefieres trabajar en equipo o por tu cuenta?
 
 **CANDIDATO:** Me gusta tener tareas claras que pueda avanzar por mi cuenta, pero siempre reviso el trabajo con alguien antes de presentarlo.
+
+**ENTREVISTADOR:** ¿Cómo te va presentando resultados frente a gerentes?
+
+**CANDIDATO:** Al principio me costaba mucho, hasta me temblaba la voz. Ahora preparo dos o tres mensajes clave y practico antes con alguien del equipo. Con eso las reuniones salen mucho mejor.
+
+**ENTREVISTADOR:** ¿Qué te gustaría aprender en este puesto?
+
+**CANDIDATO:** Me gustaría aprender a automatizar los reportes, porque todavía hago muchas cosas a mano, y también entender mejor cómo se usan los datos para decidir los precios.
 
 **ENTREVISTADOR:** Por último, ¿cuál es tu pretensión salarial?
 

@@ -1,6 +1,6 @@
 # entrevista_04
 
-Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:45 min
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
 
 ## Registro esperado
 
@@ -59,6 +59,14 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:45 min
 **ENTREVISTADOR:** ¿Y cómo priorizas cuando todas las áreas piden algo al mismo tiempo?
 
 **CANDIDATO:** Pido que cada área explique qué decisión depende de su pedido. Lo que impacta en clientes o en regulación va primero; el resto entra a una lista que revisamos juntos cada quincena.
+
+**ENTREVISTADOR:** ¿Qué te gustaría encontrar en tu próximo equipo?
+
+**CANDIDATO:** Personas con ganas de proponer. Me interesa construir un equipo que plantee ideas al negocio y no que solo responda pedidos. Para eso hace falta tiempo para explorar, y es algo que siempre defiendo frente a la gerencia.
+
+**ENTREVISTADOR:** ¿Y cómo sabes si tu equipo está haciendo un buen trabajo?
+
+**CANDIDATO:** Miro si las áreas usan lo que entregamos. Un tablero que nadie abre es un tablero que no debió hacerse, por más bonito que sea.
 
 **ENTREVISTADOR:** Por último, ¿cuántos años llevas trabajando con datos?
 

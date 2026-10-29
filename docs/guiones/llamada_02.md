@@ -1,6 +1,6 @@
 # llamada_02
 
-Pollería El Fogón (inventada) · Duración estimada: 2:40 min
+Pollería El Fogón (inventada) · Duración estimada: 2:50 min
 
 ## Registro esperado
 
@@ -76,12 +76,20 @@ Total correcto: 62 + 18 + 2 × 10 = **100** (cuadra).
 
 **CLIENTE:** Está a media cuadra de la plaza, frente a una librería.
 
-**VENDEDOR:** Muy bien. ¿Cómo va a pagar?
+**VENDEDOR:** Muy bien, ya lo ubico.
+
+**CLIENTE:** Una pregunta, ¿el pollo viene cortado?
+
+**VENDEDOR:** Sí, viene en ocho presas. Si prefiere, se lo mandamos en cuatro piezas grandes.
+
+**CLIENTE:** En ocho está bien. ¿Y las papas llegan crocantes? La última vez que pedí en otro lado llegaron blandas.
+
+**VENDEDOR:** Las mandamos en una caja con agujeros para que no se humedezcan. Llegan bien, no se preocupe. ¿Cómo va a pagar?
 
 **CLIENTE:** En efectivo. Voy a pagar con un billete de doscientos, ¿el motorizado lleva cambio?
 
 **VENDEDOR:** Sí, lleva cambio, no se preocupe. El pedido llega en unos treinta y cinco minutos.
 
-**CLIENTE:** Perfecto, muchas gracias.
+**CLIENTE:** Perfecto. ¿Me podrían mandar servilletas extra?
 
-**VENDEDOR:** Gracias a usted. Buen provecho.
+**VENDEDOR:** Claro, van en la bolsa junto con las cremas. Gracias a usted, y buen provecho.

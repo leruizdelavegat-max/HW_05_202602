@@ -1,6 +1,6 @@
 # llamada_05 (control)
 
-Pizzería La Plaza (inventada) · Duración estimada: 2:30 min
+Pizzería La Plaza (inventada) · Duración estimada: 2:40 min
 
 Llamada sin errores: sirve para comprobar que el sistema **no** marca problemas donde no los hay.
 
@@ -37,7 +37,11 @@ Total correcto: 2 × 38 + 12 + 18 = **106** (cuadra).
 
 **VENDEDOR:** Jamón, queso mozzarella y orégano. Es la más pedida.
 
-**CLIENTE:** Entonces quiero dos pizzas americanas medianas.
+**CLIENTE:** ¿Y qué otras pizzas tienen?
+
+**VENDEDOR:** Hawaiana, pepperoni, vegetariana y la de la casa, que lleva tocino y champiñones.
+
+**CLIENTE:** En mi casa solo comen la americana, así que vamos con esa. Entonces quiero dos pizzas americanas medianas.
 
 **VENDEDOR:** Dos americanas medianas, a treinta y ocho soles cada una. ¿Masa delgada o tradicional?
 
@@ -63,6 +67,10 @@ Total correcto: 2 × 38 + 12 + 18 = **106** (cuadra).
 
 **CLIENTE:** Una jarra de chicha morada, entonces.
 
+**VENDEDOR:** ¿La quiere con el hielo aparte?
+
+**CLIENTE:** Sí, aparte, por favor, porque si no se diluye.
+
 **VENDEDOR:** Le repito el pedido: dos pizzas americanas medianas, setenta y seis soles; un pan al ajo, doce; y una jarra de chicha morada, dieciocho. El total es ciento seis soles.
 
 **CLIENTE:** ¿Hay algún descuento por pagar en efectivo?
@@ -78,6 +86,10 @@ Total correcto: 2 × 38 + 12 + 18 = **106** (cuadra).
 **VENDEDOR:** Avenida La Marina tres mil ciento setenta y cinco, San Miguel, torre B, departamento ochocientos tres. ¿El repartidor puede subir?
 
 **CLIENTE:** No, tiene que dejarlo en recepción. Yo bajo a recogerlo.
+
+**VENDEDOR:** Entonces le digo que pregunte por el departamento ochocientos tres, para que lo llamen desde recepción.
+
+**CLIENTE:** Sí, así está bien.
 
 **VENDEDOR:** Muy bien. Llega en unos cuarenta minutos.
 

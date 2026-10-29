@@ -1,6 +1,6 @@
 # entrevista_05
 
-Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:30 min
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
 
 ## Registro esperado
 
@@ -54,6 +54,14 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:30 min
 **ENTREVISTADOR:** ¿Cómo fue tener usuarios de otra área usando tu aplicación?
 
 **CANDIDATO:** Al principio me pedían muchos cambios, pero aprendí a preguntar primero qué decisión querían tomar con los datos. Eso hizo que la aplicación fuera mucho más simple.
+
+**ENTREVISTADOR:** ¿Qué fue lo más difícil de trabajar en una startup?
+
+**CANDIDATO:** Que todo cambiaba muy rápido. Un mes la prioridad era bajar los costos de reparto y al siguiente era abrir una ciudad nueva. Aprendí a no encariñarme con un análisis y a entregar algo útil aunque no fuera perfecto.
+
+**ENTREVISTADOR:** ¿Trabajabas por tu cuenta o en equipo?
+
+**CANDIDATO:** Éramos tres en el área de datos. Nos repartíamos los pedidos cada lunes y los viernes mostrábamos lo que habíamos avanzado.
 
 **ENTREVISTADOR:** ¿Cuál dirías que es tu mayor debilidad?
 

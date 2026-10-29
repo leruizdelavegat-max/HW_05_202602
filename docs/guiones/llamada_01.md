@@ -1,6 +1,6 @@
 # llamada_01
 
-Pizzería La Esquina de Bruno (inventada) · Duración estimada: 2:45 min
+Pizzería La Esquina de Bruno (inventada) · Duración estimada: 2:50 min
 
 ## Registro esperado
 
@@ -80,6 +80,14 @@ Total correcto: 3 × 45 + 2 × 8 − 10 = **141**.
 
 **VENDEDOR:** A esta hora hay bastantes pedidos, pero le doy prioridad. Si se demora, nos vuelve a llamar a este mismo número.
 
-**CLIENTE:** Perfecto. Muchas gracias.
+**CLIENTE:** Otra cosa, ¿pueden escribir "feliz cumpleaños" en la caja de una de las pizzas?
+
+**VENDEDOR:** Claro, le pedimos al cocinero que lo escriba con plumón en la tapa. ¿Le ponemos algún nombre?
+
+**CLIENTE:** No, solo "feliz cumpleaños", por favor. Es sorpresa.
+
+**VENDEDOR:** Perfecto, así lo anotamos. Y si quiere, le mandamos una vela pequeña sin costo.
+
+**CLIENTE:** Sí, mándela, por favor. Muchas gracias.
 
 **VENDEDOR:** Gracias a usted por su pedido, y feliz cumpleaños a su hermano.

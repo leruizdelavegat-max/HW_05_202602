@@ -1,6 +1,6 @@
 # llamada_04
 
-Hamburguesería Burger Barrio (inventada) · Duración estimada: 2:40 min
+Hamburguesería Burger Barrio (inventada) · Duración estimada: 2:45 min
 
 ## Registro esperado
 
@@ -36,7 +36,11 @@ Total correcto: 5 × 22 + 3 × 9 − 12 = **125**.
 
 **VENDEDOR:** La clásica, con carne, queso y tomate; la de pollo crispy; y la parrillera, que lleva chorizo. La clásica regular está a veintidós soles y la doble a treinta.
 
-**CLIENTE:** Quiero cuatro hamburguesas clásicas… no, espere, que se suma uno más. Cinco hamburguesas clásicas regulares.
+**CLIENTE:** ¿La parrillera pica mucho?
+
+**VENDEDOR:** Un poco, por el chorizo y la salsa de ají. Si en la oficina no les gusta el picante, la clásica es la más segura.
+
+**CLIENTE:** Entonces la clásica. Quiero cuatro hamburguesas clásicas… no, espere, que se suma uno más. Cinco hamburguesas clásicas regulares.
 
 **VENDEDOR:** Cinco hamburguesas clásicas regulares, a veintidós soles cada una. ¿Las acompaña con papas?
 
@@ -72,7 +76,11 @@ Total correcto: 5 × 22 + 3 × 9 − 12 = **125**.
 
 **VENDEDOR:** Claro, el repartidor le pide los datos de la empresa cuando entrega.
 
-**CLIENTE:** ¿Y cuánto demoran? Tenemos una reunión a la una.
+**CLIENTE:** Perfecto. ¿Las hamburguesas llegan armadas o separadas?
+
+**VENDEDOR:** Armadas, pero las verduras van en un envase aparte para que el pan no se humedezca.
+
+**CLIENTE:** Mejor así. ¿Y cuánto demoran? Tenemos una reunión a la una.
 
 **VENDEDOR:** Unos treinta minutos. Si sale ahora, llega antes de la una.
 
@@ -86,4 +94,4 @@ Total correcto: 5 × 22 + 3 × 9 − 12 = **125**.
 
 **CLIENTE:** Está bien. Eso es todo, gracias.
 
-**VENDEDOR:** Gracias a usted, que lo disfruten.
+**VENDEDOR:** Gracias a usted, que lo disfruten. Y que les vaya bien en la reunión.

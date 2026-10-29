@@ -100,7 +100,7 @@ def test_call_records_are_complete_and_literal():
 
 
 def test_audio_length_fits_two_to_four_minutes():
-    # Unas 130–150 palabras por minuto leyendo con naturalidad: 2 min ≈ 280 palabras.
+    # Hablando rápido (~170 palabras por minuto), 2 min ≈ 340 palabras; despacio (~140), 4 min ≈ 560.
     for ref in sorted(REFS.glob("*_0*.txt")):
         words = len(ref.read_text(encoding="utf-8").split())
-        assert 280 <= words <= 560, f"{ref.stem}: {words} palabras"
+        assert 350 <= words <= 560, f"{ref.stem}: {words} palabras"

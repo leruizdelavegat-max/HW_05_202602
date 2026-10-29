@@ -52,6 +52,10 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
 
 **CANDIDATO:** Hablo con quien genera la información para entender de dónde viene el error, y dejo una validación automática para que no vuelva a pasar sin que nadie se entere.
 
+**ENTREVISTADOR:** ¿Trabajas mejor con plazos ajustados o con proyectos largos?
+
+**CANDIDATO:** Con proyectos largos me organizo mejor, pero en el banco aprendí a manejar los cierres de mes, que siempre son urgentes. Lo que hago es dejar listas las consultas con anticipación, para que ese día solo haya que revisar y no empezar de cero.
+
 **ENTREVISTADOR:** Hablemos de condiciones. ¿Cuánto te gustaría ganar?
 
 **CANDIDATO:** Ahora gano cinco mil ochocientos. Buscaría algo entre siete mil y siete mil quinientos… pongamos siete mil, para empezar.
