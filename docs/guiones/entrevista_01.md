@@ -1,58 +1,73 @@
 # entrevista_01
 
-| Campo | Valor que debe quedar claro |
-|---|---|
-| Años de experiencia | 5 |
-| Último puesto | analista de datos |
-| Tecnologías | Python, SQL, Power BI |
-| Expectativa salarial | 6500 (seis mil quinientos) |
-| Disponibilidad | en 2 semanas |
-| Nivel de inglés | intermedio |
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
 
-Duración estimada: 3:00 min
+## Registro esperado
+
+```json
+{
+  "anios_experiencia": 6,
+  "ultimo_puesto": "analista de datos senior",
+  "tecnologias": ["python", "sql", "power bi"],
+  "expectativa_salarial": 7000,
+  "disponibilidad": "2026-11-13",
+  "nivel_ingles": "intermedio"
+}
+```
+
+## Cómo se dice cada campo
+
+| Orden | Campo | Cómo aparece en el audio | Por qué no es limpio |
+|---|---|---|---|
+| 1 | Tecnologías | Python, SQL, Power BI… y Excel | Excel se menciona, pero **ya no lo usa** |
+| 2 | Último puesto | "Entré como asistente de reportes… ahora el cargo es analista de datos senior" | Hay dos cargos; vale el último |
+| 3 | Inglés | "En el instituto llegué hasta el nivel intermedio" | Nunca dice "mi inglés es…" |
+| 4 | Salario | "Ahora gano cinco mil ochocientos… entre siete mil y siete mil quinientos… pongamos siete mil" | Sueldo actual + rango + cifra final |
+| 5 | Experiencia | "cinco años en el banco… uno como practicante… seis en total" | Hay que sumar; el 5 distrae |
+| 6 | Disponibilidad | "quince días de preaviso" | Relativa: 29/10 + 15 días = 13/11 |
 
 ---
 
-**ENTREVISTADOR:** Buenos días, gracias por venir. Para empezar, cuéntame un poco sobre tu trayectoria.
+**ENTREVISTADOR:** Buenos días, gracias por venir. Vi en tu CV que trabajas mucho con tableros. ¿Con qué herramientas armas tu día a día?
 
-**CANDIDATO:** Buenos días. Claro. Estudié estadística en la universidad y desde entonces me he dedicado al análisis. Tengo cinco años de experiencia en el sector financiero, principalmente haciendo reportes y modelos para el área comercial.
+**CANDIDATO:** Buenos días. Hoy casi todo lo hago en Python para limpiar los datos y en SQL para las consultas. Los tableros los publico en Power BI. Antes usábamos Excel para todo, pero el año pasado lo dejamos porque los archivos se volvían inmanejables.
 
-**ENTREVISTADOR:** ¿Y cuál fue tu último puesto?
+**ENTREVISTADOR:** ¿Y en qué área estabas?
 
-**CANDIDATO:** Mi último puesto fue analista de datos en un banco mediano. Ahí me encargaba de preparar los tableros de ventas y de automatizar los reportes semanales que antes se hacían a mano.
+**CANDIDATO:** En el área comercial de un banco mediano. Entré como asistente de reportes y hace dos años me ascendieron. Ahora el cargo es analista de datos senior.
 
-**ENTREVISTADOR:** ¿Qué herramientas usabas en el día a día?
+**ENTREVISTADOR:** ¿Qué proyecto destacarías?
 
-**CANDIDATO:** Sobre todo Python para limpiar y transformar los datos, SQL para las consultas a la base de datos y Power BI para los tableros que revisaba la gerencia.
+**CANDIDATO:** Un tablero de metas por agencia. Antes cada agencia mandaba su archivo y alguien los juntaba todos los lunes. Ahora se actualiza solo cada mañana y la gerencia ve el avance por región sin esperar.
 
-**ENTREVISTADOR:** ¿Hay algún proyecto que quieras destacar?
+**ENTREVISTADOR:** El equipo revisa documentación técnica en inglés. ¿Cómo te va con eso?
 
-**CANDIDATO:** Sí. Armé un tablero de seguimiento de metas por agencia. Antes cada agencia mandaba su archivo y alguien los juntaba todos los lunes. Con el tablero eso se actualiza solo cada mañana, y el área comercial puede ver el avance por región sin esperar a fin de semana.
+**CANDIDATO:** Leer, bien, porque leo documentación todos los días. En el instituto llegué hasta el nivel intermedio. Hablar me cuesta un poco más, sobre todo en reuniones largas.
 
 **ENTREVISTADOR:** ¿Cómo explicas tus resultados a personas que no son del área técnica?
 
-**CANDIDATO:** Trato de empezar por la conclusión y no por el método. Si la gerencia necesita decidir dónde poner más vendedores, primero muestro qué agencias están atrasadas y después, si me preguntan, explico cómo se calculó cada indicador.
+**CANDIDATO:** Empiezo por la conclusión y no por el método. Primero muestro qué agencias están atrasadas y, si me preguntan, explico cómo se calculó cada indicador.
 
-**ENTREVISTADOR:** ¿Y qué haces cuando los datos que te llegan tienen errores?
+**ENTREVISTADOR:** ¿Y qué haces cuando los datos llegan con errores?
 
-**CANDIDATO:** Primero hablo con quien genera la información para entender de dónde viene el error. Luego dejo una validación automática, para que el mismo problema no vuelva a pasar sin que nadie se entere.
+**CANDIDATO:** Hablo con quien genera la información para entender de dónde viene el error, y dejo una validación automática para que no vuelva a pasar sin que nadie se entere.
 
-**ENTREVISTADOR:** Muy bien. Hablemos de condiciones. ¿Cuál es tu expectativa salarial?
+**ENTREVISTADOR:** Hablemos de condiciones. ¿Cuánto te gustaría ganar?
 
-**CANDIDATO:** Mi expectativa salarial es de seis mil quinientos soles mensuales.
+**CANDIDATO:** Ahora gano cinco mil ochocientos. Buscaría algo entre siete mil y siete mil quinientos… pongamos siete mil, para empezar.
+
+**ENTREVISTADOR:** ¿Cuánto tiempo llevas trabajando, en total?
+
+**CANDIDATO:** En el banco van a ser cinco años, y antes estuve uno como practicante en una consultora. O sea, seis en total.
 
 **ENTREVISTADOR:** ¿Y cuándo podrías empezar?
 
-**CANDIDATO:** Tendría que avisar en mi trabajo actual, así que puedo empezar en dos semanas.
+**CANDIDATO:** En el banco piden quince días de preaviso, así que contando desde hoy, a mediados de noviembre.
 
-**ENTREVISTADOR:** Perfecto. El puesto requiere leer documentación técnica en inglés. ¿Cómo está tu nivel?
+**ENTREVISTADOR:** Perfecto. ¿Tienes alguna pregunta para nosotros?
 
-**CANDIDATO:** Mi nivel de inglés es intermedio. Leo documentación sin problema y puedo mantener una conversación sencilla, aunque todavía me cuesta un poco seguir reuniones largas.
+**CANDIDATO:** Sí, ¿cada cuánto presentan resultados a la gerencia?
 
-**ENTREVISTADOR:** Entendido. ¿Tienes alguna pregunta para nosotros?
+**ENTREVISTADOR:** Una vez al mes. Gracias por tu tiempo, te escribiremos esta semana.
 
-**CANDIDATO:** Sí, me gustaría saber cómo está organizado el equipo y cada cuánto se presentan resultados a la gerencia.
-
-**ENTREVISTADOR:** Somos un equipo pequeño y presentamos resultados cada mes. Gracias por tu tiempo, te escribiremos esta semana.
-
-**CANDIDATO:** Muchas gracias a ustedes. Que tengan buen día.
+**CANDIDATO:** Gracias a ustedes, que tengan buen día.

@@ -3,6 +3,7 @@
   python -m pytest tests      (o simplemente: python tests/test_engine.py)
 """
 import sys
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -10,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import numpy as np
 
 from engine import extract_rules
+from engine.dates import to_absolute
 from engine.degrade import add_noise, measured_snr_db, phone
 from engine.metrics import wer_cer
 from engine.numbers import normalize_numbers
@@ -42,6 +44,20 @@ def test_rules_extraction():
         "nivel_ingles": "intermedio",
         "tecnologias": ["python", "sql", "power bi"],
     }
+
+
+def test_relative_dates():
+    jueves = date(2026, 10, 29)
+    assert to_absolute("inmediata", jueves) == "2026-10-29"
+    assert to_absolute("desde mañana", jueves) == "2026-10-30"
+    assert to_absolute("el lunes mismo", jueves) == "2026-11-02"
+    assert to_absolute("en dos semanas", jueves) == "2026-11-12"
+    assert to_absolute("necesitaría un mes", jueves) == "2026-11-29"
+    assert to_absolute("a partir del primero de diciembre", jueves) == "2026-12-01"
+    assert to_absolute("15 de enero", jueves) == "2027-01-15"
+    assert to_absolute("cuando pueda", jueves) is None
+    r = extract_rules.extract(INTERVIEW, ["python"], jueves)
+    assert r["disponibilidad_fecha"] == "2026-11-12"
 
 
 def test_literal_verification():

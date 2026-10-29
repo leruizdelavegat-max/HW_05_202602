@@ -30,7 +30,8 @@ def read_csv(name: str) -> pd.DataFrame | None:
 
 def show_fields(verified: dict):
     table = pd.DataFrame(
-        [{"campo": k, "valor": json.dumps(v["valor"], ensure_ascii=False), "estado": v["estado"]}
+        [{"campo": k, "valor": json.dumps(v["valor"], ensure_ascii=False),
+          "fecha": v.get("fecha", ""), "estado": v["estado"]}
          for k, v in verified.items()]
     )
     st.dataframe(table, hide_index=True, use_container_width=True)

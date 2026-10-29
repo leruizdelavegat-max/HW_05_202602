@@ -1,8 +1,8 @@
 # Guiones de grabación
 
 Diez guiones con contenido **inventado**: 5 entrevistas (Tarea 1) y 5 llamadas de venta de
-restaurante (Tarea 2). Cada archivo trae arriba los datos que deben quedar claros en el audio, y
-esos mismos valores están en `data/ground_truth/*.json`.
+restaurante (Tarea 2). Cada archivo trae arriba el registro esperado y cómo se dice cada dato en el
+audio; esos mismos valores están en `data/ground_truth/*.json`.
 
 ## Cómo grabar
 
@@ -35,9 +35,37 @@ El script toma solo las líneas que empiezan con `**ROL:**` y escribe `data/refe
 | llamada_05 | — | — (cuadra: 106, llamada de control) | Av. La Marina 3175 |
 | **Total** | **3** | **3** | **5** |
 
-## Casos difíciles a propósito (Tarea 1)
+## Entrevistas (Tarea 1)
 
-- `entrevista_02`: menciona el sueldo actual (7000) además de la expectativa (9000).
-- `entrevista_03`: se corrige los años de experiencia ("cuatro, perdón, tres").
-- `entrevista_04`: dice "llevo doce años" en vez de "años de experiencia", y la disponibilidad es "en un mes", que el extractor por reglas no detecta.
-- `entrevista_05`: no da expectativa salarial, así que el valor correcto es `null`.
+La estructura sigue el laboratorio `LAB_Entrevistas.ipynb` de la sesión 10: primero se formalizan
+los campos y sus valores permitidos, después el registro esperado de cada entrevista en JSON, y
+recién entonces el texto. Como en ese laboratorio (el registro "despedido por fraude, pero apto
+para recontratar"), una entrevista trae una inconsistencia a propósito.
+
+| Campo | Tipo | Valores / formato | Se guarda |
+|---|---|---|---|
+| `anios_experiencia` | entero | años de trabajo profesional | el total, aunque se diga como suma o año de inicio |
+| `ultimo_puesto` | texto | cargo tal como se dice | el último cargo formal, no la función ni el título de LinkedIn |
+| `tecnologias` | lista | las de `config.yaml` | solo las que usó; no las que quiere aprender o dejó de usar |
+| `expectativa_salarial` | entero o null | soles mensuales | la cifra final; null si no la da |
+| `disponibilidad` | fecha | AAAA-MM-DD | se dice relativa ("el lunes", "en un mes") y se guarda absoluta desde `fecha_entrevista` |
+| `nivel_ingles` | categoría | básico / intermedio / avanzado / fluido | lo que dice que habla, aunque el CV diga otra cosa |
+
+Ningún campo se dice limpio, y el orden cambia en cada entrevista:
+
+| Entrevista | Orden en que salen los campos | Trampas principales |
+|---|---|---|
+| `entrevista_01` | tecnologías → puesto → inglés → salario → experiencia → disponibilidad | Excel que ya no usa; dos cargos; sueldo actual + rango; años por suma (5 + 1); "quince días de preaviso" |
+| `entrevista_02` | salario → inglés → experiencia → puesto → tecnologías → disponibilidad | cuatro cifras de salario; años como "desde el dos mil dieciocho" (el 8 no se dice); Python que quiere aprender; "el lunes mismo" |
+| `entrevista_03` | experiencia → disponibilidad → tecnologías → inglés → puesto → salario | dos autocorrecciones; **inconsistencia** CV "avanzado" vs. dice "básico"; rango y luego cifra |
+| `entrevista_04` | puesto → salario → tecnologías → disponibilidad → inglés → experiencia | LinkedIn vs. contrato; "quince mil… no, quince mil quinientos"; "un mes" sin dígito; 13 vs. 12 años |
+| `entrevista_05` | inglés → disponibilidad → experiencia → salario → tecnologías → puesto | "B uno"; años por suma (0,5 + 1,5); salario de prácticas que **no** es la expectativa → null |
+
+`data/ground_truth/entrevistas.json` guarda, para cada entrevista, el registro esperado, la
+`fecha_entrevista` y la `evidencia`: la frase literal de la que sale cada valor. Los años de la
+`entrevista_02` y la `entrevista_05` no se dicen como número, así que un extractor que acierte
+quedará igual `sin_verificar`: es el caso de "corregir en silencio" que pide analizar la tarea.
+
+Sobre los guiones, el extractor por reglas acierta 8 de 30 campos. `tests/test_guiones.py`
+comprueba que cada entrevista le haga fallar al menos dos, que el orden no se repita y que las
+fechas de disponibilidad salgan de la evidencia.

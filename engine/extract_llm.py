@@ -4,6 +4,7 @@ El LLM solo propone valores; después engine.verify comprueba que aparezcan lite
 en la transcripción. Lo que no aparezca queda como `sin_verificar`.
 """
 import json
+from datetime import date
 
 import anthropic
 
@@ -18,11 +19,12 @@ INTERVIEW_SCHEMA = {
         "tecnologias": {"type": "array", "items": {"type": "string"}},
         "expectativa_salarial": _NULLABLE_INT,
         "disponibilidad": _NULLABLE_STR,
+        "disponibilidad_fecha": _NULLABLE_STR,
         "nivel_ingles": _NULLABLE_STR,
     },
     "required": [
         "anios_experiencia", "ultimo_puesto", "tecnologias",
-        "expectativa_salarial", "disponibilidad", "nivel_ingles",
+        "expectativa_salarial", "disponibilidad", "disponibilidad_fecha", "nivel_ingles",
     ],
     "additionalProperties": False,
 }
@@ -53,9 +55,15 @@ ORDER_SCHEMA = {
 }
 
 INTERVIEW_PROMPT = """Extrae los datos del candidato de esta transcripción de entrevista.
+La entrevista se realizó el {fecha} ({dia_semana}).
 Reglas:
 - Copia los textos tal como aparecen en la transcripción; no parafrasees ni traduzcas.
 - Convierte los números dichos en palabras a dígitos (ej. "seis mil quinientos" -> 6500).
+- Si el candidato se corrige, usa el valor final. Si da un rango y luego una cifra, usa la cifra.
+- `tecnologias`: solo las que usó en su trabajo, no las que quiere aprender o dejó de usar.
+- `nivel_ingles`: uno de básico, intermedio, avanzado o fluido, según lo que dice que habla realmente.
+- `disponibilidad`: la frase tal como la dice; `disponibilidad_fecha`: esa fecha en formato AAAA-MM-DD,
+  calculada desde la fecha de la entrevista ("inmediata" = el mismo día).
 - Si un dato no se menciona, devuelve null (o lista vacía para tecnologías). No inventes.
 
 <transcripcion>
@@ -93,8 +101,13 @@ def _call(prompt: str, schema: dict, cfg: dict) -> dict:
     return json.loads(text)
 
 
-def extract_interview(transcript: str, cfg: dict) -> dict:
-    return _call(INTERVIEW_PROMPT.format(transcript=transcript), INTERVIEW_SCHEMA, cfg)
+_WEEKDAYS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+
+
+def extract_interview(transcript: str, cfg: dict, ref_date: date) -> dict:
+    prompt = INTERVIEW_PROMPT.format(transcript=transcript, fecha=ref_date.isoformat(),
+                                     dia_semana=_WEEKDAYS[ref_date.weekday()])
+    return _call(prompt, INTERVIEW_SCHEMA, cfg)
 
 
 def extract_order(transcript: str, domain: str, cfg: dict) -> dict:

@@ -1,58 +1,76 @@
 # entrevista_02
 
-| Campo | Valor que debe quedar claro |
-|---|---|
-| Años de experiencia | 8 |
-| Último puesto | desarrollador backend |
-| Tecnologías | Java, Docker, AWS, Git |
-| Expectativa salarial | 9000 (nueve mil) — **ojo:** también menciona su sueldo actual, 7000 |
-| Disponibilidad | inmediata |
-| Nivel de inglés | avanzado |
+Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:50 min
 
-Duración estimada: 2:50 min
+## Registro esperado
+
+```json
+{
+  "anios_experiencia": 8,
+  "ultimo_puesto": "desarrollador backend",
+  "tecnologias": ["java", "docker", "aws", "git"],
+  "expectativa_salarial": 9000,
+  "disponibilidad": "2026-11-02",
+  "nivel_ingles": "avanzado"
+}
+```
+
+## Cómo se dice cada campo
+
+| Orden | Campo | Cómo aparece en el audio | Por qué no es limpio |
+|---|---|---|---|
+| 1 | Salario | El candidato pregunta por el rango ("ocho a diez mil"), gana siete mil, pide nueve mil | Cuatro cifras en dos frases; vale 9000 |
+| 2 | Inglés | "No tengo certificado, pero diría que mi nivel es avanzado" | Dicho con dudas |
+| 3 | Experiencia | "Programo profesionalmente desde el dos mil dieciocho… los últimos tres años en una fintech" | **El 8 nunca se dice**: 2026 − 2018. El 3 distrae |
+| 4 | Último puesto | "Oficialmente era desarrollador backend, aunque… frontend" | Dos roles; vale el oficial |
+| 5 | Tecnologías | Java, Docker, AWS, Git… y Python | Python lo **quiere aprender**, no lo usó |
+| 6 | Disponibilidad | "puedo empezar el lunes mismo" | Relativa: el lunes siguiente al jueves 29/10 = 02/11 |
+
+> Caso para el informe: si el LLM devuelve 8 años, acierta, pero el valor queda `sin_verificar`
+> porque "ocho" no está en la transcripción. Es el caso de un modelo que "corrige" en silencio.
 
 ---
 
-**ENTREVISTADOR:** Hola, buenas tardes. Gracias por conectarte. ¿Podrías presentarte brevemente?
+**ENTREVISTADOR:** Hola, buenas tardes. Gracias por conectarte.
 
-**CANDIDATO:** Buenas tardes. Estudié ingeniería de sistemas y tengo ocho años de experiencia en desarrollo de software, casi todo en empresas de pagos digitales.
+**CANDIDATO:** Buenas tardes. Antes de empezar, ¿puedo preguntar algo? En el anuncio decía que el rango era de ocho a diez mil soles. ¿Sigue siendo así?
 
-**ENTREVISTADOR:** ¿En qué consistía tu trabajo más reciente?
+**ENTREVISTADOR:** Sí, ese es el rango. ¿Cuánto ganas ahora y cuánto esperarías?
 
-**CANDIDATO:** Trabajé como desarrollador backend en una fintech durante los últimos tres años. Diseñaba los servicios que procesan las transferencias entre cuentas y me encargaba de que respondieran rápido incluso en horas de mucho tráfico.
+**CANDIDATO:** Ahora gano siete mil. Con nueve mil estaría conforme, considerando que este puesto tiene personas a cargo.
+
+**ENTREVISTADOR:** Bien. Una parte de la entrevista técnica es en inglés, ¿te parece?
+
+**CANDIDATO:** Sí, sin problema. Mi equipo estaba en Estados Unidos y todas las reuniones eran en inglés. No tengo certificado, pero diría que mi nivel es avanzado.
+
+**ENTREVISTADOR:** Cuéntame de tu trayectoria.
+
+**CANDIDATO:** Programo profesionalmente desde el dos mil dieciocho, casi siempre en empresas de pagos digitales. Los últimos tres años estuve en una fintech.
+
+**ENTREVISTADOR:** ¿Qué cargo tenías ahí?
+
+**CANDIDATO:** Oficialmente era desarrollador backend, aunque cuando faltaba gente también me tocaba arreglar cosas del frontend.
 
 **ENTREVISTADOR:** ¿Con qué tecnologías trabajabas?
 
-**CANDIDATO:** El lenguaje principal era Java. Los servicios los empaquetábamos con Docker y todo corría en AWS. Para el control de versiones usábamos Git, con revisión de código obligatoria antes de cada despliegue.
+**CANDIDATO:** El lenguaje principal era Java. Empaquetábamos los servicios con Docker y todo corría en AWS. El código lo manejábamos en Git, con revisión obligatoria. Python lo he visto solo en un curso; es algo que me gustaría aprender bien aquí.
 
-**ENTREVISTADOR:** ¿Cuál ha sido tu mayor reto técnico?
+**ENTREVISTADOR:** ¿Cuál fue tu mayor reto técnico?
 
-**CANDIDATO:** Reducir el tiempo de respuesta en los días de quincena, cuando todo el mundo transfiere al mismo tiempo. Separamos la validación de fraude en un servicio aparte y con eso la latencia bajó a la mitad.
-
-**ENTREVISTADOR:** ¿Cómo te organizas cuando hay un problema en producción?
-
-**CANDIDATO:** Lo primero es estabilizar el servicio, aunque sea con una solución temporal. Después, con calma, revisamos los registros, buscamos la causa y escribimos un resumen para que todo el equipo aprenda del incidente.
+**CANDIDATO:** Bajar el tiempo de respuesta en los días de quincena, cuando todos transfieren a la vez. Separamos la validación de fraude en un servicio aparte y la latencia bajó a la mitad.
 
 **ENTREVISTADOR:** ¿Te ha tocado guiar a personas con menos experiencia?
 
-**CANDIDATO:** Sí, en el último año acompañé a dos practicantes. Revisaba su código, les explicaba por qué pedía cambios y poco a poco empezaron a tomar tareas más grandes por su cuenta.
+**CANDIDATO:** Sí, el último año acompañé a dos practicantes. Revisaba su código y les explicaba por qué pedía cada cambio, hasta que empezaron a tomar tareas grandes por su cuenta.
 
-**ENTREVISTADOR:** Interesante. Cambiando de tema, ¿cuánto ganas actualmente y cuánto esperas ganar en este puesto?
+**ENTREVISTADOR:** ¿Cómo reaccionas cuando algo falla en producción?
 
-**CANDIDATO:** Actualmente gano siete mil soles. Mi expectativa salarial es de nueve mil soles, considerando que este puesto tiene más responsabilidad y personas a cargo.
+**CANDIDATO:** Primero estabilizo el servicio, aunque sea con una solución temporal. Después buscamos la causa con calma y escribimos un resumen para que todo el equipo aprenda.
 
-**ENTREVISTADOR:** Entiendo. ¿Cuál sería tu disponibilidad para empezar?
+**ENTREVISTADOR:** Muy bien. ¿Y cuándo podrías incorporarte?
 
-**CANDIDATO:** Terminé mi contrato la semana pasada, así que mi disponibilidad es inmediata.
+**CANDIDATO:** Mi contrato terminó la semana pasada, así que puedo empezar el lunes mismo.
 
-**ENTREVISTADOR:** ¿Y tu inglés?
+**ENTREVISTADOR:** Perfecto, eso es todo por hoy. Te contactaremos pronto.
 
-**CANDIDATO:** Tengo inglés avanzado. En la fintech las reuniones con el equipo de Estados Unidos eran siempre en inglés, y también escribía la documentación técnica en ese idioma.
-
-**ENTREVISTADOR:** Perfecto. ¿Hay algo más que quieras contarnos?
-
-**CANDIDATO:** Solo que me interesa mucho trabajar en un equipo donde se revise bien el código. Para mí es la mejor forma de aprender.
-
-**ENTREVISTADOR:** Muy bien, eso es todo por hoy. Te contactaremos pronto.
-
-**CANDIDATO:** Gracias. Quedo a la espera de sus noticias.
+**CANDIDATO:** Gracias, quedo a la espera de sus noticias.
