@@ -13,6 +13,17 @@ TODO: confirma con tus palabras que grabaste todos los audios tú, que apareces 
 contenido es inventado y que todas las personas grabadas dieron su consentimiento. Los audios no se
 suben al repo, solo sus transcripciones cacheadas en `cache/transcripts/`.
 
+## Corpus
+
+- **Tarea 1:** 5 entrevistas de trabajo inventadas, con los seis campos dichos de forma poco limpia
+  y en un orden distinto en cada una.
+- **Tarea 2:** dominio **restaurante** (delivery). 5 llamadas con productos, tamaños, precios, una
+  promoción, dirección, forma de pago y un total dicho en voz alta: 3 autocorrecciones, 3 totales
+  erróneos y 5 direcciones con dígitos.
+
+Los guiones, el detalle de cómo se varió cada campo y la tabla de trampas están en
+[`docs/guiones/`](docs/guiones/README.md).
+
 ## Herramientas de IA declaradas
 
 TODO: lista los agentes de IA (por ejemplo Claude Code) y los servidores MCP que usaste, y para qué.
