@@ -59,6 +59,10 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:30 min
 
 **CANDIDATO:** A veces me cuesta pedir ayuda a tiempo. Ahora, si me quedo atascado un buen rato, consulto con alguien del equipo.
 
+**ENTREVISTADOR:** ¿Y cómo te ves dentro de unos años?
+
+**CANDIDATO:** Me gustaría liderar proyectos de análisis de punta a punta, desde entender el problema del negocio hasta poner la solución en manos de los usuarios.
+
 **ENTREVISTADOR:** Por último, ¿cuál fue tu último cargo?
 
 **CANDIDATO:** Empecé como practicante de operaciones, pero al cierre de la startup mi cargo era analista junior de datos.

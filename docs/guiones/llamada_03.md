@@ -1,47 +1,89 @@
 # llamada_03
 
-| Producto | Cantidad | Precio unitario | Subtotal |
-|---|---|---|---|
-| Lasaña de carne | 2 | 32 | 64 |
-| Ensalada César | 1 | 15 | 15 |
-| Jarra de limonada | 1 | 20 | 20 |
-| Promoción | | | −15 |
-| **Total correcto** | | | **84** |
+Trattoria Don Lucio (inventada) · Duración estimada: 2:45 min
 
-**Trampas:**
-- **Total erróneo:** el vendedor dice **94**; lo correcto es 84 (aplica mal el descuento).
-- **Dígitos:** Calle Los Pinos 789.
+## Registro esperado
+
+```json
+{
+  "items": [
+    {"producto": "lasaña de carne", "tamano": "individual", "cantidad": 2, "precio_unitario": 32},
+    {"producto": "ensalada César", "tamano": "personal", "cantidad": 1, "precio_unitario": 15},
+    {"producto": "limonada", "tamano": "jarra de un litro", "cantidad": 1, "precio_unitario": 20}
+  ],
+  "promocion": 15,
+  "direccion_o_contrato": "Calle Los Pinos 789, Surco",
+  "metodo_pago": "Yape",
+  "total_dicho": 94
+}
+```
+
+Total correcto: 2 × 32 + 15 + 20 − 15 = **84**.
+
+## Trampas
+
+| Tipo | Qué pasa en el audio |
+|---|---|
+| Total erróneo | El vendedor dice el subtotal bien (99), pero aplica mal el descuento y dice **94**; lo correcto es 84 |
+| Dígitos | Calle Los Pinos 789 |
+| Distractores | Precio de la bandeja (110), "más de setenta soles", "dos pisos" |
 
 ---
 
-**VENDEDOR:** La Esquina de Bruno, buenas noches, ¿en qué le puedo ayudar?
+**VENDEDOR:** Trattoria Don Lucio, buenas noches. ¿En qué le puedo ayudar?
 
-**CLIENTE:** Buenas noches. Quiero hacer un pedido para llevar a casa.
+**CLIENTE:** Buenas noches. Quiero hacer un pedido para llevar a casa. ¿Me podría decir qué platos de fondo tienen hoy?
 
-**VENDEDOR:** Claro, dígame.
+**VENDEDOR:** Tenemos lasaña de carne, fetuccini a la huancaína con lomo, ravioles de ricota y risotto de hongos.
 
-**CLIENTE:** Dos lasañas de carne.
+**CLIENTE:** ¿Y la lasaña cuánto está?
 
-**VENDEDOR:** Dos lasañas de carne, a treinta y dos soles cada una.
+**VENDEDOR:** La porción individual está a treinta y dos soles, y la bandeja para cuatro personas a ciento diez.
 
-**CLIENTE:** Una ensalada César.
+**CLIENTE:** Mejor dos lasañas de carne individuales.
 
-**VENDEDOR:** Ensalada César, quince soles.
+**VENDEDOR:** Dos lasañas individuales, a treinta y dos soles cada una. ¿Desea alguna entrada?
 
-**CLIENTE:** Y una jarra de limonada.
+**CLIENTE:** ¿Qué ensaladas tienen?
 
-**VENDEDOR:** La jarra de limonada está a veinte soles. Como es martes, tiene una promoción de quince soles de descuento.
+**VENDEDOR:** La ensalada César y la caprese. La César personal está a quince soles.
+
+**CLIENTE:** Una ensalada César personal, entonces.
+
+**VENDEDOR:** Ensalada César personal, quince soles. ¿Y para tomar?
+
+**CLIENTE:** Una jarra de limonada.
+
+**VENDEDOR:** La jarra de un litro de limonada está a veinte soles. Como hoy es martes, tiene una promoción de quince soles de descuento en pedidos de más de setenta soles.
 
 **CLIENTE:** Qué bien. ¿Cuánto me sale todo?
 
-**VENDEDOR:** Con la promoción le sale noventa y cuatro soles.
+**VENDEDOR:** Serían noventa y nueve… con la promoción le sale noventa y cuatro soles.
 
-**CLIENTE:** De acuerdo.
+**CLIENTE:** De acuerdo. ¿Cuánto demora?
 
-**VENDEDOR:** ¿La dirección de entrega?
+**VENDEDOR:** Unos cuarenta y cinco minutos, porque la lasaña se hornea al momento.
 
-**CLIENTE:** Calle Los Pinos setecientos ochenta y nueve, en Surco.
+**CLIENTE:** No hay problema. Una pregunta, ¿la lasaña lleva algo de picante? Mi mamá no come nada picante.
 
-**VENDEDOR:** Calle Los Pinos setecientos ochenta y nueve, Surco. En unos cuarenta y cinco minutos estamos por allá.
+**VENDEDOR:** No, nada. Lleva salsa de tomate, carne molida, queso parmesano y bechamel. Si quiere, le mandamos el queso rallado aparte.
 
-**CLIENTE:** Gracias.
+**CLIENTE:** Sí, mejor aparte, gracias.
+
+**VENDEDOR:** ¿Me da la dirección de entrega?
+
+**CLIENTE:** Calle Los Pinos setecientos ochenta y nueve, en Surco. Es una casa de dos pisos con la puerta marrón.
+
+**VENDEDOR:** Calle Los Pinos setecientos ochenta y nueve, Surco, casa de puerta marrón. ¿Cómo desea pagar?
+
+**CLIENTE:** Por Yape, si se puede.
+
+**VENDEDOR:** Sí, cuando llegue el repartidor le muestra el código y usted paga ahí mismo.
+
+**CLIENTE:** Perfecto. ¿Pueden mandar cubiertos?
+
+**VENDEDOR:** Claro, le mandamos dos juegos de cubiertos y servilletas.
+
+**CLIENTE:** Gracias, muy amable. La última vez la lasaña llegó un poco fría.
+
+**VENDEDOR:** Lo siento mucho. Esta vez la mandamos en una bolsa térmica. Buenas noches.

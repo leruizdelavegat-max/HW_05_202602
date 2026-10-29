@@ -38,19 +38,21 @@ ORDER_SCHEMA = {
                 "type": "object",
                 "properties": {
                     "producto": {"type": "string"},
+                    "tamano": _NULLABLE_STR,
                     "cantidad": {"type": "number"},
                     "precio_unitario": {"type": ["number", "null"]},
                 },
-                "required": ["producto", "cantidad", "precio_unitario"],
+                "required": ["producto", "tamano", "cantidad", "precio_unitario"],
                 "additionalProperties": False,
             },
         },
         "promocion": {"type": ["number", "null"]},
-        "total_declarado": {"type": ["number", "null"]},
         "direccion_o_contrato": _NULLABLE_STR,
+        "metodo_pago": _NULLABLE_STR,
+        "total_dicho": {"type": ["number", "null"]},
         "autocorrecciones": {"type": "array", "items": {"type": "string"}},
     },
-    "required": ["items", "promocion", "total_declarado", "direccion_o_contrato", "autocorrecciones"],
+    "required": ["items", "promocion", "direccion_o_contrato", "metodo_pago", "total_dicho", "autocorrecciones"],
     "additionalProperties": False,
 }
 
@@ -73,8 +75,11 @@ Reglas:
 ORDER_PROMPT = """Extrae el pedido de esta transcripción de una llamada de venta ({domain}).
 Reglas:
 - Si el cliente se corrige ("dos... no, mejor tres"), usa el valor FINAL y anota la corrección en `autocorrecciones`.
-- `total_declarado` es el total que dice en voz alta el vendedor o el cliente, aunque esté mal calculado. No lo corrijas.
-- `promocion` es el descuento en moneda (no porcentaje); null si no hay.
+- `tamano` va aparte del producto ("pizza de jamón" + "familiar"); null si el producto no tiene tamaño.
+- `precio_unitario` es el del tamaño que se pidió, no el de otros tamaños que se mencionan.
+- `total_dicho` es el total que dice en voz alta el vendedor o el cliente, aunque esté mal calculado. No lo corrijas.
+- `promocion` es el descuento en moneda (no porcentaje) que se aplica a este pedido; null si no hay o no aplica.
+- `metodo_pago`: efectivo, tarjeta, Yape, etc.; null si no se dice.
 - Copia direcciones y números de contrato tal como aparecen.
 - Si un dato no se menciona, devuelve null. No inventes.
 

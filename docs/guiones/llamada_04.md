@@ -1,41 +1,89 @@
 # llamada_04
 
-| Producto | Cantidad | Precio unitario | Subtotal |
-|---|---|---|---|
-| Hamburguesa clásica | 5 | 22 | 110 |
-| Papas fritas | 3 | 9 | 27 |
-| Promoción | | | −12 |
-| **Total correcto** | | | **125** |
+Hamburguesería Burger Barrio (inventada) · Duración estimada: 2:40 min
 
-**Trampas:**
-- **Autocorrección:** pide cuatro hamburguesas y se corrige a cinco.
-- **Total erróneo:** el vendedor dice **135**; lo correcto es 125.
-- **Dígitos:** Avenida Brasil 2050, interior 4.
+## Registro esperado
+
+```json
+{
+  "items": [
+    {"producto": "hamburguesa clásica", "tamano": "regular", "cantidad": 5, "precio_unitario": 22},
+    {"producto": "papas fritas", "tamano": "grandes", "cantidad": 3, "precio_unitario": 9}
+  ],
+  "promocion": 12,
+  "direccion_o_contrato": "Avenida Brasil 2050, interior 4, Jesús María",
+  "metodo_pago": "tarjeta",
+  "total_dicho": 135
+}
+```
+
+Total correcto: 5 × 22 + 3 × 9 − 12 = **125**.
+
+## Trampas
+
+| Tipo | Qué pasa en el audio |
+|---|---|
+| Autocorrección | Pide cuatro hamburguesas y se corrige a cinco |
+| Total erróneo | El vendedor dice **135**; lo correcto es 125 |
+| Dígitos | Avenida Brasil 2050, interior 4 |
+| Distractores | Precio de la doble (30) y de las papas medianas (6), "segundo piso", "a la una" |
 
 ---
 
-**VENDEDOR:** La Esquina de Bruno, buenas tardes.
+**VENDEDOR:** Burger Barrio, buenas tardes, ¿qué va a pedir?
 
-**CLIENTE:** Hola. Quiero cuatro hamburguesas clásicas... no, perdón, que sean cinco, que viene un amigo más.
+**CLIENTE:** Hola, buenas tardes. Es para la oficina, somos varios. ¿Qué hamburguesas tienen?
 
-**VENDEDOR:** Cinco hamburguesas clásicas, a veintidós soles cada una. ¿Con papas?
+**VENDEDOR:** La clásica, con carne, queso y tomate; la de pollo crispy; y la parrillera, que lleva chorizo. La clásica regular está a veintidós soles y la doble a treinta.
 
-**CLIENTE:** Sí, tres porciones de papas fritas.
+**CLIENTE:** Quiero cuatro hamburguesas clásicas… no, espere, que se suma uno más. Cinco hamburguesas clásicas regulares.
 
-**VENDEDOR:** Tres papas fritas, a nueve soles la porción. Por ser cliente frecuente tiene un descuento de doce soles.
+**VENDEDOR:** Cinco hamburguesas clásicas regulares, a veintidós soles cada una. ¿Las acompaña con papas?
 
-**CLIENTE:** Excelente. ¿Cuál sería el total?
+**CLIENTE:** Sí, ¿qué tamaños hay?
 
-**VENDEDOR:** El total con descuento es de ciento treinta y cinco soles.
+**VENDEDOR:** Medianas a seis soles y grandes a nueve.
 
-**CLIENTE:** Ok.
+**CLIENTE:** Tres papas fritas grandes, para compartir.
 
-**VENDEDOR:** ¿Adónde lo enviamos?
+**VENDEDOR:** Tres papas grandes, a nueve soles cada una. ¿Qué salsas le mando? Tenemos kétchup, mayonesa, mostaza y la salsa de la casa, que es de ajo.
 
-**CLIENTE:** Avenida Brasil dos mil cincuenta, interior cuatro, en Jesús María.
+**CLIENTE:** La de la casa y kétchup. ¿La salsa de ajo tiene costo?
 
-**VENDEDOR:** Avenida Brasil dos mil cincuenta, interior cuatro. ¿Paga con efectivo?
+**VENDEDOR:** No, las salsas son gratis. ¿Alguna bebida?
 
-**CLIENTE:** Sí, con un billete de doscientos.
+**CLIENTE:** No, bebidas tenemos aquí. ¿Tienen alguna promoción?
 
-**VENDEDOR:** Le llevamos el vuelto. Su pedido llega en treinta minutos.
+**VENDEDOR:** Sí, por ser pedido para empresa le descontamos doce soles.
+
+**CLIENTE:** Excelente. ¿Cuánto sería entonces?
+
+**VENDEDOR:** Con el descuento son ciento treinta y cinco soles.
+
+**CLIENTE:** Perfecto.
+
+**VENDEDOR:** ¿A qué dirección lo enviamos?
+
+**CLIENTE:** Avenida Brasil dos mil cincuenta, interior cuatro, en Jesús María. Es una oficina en el segundo piso.
+
+**VENDEDOR:** Avenida Brasil dos mil cincuenta, interior cuatro, Jesús María, segundo piso. ¿Cómo va a pagar?
+
+**CLIENTE:** Con tarjeta de crédito. ¿Me pueden dar factura?
+
+**VENDEDOR:** Claro, el repartidor le pide los datos de la empresa cuando entrega.
+
+**CLIENTE:** ¿Y cuánto demoran? Tenemos una reunión a la una.
+
+**VENDEDOR:** Unos treinta minutos. Si sale ahora, llega antes de la una.
+
+**CLIENTE:** Una cosa más: una de las hamburguesas sin cebolla, por favor.
+
+**VENDEDOR:** Anotado, una sin cebolla. La marcamos con un sticker para que no se confundan. ¿Algo más?
+
+**CLIENTE:** ¿El repartidor puede subir hasta la oficina?
+
+**VENDEDOR:** Si el edificio lo permite, sí. Si no, le timbramos y usted baja a recoger.
+
+**CLIENTE:** Está bien. Eso es todo, gracias.
+
+**VENDEDOR:** Gracias a usted, que lo disfruten.

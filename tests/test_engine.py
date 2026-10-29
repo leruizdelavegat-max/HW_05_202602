@@ -76,7 +76,7 @@ def test_metrics_normalize_numbers():
 def test_arithmetic_and_classification():
     order = {"items": [{"producto": "pizza", "cantidad": 3, "precio_unitario": 45},
                        {"producto": "gaseosa", "cantidad": 2, "precio_unitario": 8}],
-             "promocion": 10, "total_declarado": 155}
+             "promocion": 10, "total_dicho": 155}
     c = check_total(order)
     assert c["total_calculado"] == 141 and not c["cuadra"]
     assert classify_error({"L0": 155, "L1": 155, "L2": 155}, 141) == "error_hablante"

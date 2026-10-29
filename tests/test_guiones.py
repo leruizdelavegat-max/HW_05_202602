@@ -83,3 +83,24 @@ def test_call_totals_and_traps():
         assert chk["total_calculado"] == c["total_correcto"], call_id
         has_wrong_total = any(t["tipo"] == "total_erroneo" for t in c["trampas"])
         assert chk["cuadra"] != has_wrong_total, call_id
+
+
+def test_call_records_are_complete_and_literal():
+    for call_id, c in load("llamadas.json").items():
+        text = reference(call_id)
+        assert c["metodo_pago"] and appears_in(c["metodo_pago"], text), call_id
+        assert appears_in(c["total_dicho"], text), call_id
+        for item in c["items"]:
+            assert "tamano" in item, f"{call_id}: {item['producto']} sin campo tamano"
+            assert appears_in(item["precio_unitario"], text), f"{call_id}: precio de {item['producto']}"
+        for trap in c["trampas"]:
+            if trap["tipo"] == "digitos":
+                for part in trap["esperado"].split(","):
+                    assert appears_in(part.strip(), text), f"{call_id}: «{part.strip()}»"
+
+
+def test_audio_length_fits_two_to_four_minutes():
+    # Unas 130–150 palabras por minuto leyendo con naturalidad: 2 min ≈ 280 palabras.
+    for ref in sorted(REFS.glob("*_0*.txt")):
+        words = len(ref.read_text(encoding="utf-8").split())
+        assert 280 <= words <= 560, f"{ref.stem}: {words} palabras"

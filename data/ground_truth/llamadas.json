@@ -1,14 +1,15 @@
 {
-  "_instrucciones": "Una clave por llamada (mismo nombre que data/audio/llamadas/<id>). Valores tomados de docs/guiones/. total_declarado = lo que se DICE en el audio; total_correcto = el cálculo real. Tipos de trampa: autocorreccion (producto + cantidad_final), total_erroneo, digitos (esperado).",
+  "_instrucciones": "Una clave por llamada (mismo nombre que data/audio/llamadas/<id>). Valores tomados de docs/guiones/. total_dicho = lo que se DICE en el audio; total_correcto = el cálculo real (Σ cantidad × precio − promoción). tamano = null si el producto no tiene tamaño. Tipos de trampa: autocorreccion (producto + cantidad_final), total_erroneo, digitos (esperado).",
   "llamada_01": {
     "items": [
-      {"producto": "pizza familiar de jamón", "cantidad": 3, "precio_unitario": 45},
-      {"producto": "gaseosa de litro", "cantidad": 2, "precio_unitario": 8}
+      {"producto": "pizza de jamón", "tamano": "familiar", "cantidad": 3, "precio_unitario": 45},
+      {"producto": "gaseosa", "tamano": "litro", "cantidad": 2, "precio_unitario": 8}
     ],
     "promocion": 10,
-    "total_declarado": 155,
-    "total_correcto": 141,
     "direccion_o_contrato": "Avenida Arequipa 1234, Lince",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 155,
+    "total_correcto": 141,
     "trampas": [
       {"id": "t1", "tipo": "autocorreccion", "descripcion": "dos pizzas... no, mejor tres", "producto": "pizza", "cantidad_final": 3},
       {"id": "t2", "tipo": "total_erroneo", "descripcion": "dice 155, lo correcto es 141"},
@@ -17,14 +18,15 @@
   },
   "llamada_02": {
     "items": [
-      {"producto": "pollo a la brasa entero", "cantidad": 1, "precio_unitario": 62},
-      {"producto": "papas familiares", "cantidad": 1, "precio_unitario": 18},
-      {"producto": "gaseosa de litro y medio", "cantidad": 2, "precio_unitario": 10}
+      {"producto": "pollo a la brasa", "tamano": "entero", "cantidad": 1, "precio_unitario": 62},
+      {"producto": "papas", "tamano": "familiares", "cantidad": 1, "precio_unitario": 18},
+      {"producto": "gaseosa", "tamano": "litro y medio", "cantidad": 2, "precio_unitario": 10}
     ],
     "promocion": null,
-    "total_declarado": 100,
+    "direccion_o_contrato": "Jirón Junín 456, departamento 302, Cercado de Lima",
+    "metodo_pago": "efectivo",
+    "total_dicho": 100,
     "total_correcto": 100,
-    "direccion_o_contrato": "Jirón Junín 456, departamento 302",
     "trampas": [
       {"id": "t1", "tipo": "autocorreccion", "descripcion": "una gaseosa... mejor dos", "producto": "gaseosa", "cantidad_final": 2},
       {"id": "t2", "tipo": "digitos", "descripcion": "dirección con número y departamento", "esperado": "Jirón Junín 456, departamento 302"}
@@ -32,28 +34,30 @@
   },
   "llamada_03": {
     "items": [
-      {"producto": "lasaña de carne", "cantidad": 2, "precio_unitario": 32},
-      {"producto": "ensalada césar", "cantidad": 1, "precio_unitario": 15},
-      {"producto": "jarra de limonada", "cantidad": 1, "precio_unitario": 20}
+      {"producto": "lasaña de carne", "tamano": "individual", "cantidad": 2, "precio_unitario": 32},
+      {"producto": "ensalada César", "tamano": "personal", "cantidad": 1, "precio_unitario": 15},
+      {"producto": "limonada", "tamano": "jarra de un litro", "cantidad": 1, "precio_unitario": 20}
     ],
     "promocion": 15,
-    "total_declarado": 94,
-    "total_correcto": 84,
     "direccion_o_contrato": "Calle Los Pinos 789, Surco",
+    "metodo_pago": "Yape",
+    "total_dicho": 94,
+    "total_correcto": 84,
     "trampas": [
-      {"id": "t1", "tipo": "total_erroneo", "descripcion": "dice 94, lo correcto es 84"},
+      {"id": "t1", "tipo": "total_erroneo", "descripcion": "dice el subtotal bien (99) pero 94 con descuento; lo correcto es 84"},
       {"id": "t2", "tipo": "digitos", "descripcion": "dirección con número", "esperado": "Calle Los Pinos 789"}
     ]
   },
   "llamada_04": {
     "items": [
-      {"producto": "hamburguesa clásica", "cantidad": 5, "precio_unitario": 22},
-      {"producto": "papas fritas", "cantidad": 3, "precio_unitario": 9}
+      {"producto": "hamburguesa clásica", "tamano": "regular", "cantidad": 5, "precio_unitario": 22},
+      {"producto": "papas fritas", "tamano": "grandes", "cantidad": 3, "precio_unitario": 9}
     ],
     "promocion": 12,
-    "total_declarado": 135,
-    "total_correcto": 125,
     "direccion_o_contrato": "Avenida Brasil 2050, interior 4, Jesús María",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 135,
+    "total_correcto": 125,
     "trampas": [
       {"id": "t1", "tipo": "autocorreccion", "descripcion": "cuatro hamburguesas... no, cinco", "producto": "hamburguesa", "cantidad_final": 5},
       {"id": "t2", "tipo": "total_erroneo", "descripcion": "dice 135, lo correcto es 125"},
@@ -62,16 +66,17 @@
   },
   "llamada_05": {
     "items": [
-      {"producto": "pizza mediana americana", "cantidad": 2, "precio_unitario": 38},
-      {"producto": "pan al ajo", "cantidad": 1, "precio_unitario": 12},
-      {"producto": "jarra de chicha morada", "cantidad": 1, "precio_unitario": 18}
+      {"producto": "pizza americana", "tamano": "mediana", "cantidad": 2, "precio_unitario": 38},
+      {"producto": "pan al ajo", "tamano": null, "cantidad": 1, "precio_unitario": 12},
+      {"producto": "chicha morada", "tamano": "jarra de un litro", "cantidad": 1, "precio_unitario": 18}
     ],
     "promocion": null,
-    "total_declarado": 106,
+    "direccion_o_contrato": "Avenida La Marina 3175, torre B, departamento 803, San Miguel",
+    "metodo_pago": "efectivo",
+    "total_dicho": 106,
     "total_correcto": 106,
-    "direccion_o_contrato": "Avenida La Marina 3175, San Miguel",
     "trampas": [
-      {"id": "t1", "tipo": "digitos", "descripcion": "dirección con número", "esperado": "Avenida La Marina 3175"}
+      {"id": "t1", "tipo": "digitos", "descripcion": "dirección con número y departamento", "esperado": "Avenida La Marina 3175, departamento 803"}
     ]
   }
 }

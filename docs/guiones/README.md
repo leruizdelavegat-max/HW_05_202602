@@ -32,8 +32,18 @@ El script toma solo las líneas que empiezan con `**ROL:**` y escribe `data/refe
 | llamada_02 | gaseosas 1 → 2 | — (cuadra: 100) | Jr. Junín 456, dpto. 302 |
 | llamada_03 | — | dice 94, correcto 84 | Calle Los Pinos 789 |
 | llamada_04 | hamburguesas 4 → 5 | dice 135, correcto 125 | Av. Brasil 2050, int. 4 |
-| llamada_05 | — | — (cuadra: 106, llamada de control) | Av. La Marina 3175 |
+| llamada_05 | — | — (cuadra: 106, llamada de control) | Av. La Marina 3175, dpto. 803 |
 | **Total** | **3** | **3** | **5** |
+
+Cada llamada dice todos los campos del registro: productos con **tamaño**, cantidad y precio
+unitario, promoción, dirección, **forma de pago** (tarjeta, efectivo, Yape) y el total dicho en voz
+alta (`total_dicho`). También trae distractores: precios de tamaños que no se piden, promociones
+que no aplican, pisos, horas y minutos de entrega. El registro debe guardar el pedido final.
+
+Cada guion tiene entre 300 y 360 palabras, unos 2 a 2,5 minutos leyendo con calma. Si una
+grabación sale por debajo de 2 minutos, léela más despacio, con pausas naturales.
+`tests/test_guiones.py` comprueba el largo, las sumas y que precios, pago y direcciones aparezcan
+en el texto.
 
 ## Entrevistas (Tarea 1)
 
