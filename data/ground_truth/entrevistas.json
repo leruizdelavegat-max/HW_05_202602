@@ -11,7 +11,7 @@
     "evidencia": {
       "anios_experiencia": "seis en total",
       "ultimo_puesto": "ahora el cargo es analista de datos senior",
-      "expectativa_salarial": "pongamos siete mil",
+      "expectativa_salarial": "pongámoslo siete mil",
       "disponibilidad": "quince días de preaviso",
       "nivel_ingles": "llegué hasta el nivel intermedio"
     }
@@ -43,7 +43,7 @@
     "evidencia": {
       "anios_experiencia": "cuatro perdón tres años de experiencia",
       "ultimo_puesto": "mi cargo era asistente de inteligencia de negocios",
-      "expectativa_salarial": "si me pide una cifra cuatro mil doscientos",
+      "expectativa_salarial": "si me piden una cifra cuatro mil doscientos",
       "disponibilidad": "mejor desde el primero de diciembre",
       "nivel_ingles": "en realidad mi inglés es básico"
     }
@@ -55,13 +55,13 @@
     "tecnologias": ["python", "spark", "azure"],
     "expectativa_salarial": 15500,
     "disponibilidad": "2026-11-29",
-    "nivel_ingles": "fluido",
+    "nivel_ingles": "avanzado",
     "evidencia": {
       "anios_experiencia": "profesionalmente llevo doce años",
       "ultimo_puesto": "el cargo en el contrato es jefe de proyectos de datos",
       "expectativa_salarial": "no quince mil quinientos soles mensuales",
       "disponibilidad": "necesitaría un mes",
-      "nivel_ingles": "diría que fluido"
+      "nivel_ingles": "diría que avanzado"
     }
   },
   "entrevista_05": {

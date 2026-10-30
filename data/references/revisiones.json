@@ -3,5 +3,8 @@
   "entrevista_02": [
     {"minuto": "2:42", "guion": "valoras", "oido": "valores", "decision": "asr"},
     {"minuto": "1:57", "guion": "separamos", "oido": "separabamos", "decision": "habla"}
+  ],
+  "entrevista_04": [
+    {"minuto": "1:44", "guion": "fluido", "oido": "avanzado", "decision": "habla"}
   ]
 }
