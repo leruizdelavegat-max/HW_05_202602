@@ -1,0 +1,7 @@
+{
+  "_instrucciones": "Decisiones tomadas escuchando el audio sobre los tramos [AMBOS] de scripts/diff_references.py. 'asr' = el audio dice lo del guion (fue un error del ASR, la referencia NO cambia). 'habla' = se dijo distinto al guion (la referencia toma lo que se escuchó). 'guion' y 'oido' van normalizados, como aparecen en results/diff_<set>.md.",
+  "entrevista_02": [
+    {"minuto": "2:42", "guion": "valoras", "oido": "valores", "decision": "asr"},
+    {"minuto": "1:57", "guion": "separamos", "oido": "separabamos", "decision": "habla"}
+  ]
+}

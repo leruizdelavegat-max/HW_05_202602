@@ -12,12 +12,14 @@ la transcripción se aparta del guion y separa dos casos:
   python scripts/diff_references.py --set llamadas               # usa el nivel L0
 
 Con --apply, cada referencia pasa a ser el guion con los tramos [AMBOS] reemplazados por lo que se
-escuchó (texto normalizado, igual que lo compara el WER). Es un borrador: escucha cada tramo y, si
-alguno fue un error del ASR y no del habla, revierte ese tramo en data/references/<audio>.txt.
+escuchó (texto normalizado, igual que lo compara el WER). Es un borrador: escucha cada tramo y anota
+en data/references/revisiones.json si fue un error del ASR ("asr", no se aplica) o si se dijo así
+("habla", se aplica aunque solo un modelo lo haya escuchado). Vuelve a correr con --apply.
 Escribe results/diff_<set>.md.
 """
 import argparse
 import difflib
+import json
 import sys
 from pathlib import Path
 
@@ -61,6 +63,8 @@ def main():
     if args.set == "llamadas":
         cache_dir = cache_dir / "L0"
     refs_dir = resolve(cfg["paths"]["references"])
+    reviews_file = refs_dir / "revisiones.json"
+    reviews = json.loads(reviews_file.read_text(encoding="utf-8")) if reviews_file.exists() else {}
     out = [f"# Diferencias entre guion y audio · {args.set}\n",
            "Escucha cada tramo **[AMBOS]** en el minuto indicado. Si se dijo así, la referencia está bien; "
            "si el audio dice lo del guion, fue un error del ASR y hay que revertir ese tramo.\n"]
@@ -78,6 +82,7 @@ def main():
         hyp_b, _ = timed_tokens(b)
         dev_b = {(i1, i2): hyp_b[j1:j2] for _, i1, i2, j1, j2 in opcodes(ref, hyp_b)}
 
+        decided = {(r["guion"], r["oido"]): r["decision"] for r in reviews.get(stem, [])}
         out.append(f"\n## {stem}\n\nModelos: `{name_a}` y `{name_b}`\n")
         corrected, last, n_both = [], 0, 0
         for _, i1, i2, j1, j2 in opcodes(ref, hyp_a):
@@ -85,9 +90,11 @@ def main():
             both = dev_b.get((i1, i2)) == heard
             at = mmss(times_a[min(j1, len(times_a) - 1)]) if times_a else "?"
             context = " ".join(ref[max(0, i1 - 5):i1])
-            tag = "**[AMBOS]**" if both else "[UNO]"
+            decision = decided.get((" ".join(ref[i1:i2]), " ".join(heard)))
+            tag = {"asr": "✔ error del ASR (escuchado)", "habla": "✔ se dijo así (escuchado)"}.get(
+                decision, "**[AMBOS]**" if both else "[UNO]")
             out.append(f"- `{at}` {tag} …{context} **«{' '.join(ref[i1:i2]) or '∅'}»** → «{' '.join(heard) or '∅'}»")
-            if both:
+            if decision == "habla" or (both and decision != "asr"):
                 corrected += ref[last:i1] + heard
                 last = i2
                 n_both += 1
