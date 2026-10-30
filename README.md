@@ -52,6 +52,31 @@ cache/transcripts/       Transcripciones cacheadas (se versionan)
 results/                 CSV y JSON generados
 ```
 
+### Un motor, dos tareas
+
+`engine.pipeline.process_audio(ruta, kind=...)` es la única función que recibe un audio nuevo y
+devuelve transcripción, campos, verificación, dispositivo, tiempo y error. Sirve a los dos esquemas
+de registro cambiando solo el extractor:
+
+| Paso | Entrevista (`kind="entrevista"`) | Llamada (`kind="llamada"`) |
+|---|---|---|
+| Transcripción | `engine/asr.py` | `engine/asr.py` (la misma) |
+| Extracción | `extract_interview` + `INTERVIEW_SCHEMA` | `extract_order` + `ORDER_SCHEMA` |
+| Prompt | `extraction.llm.prompts.entrevista` en `config.yaml` | `extraction.llm.prompts.pedido` |
+| Verificación literal | `engine/verify.py` | `engine/verify.py` (la misma) |
+| Validación | – | `engine/validate.py` (aritmética + error ASR vs. hablante) |
+
+Los scripts por lotes (`extract_interviews.py`, `validate_calls.py`) usan esas mismas funciones del
+motor sobre las transcripciones cacheadas, para no volver a transcribir.
+
+Comando para comprobar que el motor no importa ninguna librería de interfaz (imprime `[]`):
+
+```bash
+python -c "import sys, engine.pipeline; print([m for m in sys.modules if m.split('.')[0] in ('streamlit', 'altair', 'gradio', 'plotly')])"
+```
+
+`tests/test_app.py` comprueba además que `app.py` solo importa `engine.config` y `engine.pipeline`.
+
 ## Instalación
 
 Requisitos: Python 3.12. No hace falta instalar ffmpeg: PyAV (fijado en `requirements.txt`) trae
@@ -87,6 +112,8 @@ python scripts/extract_interviews.py
 python scripts/degrade.py
 python scripts/transcribe.py --set llamadas
 python scripts/validate_calls.py
+python scripts/glossary.py
+python scripts/report.py
 streamlit run app.py
 ```
 
@@ -136,16 +163,24 @@ comparación CPU vs. GPU a igual precisión no se ve afectada.
 Promedio de las 5 entrevistas (3:34 a 3:57 min cada una). Tiempo = solo inferencia, por audio.
 RTF = tiempo / duración del audio (menos de 1 = más rápido que tiempo real).
 
-| Modelo | Dispositivo | Precisión | WER | CER | Tiempo (s) | RTF | VRAM pico (MiB) |
+**Normalización antes de comparar** (`engine/metrics.py::normalize_text`, igual para referencia e
+hipótesis): minúsculas, números en palabras a dígitos («seis mil quinientos» → 6500), sin tildes, sin
+separador de miles (6.500 → 6500), sin puntuación y espacios simples.
+
+**IC 95 %:** bootstrap de percentiles remuestreando los 5 clips con reemplazo (10 000 remuestreos,
+semilla 42; `results/asr_ci.csv`). Con 5 clips el intervalo es ancho: sirve para ver qué diferencias
+no se distinguen del azar, no para dar una cifra precisa.
+
+| Modelo | Dispositivo | Precisión | WER [IC 95 %] | CER | Tiempo (s) | RTF | VRAM pico (MiB) |
 |---|---|---|---|---|---|---|---|
-| small | CPU | int8 | 3.4 % | 1.4 % | 158 | 0.72 | – |
-| small | CPU | float32 | 3.2 % | 1.4 % | 280 | 1.27 | – |
-| small | GPU | int8_float16 | 3.5 % | 1.4 % | 5.8 | 0.026 | 3 505 |
-| small | GPU | float16 | 3.5 % | 1.5 % | 6.0 | 0.027 | 3 446 |
-| medium | CPU | int8 | 1.4 % | 0.8 % | 476 | 2.16 | – |
-| medium | CPU | float32 | 4.2 % | 3.3 % | 819 | 3.70 | – |
-| medium | GPU | int8_float16 | 1.5 % | 0.9 % | 11.5 | 0.052 | 4 270 |
-| medium | GPU | float16 | 4.2 % | 3.3 % | 11.4 | 0.052 | 4 102 |
+| small | CPU | int8 | 3.4 % [2.9–3.9] | 1.4 % | 158 | 0.72 | – |
+| small | CPU | float32 | 3.2 % [2.7–3.8] | 1.4 % | 280 | 1.27 | – |
+| small | GPU | int8_float16 | 3.5 % [3.0–4.1] | 1.4 % | 5.8 | 0.026 | 3 505 |
+| small | GPU | float16 | 3.5 % [3.2–3.8] | 1.5 % | 6.0 | 0.027 | 3 446 |
+| medium | CPU | int8 | 1.4 % [0.8–1.8] | 0.8 % | 476 | 2.16 | – |
+| medium | CPU | float32 | 4.2 % [1.7–6.9] | 3.3 % | 819 | 3.70 | – |
+| medium | GPU | int8_float16 | 1.5 % [0.9–2.0] | 0.9 % | 11.5 | 0.052 | 4 270 |
+| medium | GPU | float16 | 4.2 % [1.7–6.9] | 3.3 % | 11.4 | 0.052 | 4 102 |
 
 - **CPU:** PC local, Intel Core i5-6200U (2 núcleos), 8 GB de RAM, sin GPU NVIDIA.
 - **GPU:** Google Colab, Tesla T4. Cada JSON del cache guarda `runtime_device: cuda`, `gpu_name` y
@@ -165,6 +200,36 @@ Interpretación:
 - **Para producción** elegiríamos medium int8_float16 en GPU (mejor WER, 11 s por audio) y small int8
   si solo hay CPU (RTF 0.72, ~3 % de WER).
 
+### Tarea 1 · Glosario de dominio
+
+**Qué mecanismo hay y en qué versión.** En `faster-whisper` 1.1.1 (la versión fijada) `transcribe()`
+acepta dos: `initial_prompt` (existe desde la primera versión, igual que en `openai-whisper`) y
+`hotwords` (agregado en `faster-whisper` 1.0; no existe en `openai-whisper`). Leyendo el código de la
+versión instalada (`WhisperModel.get_prompt`): `hotwords` se antepone a **cada** ventana de 30 s y se
+ignora si se pasa `prefix`; `initial_prompt` solo entra en la **primera** ventana, después la
+reemplaza el texto ya transcrito. La documentación que circula los mezcla, por eso se midieron los dos.
+
+Misma config que el baseline (small / cpu / int8, 5 entrevistas); glosario en `asr.glossary` de
+`config.yaml` (tecnologías y cargos). `python scripts/glossary.py` → `results/glossary*.csv`.
+
+| Variante | WER [IC 95 %] | Diferencia de WER vs. sin glosario [IC 95 %] | Términos del glosario bien transcritos [IC 95 %] |
+|---|---|---|---|
+| Sin glosario | 3.4 % [2.9–3.9] | – | 18/22 · 82 % [62–93] |
+| `hotwords` | 4.2 % [3.1–6.0] | +0.8 pp [−0.5, +2.9] | 22/22 · 100 % [85–100] |
+| `initial_prompt` | 3.4 % [3.0–3.8] | 0.0 pp [−0.4, +0.3] | 21/22 · 95 % [78–99] |
+
+- **El glosario arregla justo las palabras que importan para el registro.** Sin glosario se perdieron
+  «Power BI», «AWS», «Tableau» y «Azure» (una por entrevista): son valores del campo `tecnologias`.
+  Con `hotwords` salen las 4; con `initial_prompt`, 3 de 4 (sigue fallando «AWS»).
+- **El WER casi no lo ve.** 4 palabras en ~2 000 no mueven el promedio; ningún IC de la diferencia
+  excluye el cero. Es otro ejemplo de por qué el WER solo no sirve para juzgar el registro.
+- **`hotwords` tiene un costo:** en entrevista_03 el WER sube de 2.9 % a 7.6 % porque el modelo se
+  saltó una oración entera («me gusta tener tareas claras…»). Es el mismo modo de falla de borrar
+  tramos que se ve en medium float16. Con 5 clips no se puede saber si es sistemático.
+- **Decisión:** `initial_prompt` gana casi todo el beneficio sin el riesgo de borrar texto. No se activó
+  en el pipeline por defecto porque la extracción y sus métricas ya estaban calculadas sin glosario;
+  queda medido y listo para activarse.
+
 ### Tarea 1 · Extracción: reglas vs. LLM
 
 Sobre la transcripción por defecto (`medium/cuda/float16`), 5 entrevistas × 6 campos. LLM local:
@@ -175,11 +240,27 @@ Sobre la transcripción por defecto (`medium/cuda/float16`), 5 entrevistas × 6 
 | Años de experiencia | 40 % | 80 % |
 | Último puesto | 0 % | 100 % |
 | Tecnologías | 60 % | 80 % |
-| Expectativa salarial | 20 % | 100 % |
+| Pretensión salarial | 20 % | 100 % |
 | Disponibilidad (fecha) | 40 % | 80 % |
 | Nivel de inglés | 0 % | 80 % |
-| **Total** | **27 %** | **87 %** |
-| Valores `sin_verificar` | 20 de 30 | 4 de 30 |
+| **Total [IC 95 % de Wilson]** | **27 % [14–44]** | **87 % [70–95]** |
+| Valores `sin_verificar` | 20 de 30 · 67 % [49–81] | 4 de 30 · 13 % [5–30] |
+
+Cada campo tiene solo 5 observaciones: un 80 % por campo tiene un IC de 38–96 %
+(`results/extraction_ci.csv`). La muestra separa el total del LLM del de las reglas, pero no un campo
+de otro.
+
+Métricas propias de cada tipo de campo (`results/record_metrics.csv`):
+
+| Métrica | Reglas | LLM |
+|---|---|---|
+| F1 macro de `nivel_ingles` (clases básico / intermedio / avanzado) | 0.00 | 0.67 |
+| Error absoluto medio de `anios_experiencia` | 0 años (solo 2 de 5 extraídos) | 0.8 años (5 de 5; un error de 4) |
+| Error absoluto medio de `pretension_salarial` | 4 196 soles (1 de 4 extraído) | 0 soles (4 de 4) |
+
+El error de las reglas en el salario muestra la asimetría entre tipos de campo: en «cuatro mil
+doscientos» la regla capturó «4» y se quedó corta por 4 196 soles. En un campo categórico, un error
+cambia una clase por otra; en un numérico, un dígito perdido es un error de miles.
 
 - Los guiones se escribieron para que las reglas fallen: autocorrecciones («cuatro, perdón, tres»),
   cifras con contexto («programo desde el dos mil dieciocho»), dos cargos o dos niveles de inglés que
@@ -195,6 +276,37 @@ Sobre la transcripción por defecto (`medium/cuda/float16`), 5 entrevistas × 6 
 - **Errores que quedan en el LLM:** años de experiencia de entrevista_02 (exige restar 2026 − 2018);
   nivel de inglés de entrevista_03, cuya evidencia («mi inglés es básico») no está en la transcripción
   porque el ASR la borró (ver arriba); y tecnologías de entrevista_05 (omitió pandas).
+
+### ¿Se puede saber si el registro sirve mirando solo el WER?
+
+No. WER de cada entrevista (`medium/cuda/float16`, la transcripción que usa la extracción) contra el
+acierto del registro del LLM (`results/wer_vs_record.csv`):
+
+| Entrevista | WER | Campos correctos | Qué falló |
+|---|---|---|---|
+| entrevista_01 | **1.2 %** (el más bajo) | 5/6 | disponibilidad: 15 de noviembre en vez del 13 |
+| entrevista_04 | 1.7 % | 6/6 | – |
+| entrevista_02 | 2.7 % | 5/6 | años de experiencia: 4 en vez de 8 |
+| entrevista_05 | 6.5 % | 5/6 | tecnologías: omitió pandas |
+| entrevista_03 | **8.8 %** (el más alto) | 5/6 | nivel de inglés (el ASR borró la frase) |
+
+- **WER bajo, registro roto:** entrevista_01 tiene la mejor transcripción del corpus y aun así guarda
+  una fecha de inicio equivocada. entrevista_02 (2.7 %) guarda 4 años de experiencia en vez de 8: el
+  ASR transcribió bien «desde el dos mil dieciocho» y el error está en la resta.
+- **WER alto, registro casi entero:** entrevista_03 tiene 7 veces el WER de entrevista_01 y aun así
+  saca bien los dos campos más frágiles: el salario (4 200) y los años con autocorrección («cuatro,
+  perdón, tres»). Ningún clip del corpus tiene WER alto y registro perfecto. El más cercano está en
+  las llamadas: llamada_01 en L0 tiene el WER más alto de los 20 audios (15.5 %, por una alucinación)
+  y aun así detecta sus dos trampas y saca bien la promoción y el pago.
+- **Correlación de Spearman** entre WER y acierto del registro: −0.35 en entrevistas (n = 5) y −0.25
+  en llamadas (n = 20, `results/wer_vs_record_llamadas.csv`). Es débil y con estos n no se distingue
+  de cero.
+
+**Qué significa para quien reporta solo WER:** el WER cuenta todas las palabras por igual, pero el
+registro depende de unas pocas (una cifra, una fecha, un nombre propio). Un 1 % de WER puede caer justo
+en el salario, y un 9 % puede caer entero en muletillas. Además, parte de los errores del registro no
+vienen del ASR sino del extractor (la resta de entrevista_02), y esos el WER no los ve nunca. Hay que
+medir las dos capas por separado.
 
 ### Tarea 2 · Escalera de degradación
 
@@ -218,12 +330,26 @@ El SNR se mide sobre el audio generado (columna `snr_vs_anterior_db` de `results
 Transcripción con `medium/cuda/float16`; extracción con `qwen2.5:3b`. 11 trampas: 3 autocorrecciones,
 3 totales erróneos y 5 direcciones con dígitos.
 
-| Nivel | WER | CER | Trampas detectadas | Autocorrecciones | Totales erróneos | Direcciones |
+| Nivel | WER [IC 95 %] | CER | Trampas detectadas [IC 95 %] | Autocorrecciones | Totales erróneos | Direcciones |
 |---|---|---|---|---|---|---|
-| L0 | 7.5 % | 4.6 % | 11/11 | 3/3 | 3/3 | 5/5 |
-| L1 | 6.2 % | 3.5 % | 11/11 | 3/3 | 3/3 | 5/5 |
-| L2 | 6.3 % | 2.9 % | 11/11 | 3/3 | 3/3 | 5/5 |
-| L3 | 10.4 % | 5.0 % | 10/11 | 3/3 | 3/3 | 4/5 |
+| L0 | 7.5 % [4.5–11.8] | 4.6 % | 11/11 [74–100 %] | 3/3 | 3/3 | 5/5 |
+| L1 | 6.2 % [5.3–7.4] | 3.5 % | 11/11 [74–100 %] | 3/3 | 3/3 | 5/5 |
+| L2 | 6.3 % [4.9–7.7] | 2.9 % | 11/11 [74–100 %] | 3/3 | 3/3 | 5/5 |
+| L3 | 10.4 % [8.1–12.7] | 5.0 % | 10/11 [62–98 %] | 3/3 | 3/3 | 4/5 |
+
+Capa del registro (campos del pedido completo, no solo las trampas), con IC de Wilson
+(`results/calls_ci.csv`):
+
+| Nivel | Ítems correctos | Promoción | Forma de pago |
+|---|---|---|---|
+| L0 | 6/13 · 46 % [23–71] | 5/5 · 100 % [57–100] | 4/5 · 80 % [38–96] |
+| L1 | 7/13 · 54 % [29–77] | 5/5 · 100 % [57–100] | 3/5 · 60 % [23–88] |
+| L2 | 5/13 · 38 % [18–65] | 5/5 · 100 % [57–100] | 4/5 · 80 % [38–96] |
+| L3 | 7/13 · 54 % [29–77] | 5/5 · 100 % [57–100] | 3/5 · 60 % [23–88] |
+
+El WER de L3 sí se separa de L1 y L2 (los intervalos no se tocan), pero las curvas de campos no
+muestran una tendencia: con 5 llamadas todos los intervalos de una misma columna se solapan. La capa
+del registro está limitada por el extractor (modelo de 3B), no por el audio.
 
 - **El WER no siempre sube con la degradación.** L0 sale peor que L1 por una alucinación: en
   llamada_01 (L0) Whisper repitió un bloque de ~20 s («paga en efectivo o con tarjeta… llegan a las
@@ -252,9 +378,20 @@ llamada de control (05) como sin error. Hubo un falso positivo: llamada_02 dice 
 pero en L0 el LLM agregó un producto que no se pidió, el total calculado no cuadró y la llamada se
 marcó como error del hablante. La regla depende de que la extracción de ítems sea correcta.
 
+**Qué tan seguido acierta:** 4 de 5 llamadas bien clasificadas, 80 % [IC 95 % de Wilson: 38–96 %],
+igual en los cuatro niveles. La rama «error del ASR» nunca se activó: en ninguna llamada el ASR
+transcribió distinto el total entre niveles, así que esa mitad de la regla no quedó probada con datos
+reales.
+
 ### Limitaciones
 
 - Las direcciones de las llamadas usan nombres de calles reales de Lima con números inventados; no
   corresponden a ninguna persona.
 - La parte final de llamada_03 no se grabó; su referencia refleja lo que sí se dijo (3:08 min).
 - 5 audios por tarea: los promedios se mueven con un solo caso (ver la alucinación de llamada_01).
+  Con n = 5 un 80 % de acierto por campo tiene un IC de 38–96 %: la muestra no permite decir qué
+  campo es más difícil que otro, ni que la escalera degrade los campos del pedido. Sí permite decir
+  que el LLM supera a las reglas (los intervalos del total no se solapan) y que medium int8 tiene
+  menos WER que small en estas entrevistas.
+- Las referencias se corrigieron con ayuda de dos modelos (ver «Referencias»), lo que favorece a esos
+  modelos en el WER.

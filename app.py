@@ -190,6 +190,27 @@ with tab_results:
                     st.markdown(f"**{method}**")
                     st.dataframe(fields_table(verified), hide_index=True, use_container_width=True)
 
+    ci, record, glossary = read_csv("extraction_ci.csv"), read_csv("record_metrics.csv"), read_csv("glossary_summary.csv")
+    if ci is not None:
+        with st.expander("Intervalos de confianza (Wilson, 95 %) y métricas del registro"):
+            st.caption("Con 5 entrevistas por campo los intervalos son anchos: la muestra no separa un campo de otro.")
+            st.dataframe(ci, hide_index=True, use_container_width=True)
+            if record is not None:
+                st.dataframe(record, hide_index=True, use_container_width=True)
+
+    wvr = read_csv("wer_vs_record.csv")
+    if wvr is not None:
+        st.subheader("¿El WER dice si el registro sirve?")
+        st.caption("Cada punto es una entrevista: WER de su transcripción contra el acierto del registro del LLM.")
+        st.scatter_chart(wvr, x="wer", y="acierto_llm")
+        st.dataframe(wvr.drop(columns="set"), hide_index=True, use_container_width=True)
+
+    if glossary is not None:
+        st.subheader("Glosario de dominio")
+        st.caption("Misma config (small / cpu / int8), sin glosario contra hotwords e initial_prompt. "
+                   "dif_wer_vs_sin < 0 = el glosario ayudó; IC por bootstrap sobre los clips.")
+        st.dataframe(glossary, hide_index=True, use_container_width=True)
+
 # ---------------------------------------------------------------- 4. Pedidos (Tarea 2)
 with tab_orders:
     st.subheader(f"Captura de pedidos · {cfg['calls']['domain']}")
@@ -208,6 +229,10 @@ with tab_orders:
         caught = traps.groupby("level")["detectada"].agg(["sum", "count"])
         ladder["trampas detectadas"] = caught["sum"].astype(int).astype(str) + "/" + caught["count"].astype(str)
         st.dataframe(ladder.fillna("—"), use_container_width=True)
+        calls_ci = read_csv("calls_ci.csv")
+        if calls_ci is not None:
+            st.caption("Capa del registro por nivel, con IC de Wilson (95 %)")
+            st.dataframe(calls_ci, hide_index=True, use_container_width=True)
 
         st.markdown("**Trampas: detectadas vs. no detectadas**")
         pivot = traps.pivot_table(index=["llamada", "trampa", "tipo"], columns="level",

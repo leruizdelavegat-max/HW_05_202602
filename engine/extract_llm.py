@@ -22,14 +22,14 @@ INTERVIEW_SCHEMA = {
         "anios_experiencia": _NULLABLE_INT,
         "ultimo_puesto": _NULLABLE_STR,
         "tecnologias": {"type": "array", "items": {"type": "string"}},
-        "expectativa_salarial": _NULLABLE_INT,
+        "pretension_salarial": _NULLABLE_INT,
         "disponibilidad": _NULLABLE_STR,
         "disponibilidad_fecha": _NULLABLE_STR,
         "nivel_ingles": _NULLABLE_STR,
     },
     "required": [
         "anios_experiencia", "ultimo_puesto", "tecnologias",
-        "expectativa_salarial", "disponibilidad", "disponibilidad_fecha", "nivel_ingles",
+        "pretension_salarial", "disponibilidad", "disponibilidad_fecha", "nivel_ingles",
     ],
     "additionalProperties": False,
 }
@@ -61,38 +61,6 @@ ORDER_SCHEMA = {
     "additionalProperties": False,
 }
 
-INTERVIEW_PROMPT = """Extrae los datos del candidato de esta transcripción de entrevista.
-La entrevista se realizó el {fecha} ({dia_semana}).
-Reglas:
-- Copia los textos tal como aparecen en la transcripción; no parafrasees ni traduzcas.
-- Convierte los números dichos en palabras a dígitos (ej. "seis mil quinientos" -> 6500).
-- Si el candidato se corrige, usa el valor final. Si da un rango y luego una cifra, usa la cifra.
-- `tecnologias`: solo las que usó en su trabajo, no las que quiere aprender o dejó de usar.
-- `nivel_ingles`: uno de básico, intermedio, avanzado o fluido, según lo que dice que habla realmente.
-- `disponibilidad`: copia literalmente las palabras de la transcripción en las que el candidato dice
-  cuándo puede empezar (su respuesta final si cambia de idea); `disponibilidad_fecha`: esa fecha en
-  formato AAAA-MM-DD, calculada desde la fecha de la entrevista.
-- Si un dato no se menciona, devuelve null (o lista vacía para tecnologías). No inventes.
-
-<transcripcion>
-{transcript}
-</transcripcion>"""
-
-ORDER_PROMPT = """Extrae el pedido de esta transcripción de una llamada de venta ({domain}).
-Reglas:
-- Si el cliente se corrige ("dos... no, mejor tres"), usa el valor FINAL y anota la corrección en `autocorrecciones`.
-- `tamano` va aparte del producto ("pizza de jamón" + "familiar"); null si el producto no tiene tamaño.
-- `precio_unitario` es el del tamaño que se pidió, no el de otros tamaños que se mencionan.
-- `total_dicho` es el total que dice en voz alta el vendedor o el cliente, aunque esté mal calculado. No lo corrijas.
-- `promocion` es el descuento en moneda (no porcentaje) que se aplica a este pedido; null si no hay o no aplica.
-- `metodo_pago`: efectivo, tarjeta, Yape, etc.; null si no se dice.
-- Copia direcciones y números de contrato tal como aparecen.
-- Si un dato no se menciona, devuelve null. No inventes.
-
-<transcripcion>
-{transcript}
-</transcripcion>"""
-
 
 def _call(prompt: str, schema: dict, cfg: dict) -> dict:
     if cfg.get("provider", "anthropic") == "ollama":
@@ -106,14 +74,14 @@ def _call_ollama(prompt: str, schema: dict, cfg: dict) -> dict:
         "messages": [{"role": "user", "content": prompt}],
         "format": schema,  # Ollama genera solo JSON que cumple el esquema
         "stream": False,
-        "options": {"temperature": 0, "num_ctx": cfg.get("num_ctx", 4096)},
+        "options": {"temperature": 0, "num_ctx": cfg["num_ctx"]},
     }
     request = urllib.request.Request(
-        f"{cfg.get('base_url', 'http://localhost:11434')}/api/chat",
+        f"{cfg['base_url']}/api/chat",
         data=json.dumps(body).encode("utf-8"),
         headers={"Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(request, timeout=cfg.get("timeout_s", 900)) as response:
+    with urllib.request.urlopen(request, timeout=cfg["timeout_s"]) as response:
         return json.loads(json.loads(response.read())["message"]["content"])
 
 
@@ -141,8 +109,8 @@ _WEEKDAYS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "d
 
 
 def extract_interview(transcript: str, cfg: dict, ref_date: date) -> dict:
-    prompt = INTERVIEW_PROMPT.format(transcript=transcript, fecha=ref_date.isoformat(),
-                                     dia_semana=_WEEKDAYS[ref_date.weekday()])
+    prompt = cfg["prompts"]["entrevista"].format(transcript=transcript, fecha=ref_date.isoformat(),
+                                                 dia_semana=_WEEKDAYS[ref_date.weekday()])
     result = _call(prompt, INTERVIEW_SCHEMA, cfg)
     # Los modelos pequeños fallan la aritmética de calendario ("el lunes" desde un jueves):
     # el LLM aporta la frase y la fecha la calcula el mismo código que usan las reglas.
@@ -153,4 +121,4 @@ def extract_interview(transcript: str, cfg: dict, ref_date: date) -> dict:
 
 
 def extract_order(transcript: str, domain: str, cfg: dict) -> dict:
-    return _call(ORDER_PROMPT.format(transcript=transcript, domain=domain), ORDER_SCHEMA, cfg)
+    return _call(cfg["prompts"]["pedido"].format(transcript=transcript, domain=domain), ORDER_SCHEMA, cfg)

@@ -1,0 +1,334 @@
+{
+  "audio": "entrevista_04.mp3",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "hotwords": "Python, SQL, Excel, Power BI, Tableau, pandas, Streamlit, Git, Docker, AWS, Azure, Spark, Java, backend, analista de datos, inteligencia de negocios",
+  "initial_prompt": null,
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 214.64,
+  "load_s": 0.0003907999998773448,
+  "transcribe_s": 136.105497200002,
+  "rtf": 0.634110590756625,
+  "text": "Buenas tardes, gracias por tu tiempo. Vi el link en que figuras como gerente de datos. ¿Ese es tu cargo actual? Buenas tardes, eso lo puse y yo, la verdad, el cargo en el contrato es jefe de proyectos de datos en una aseguradora. Tengo un equipo de seis personas. Entiendo. Antes de traer en detalle qué expectativa salarial tienes, Estaba pensando en 15,000, no, 15,500 soles mensuales, considerando el nivel del puesto. OK. ¿Qué tecnología usa tu equipo? Los procesos de transformación se escriben en Python y los volúmenes grandes se procesan en Spark. Toda la infraestructura está en la nube de Azure. Antes teníamos servidores propios, pero lo apagamos el año pasado. ¿Qué logro destacarías de esa etapa? La migración a la nube. Tomo casi un año, pero el cierre del mes pasó de tardar dos días a estar listo en una mañana. ¿Cuándo podrías empezar? Tengo que dejar todo ordenado y entregar el equipo a mi mejor emplazo, así que necesitaría un mes más o menos. OK. Bueno, el cargo implica coordinar con la casa matriz. ¿Cómo está tu inglés? Viví dos años en Toronto por una maestría, así que lo hablo con fluidez. Diría que avanzado, aunque el asento no lo pierdo. ¿Cómo manejas los conflictos dentro del equipo? Trato de que las decisiones técnicas se discutan con datos y no por jerarquía. Si hay un desacuerdo, hacemos una prueba pequeña y decidimos según el resultado. OK. ¿Y cómo prioriza cuando todas las áreas piren algo al mismo tiempo? Pido que cada área explique qué decisión depende de su pedido, lo que impacta en clientes o en una regulación va primero. El resto entra en una lista que revisamos juntos cada quincena. OK. ¿Qué te gustaría encontrar en tu próximo equipo? Personas con ganas de proponer, me interesa construir un equipo que plantee ideas al negocio y no solo que responda pedidos. Para eso hace falta tiempo para explorar y es algo que siempre defiendo frente a la gerencia. ¿Y cómo sabes si tu equipo está haciendo un buen trabajo o no? Miro si las áreas usan lo que entregamos. Un tablero que nadie abre es un tablero que no debió hacerse por más bonito que sea. Por último, ¿cuántos años llevas trabajando con datos? 13, si cuento la tesis, pero profesionalmente llevo 12 años. Empecé en inteligencia comercial y después pasé a ingeniería de datos. Perfecto. Eso sería todo. Gracias. Gracias a ustedes por la oportunidad.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.1,
+      "text": "Buenas tardes, gracias por tu tiempo."
+    },
+    {
+      "start": 2.1,
+      "end": 5.7,
+      "text": "Vi el link en que figuras como gerente de datos."
+    },
+    {
+      "start": 5.7,
+      "end": 8.700000000000001,
+      "text": "¿Ese es tu cargo actual?"
+    },
+    {
+      "start": 8.700000000000001,
+      "end": 13.74,
+      "text": "Buenas tardes, eso lo puse y yo, la verdad,"
+    },
+    {
+      "start": 13.74,
+      "end": 18.1,
+      "text": "el cargo en el contrato es jefe de proyectos de datos en una"
+    },
+    {
+      "start": 18.1,
+      "end": 19.38,
+      "text": "aseguradora."
+    },
+    {
+      "start": 19.38,
+      "end": 22.900000000000002,
+      "text": "Tengo un equipo de seis personas."
+    },
+    {
+      "start": 22.900000000000002,
+      "end": 24.1,
+      "text": "Entiendo."
+    },
+    {
+      "start": 24.1,
+      "end": 29.98,
+      "text": "Antes de traer en detalle qué expectativa salarial tienes,"
+    },
+    {
+      "start": 30.740000000000002,
+      "end": 37.18,
+      "text": "Estaba pensando en 15,000, no, 15,500 soles mensuales,"
+    },
+    {
+      "start": 37.18,
+      "end": 40.5,
+      "text": "considerando el nivel del puesto."
+    },
+    {
+      "start": 40.5,
+      "end": 41.54,
+      "text": "OK."
+    },
+    {
+      "start": 41.54,
+      "end": 45.86,
+      "text": "¿Qué tecnología usa tu equipo?"
+    },
+    {
+      "start": 45.86,
+      "end": 49.66,
+      "text": "Los procesos de transformación se escriben en Python y los"
+    },
+    {
+      "start": 49.66,
+      "end": 53.42,
+      "text": "volúmenes grandes se procesan en Spark."
+    },
+    {
+      "start": 53.42,
+      "end": 57.1,
+      "text": "Toda la infraestructura está en la nube de Azure."
+    },
+    {
+      "start": 57.1,
+      "end": 59.06,
+      "text": "Antes teníamos servidores propios,"
+    },
+    {
+      "start": 59.06,
+      "end": 63.980000000000004,
+      "text": "pero lo apagamos el año pasado."
+    },
+    {
+      "start": 63.980000000000004,
+      "end": 68.18,
+      "text": "¿Qué logro destacarías de esa etapa?"
+    },
+    {
+      "start": 68.18,
+      "end": 69.46000000000001,
+      "text": "La migración a la nube."
+    },
+    {
+      "start": 69.46000000000001,
+      "end": 75.22,
+      "text": "Tomo casi un año, pero el cierre del mes pasó de tardar dos"
+    },
+    {
+      "start": 75.22,
+      "end": 79.06,
+      "text": "días a estar listo en una mañana."
+    },
+    {
+      "start": 79.06,
+      "end": 82.74000000000001,
+      "text": "¿Cuándo podrías empezar?"
+    },
+    {
+      "start": 82.74000000000001,
+      "end": 86.34,
+      "text": "Tengo que dejar todo ordenado y entregar el equipo a mi"
+    },
+    {
+      "start": 86.34,
+      "end": 90.7,
+      "text": "mejor emplazo, así que necesitaría un mes más o menos."
+    },
+    {
+      "start": 90.7,
+      "end": 92.06,
+      "text": "OK."
+    },
+    {
+      "start": 92.06,
+      "end": 95.62,
+      "text": "Bueno, el cargo implica coordinar con la casa matriz."
+    },
+    {
+      "start": 95.62,
+      "end": 98.58,
+      "text": "¿Cómo está tu inglés?"
+    },
+    {
+      "start": 98.58,
+      "end": 101.30000000000001,
+      "text": "Viví dos años en Toronto por una maestría,"
+    },
+    {
+      "start": 101.30000000000001,
+      "end": 103.58000000000001,
+      "text": "así que lo hablo con fluidez."
+    },
+    {
+      "start": 103.58000000000001,
+      "end": 109.66,
+      "text": "Diría que avanzado, aunque el asento no lo pierdo."
+    },
+    {
+      "start": 109.66,
+      "end": 114.38,
+      "text": "¿Cómo manejas los conflictos dentro del equipo?"
+    },
+    {
+      "start": 114.38,
+      "end": 118.5,
+      "text": "Trato de que las decisiones técnicas se discutan con datos"
+    },
+    {
+      "start": 118.5,
+      "end": 120.53999999999999,
+      "text": "y no por jerarquía."
+    },
+    {
+      "start": 120.53999999999999,
+      "end": 124.5,
+      "text": "Si hay un desacuerdo, hacemos una prueba pequeña y decidimos"
+    },
+    {
+      "start": 124.5,
+      "end": 127.86,
+      "text": "según el resultado."
+    },
+    {
+      "start": 127.86,
+      "end": 128.34,
+      "text": "OK."
+    },
+    {
+      "start": 128.34,
+      "end": 132.34,
+      "text": "¿Y cómo prioriza cuando todas las áreas piren algo al"
+    },
+    {
+      "start": 132.34,
+      "end": 134.85999999999999,
+      "text": "mismo tiempo?"
+    },
+    {
+      "start": 134.85999999999999,
+      "end": 138.57999999999998,
+      "text": "Pido que cada área explique qué decisión depende de su"
+    },
+    {
+      "start": 138.57999999999998,
+      "end": 142.9,
+      "text": "pedido, lo que impacta en clientes o en una regulación"
+    },
+    {
+      "start": 142.9,
+      "end": 144.26,
+      "text": "va primero."
+    },
+    {
+      "start": 144.26,
+      "end": 150.17999999999998,
+      "text": "El resto entra en una lista que revisamos juntos cada quincena."
+    },
+    {
+      "start": 150.17999999999998,
+      "end": 151.1,
+      "text": "OK."
+    },
+    {
+      "start": 151.1,
+      "end": 155.42,
+      "text": "¿Qué te gustaría encontrar en tu próximo equipo?"
+    },
+    {
+      "start": 155.42,
+      "end": 157.34,
+      "text": "Personas con ganas de proponer,"
+    },
+    {
+      "start": 157.34,
+      "end": 160.85999999999999,
+      "text": "me interesa construir un equipo que plantee ideas al"
+    },
+    {
+      "start": 160.85999999999999,
+      "end": 164.34,
+      "text": "negocio y no solo que responda pedidos."
+    },
+    {
+      "start": 164.34,
+      "end": 169.1,
+      "text": "Para eso hace falta tiempo para explorar y es algo que"
+    },
+    {
+      "start": 169.1,
+      "end": 172.54,
+      "text": "siempre defiendo frente a la gerencia."
+    },
+    {
+      "start": 172.54,
+      "end": 178.5,
+      "text": "¿Y cómo sabes si tu equipo está haciendo un buen trabajo o no?"
+    },
+    {
+      "start": 178.5,
+      "end": 182.62,
+      "text": "Miro si las áreas usan lo que entregamos."
+    },
+    {
+      "start": 182.62,
+      "end": 186.26,
+      "text": "Un tablero que nadie abre es un tablero que no debió hacerse"
+    },
+    {
+      "start": 186.26,
+      "end": 189.01999999999998,
+      "text": "por más bonito que sea."
+    },
+    {
+      "start": 189.01999999999998,
+      "end": 195.34,
+      "text": "Por último, ¿cuántos años llevas trabajando con datos?"
+    },
+    {
+      "start": 195.34,
+      "end": 200.34,
+      "text": "13, si cuento la tesis, pero profesionalmente llevo 12"
+    },
+    {
+      "start": 200.34,
+      "end": 201.29999999999998,
+      "text": "años."
+    },
+    {
+      "start": 201.3,
+      "end": 205.38000000000002,
+      "text": "Empecé en inteligencia comercial y después pasé a ingeniería de"
+    },
+    {
+      "start": 205.38000000000002,
+      "end": 207.46,
+      "text": "datos."
+    },
+    {
+      "start": 207.46,
+      "end": 208.46,
+      "text": "Perfecto."
+    },
+    {
+      "start": 208.46,
+      "end": 209.78,
+      "text": "Eso sería todo."
+    },
+    {
+      "start": 209.78,
+      "end": 211.54000000000002,
+      "text": "Gracias."
+    },
+    {
+      "start": 211.54000000000002,
+      "end": 215.38000000000002,
+      "text": "Gracias a ustedes por la oportunidad."
+    }
+  ]
+}

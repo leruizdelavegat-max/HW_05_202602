@@ -1,0 +1,339 @@
+{
+  "audio": "entrevista_01.wav",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "hotwords": "Python, SQL, Excel, Power BI, Tableau, pandas, Streamlit, Git, Docker, AWS, Azure, Spark, Java, backend, analista de datos, inteligencia de negocios",
+  "initial_prompt": null,
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 237.025,
+  "load_s": 4.3142748000027495,
+  "transcribe_s": 154.28598559999955,
+  "rtf": 0.650927056639593,
+  "text": "Buenos días, gracias por venir. Bien, tú se ve que trabajas mucho con tableros. ¿Con qué herramienta armas tu día a día? Buenos días. Hoy, casi todo lo hago en Python para limpiar datos y en SQL para las consultas. Los tableros los publico en Power BI. Antes usábamos Excel para todo, pero el año pasado lo dejamos porque los archivos se volvían inmanejables. ¿Y en qué área estabas? Estaba en el área comercial de un banco mediano. Entré como asistente de reportes y hace dos años me ascendieron. Ahora el cargo es analista de datos senior. ¿Qué proyectos destacarías? Un tablero de metas por agencia. Antes cada agencia mandaba su archivo y alguien los puntaba todos los lunes, lo cual era ineficiente. Ahora se actualiza solo cada mañana y la agencia ve el avance por región sin esperar. ¿El equipo revisa la documentación técnica en inglés? ¿Cómo te va a comenzar? Leer bien porque leo documentación todos los días en el instituto y llegué hasta el nivel intermedio. Hablar me cuesta un poco más, sobre todo, en reuniones largas. OK. ¿Cómo explicas tus resultados a personas que no son del área técnica? Empiezo por la conclusión y no por el método. Primero muestro que agencias están atrasadas. Y si me preguntan, explico cómo se calculó cada indicador. ¿Y qué haces cuando los datos llegan con errores? Hablo con quien genera la información para entender de dónde viene el error y dejo una validación automática para que no vuelva a pasar sin que nadie se entere. ¿Trabajas mejor con plazos ajustados o tal vez con proyectos largos? Con proyectos largos me organizo muchísimo mejor. Pero en el banco aprendí a manejar los cierres de mes que siempre son urgentes. Lo que hago es dejar listas las consultas con anticipación para que ese día sólo haya que revisar y no empezar desde cero. OK. Bueno, ahora hablemos de condiciones. ¿Cuánto te gustaría ganar? Actualmente gano 5,800. Buscaría algo entre 7,000 y 7,500. Pongámoslo 7,000 para empezar. OK. ¿Y cuánto tiempo llevas trabajando en general? En el banco va a ser 5 años y antes estuve uno como practicante en una consultora, o sea, 6 en total. OK. ¿Y cuándo podrías empezar? En el banco piden 15 días de preaviso, así que contando desde hoy a mediados de noviembre. Perfecto. ¿Tienes alguna pregunta para nosotros? Sí, ¿cada cuánto presentan resultados a la gerencia? Ah, eso. Una vez al mes. Y, bueno, gracias por tu tiempo. Te escribiremos esta semana.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.2800000000000002,
+      "text": "Buenos días, gracias por venir."
+    },
+    {
+      "start": 2.2800000000000002,
+      "end": 5.4,
+      "text": "Bien, tú se ve que trabajas mucho con tableros."
+    },
+    {
+      "start": 5.4,
+      "end": 10.040000000000001,
+      "text": "¿Con qué herramienta armas tu día a día?"
+    },
+    {
+      "start": 10.040000000000001,
+      "end": 10.92,
+      "text": "Buenos días."
+    },
+    {
+      "start": 10.92,
+      "end": 16.12,
+      "text": "Hoy, casi todo lo hago en Python para limpiar datos y en SQL"
+    },
+    {
+      "start": 16.12,
+      "end": 18.04,
+      "text": "para las consultas."
+    },
+    {
+      "start": 18.04,
+      "end": 21.64,
+      "text": "Los tableros los publico en Power BI."
+    },
+    {
+      "start": 21.64,
+      "end": 26.12,
+      "text": "Antes usábamos Excel para todo, pero el año pasado lo dejamos"
+    },
+    {
+      "start": 26.12,
+      "end": 31.32,
+      "text": "porque los archivos se volvían inmanejables."
+    },
+    {
+      "start": 31.32,
+      "end": 34.56,
+      "text": "¿Y en qué área estabas?"
+    },
+    {
+      "start": 34.56,
+      "end": 37.6,
+      "text": "Estaba en el área comercial de un banco mediano."
+    },
+    {
+      "start": 37.6,
+      "end": 42.28,
+      "text": "Entré como asistente de reportes y hace dos años me ascendieron."
+    },
+    {
+      "start": 42.28,
+      "end": 48.040000000000006,
+      "text": "Ahora el cargo es analista de datos senior."
+    },
+    {
+      "start": 48.040000000000006,
+      "end": 52.56,
+      "text": "¿Qué proyectos destacarías?"
+    },
+    {
+      "start": 52.56,
+      "end": 54.96,
+      "text": "Un tablero de metas por agencia."
+    },
+    {
+      "start": 54.96,
+      "end": 59.24,
+      "text": "Antes cada agencia mandaba su archivo y alguien los puntaba"
+    },
+    {
+      "start": 59.24,
+      "end": 62.84,
+      "text": "todos los lunes, lo cual era ineficiente."
+    },
+    {
+      "start": 62.84,
+      "end": 67.68,
+      "text": "Ahora se actualiza solo cada mañana y la agencia ve el avance"
+    },
+    {
+      "start": 67.68,
+      "end": 71.08,
+      "text": "por región sin esperar."
+    },
+    {
+      "start": 71.08,
+      "end": 75.44,
+      "text": "¿El equipo revisa la documentación técnica en inglés?"
+    },
+    {
+      "start": 75.44,
+      "end": 78.32,
+      "text": "¿Cómo te va a comenzar?"
+    },
+    {
+      "start": 78.32000000000001,
+      "end": 84.32000000000001,
+      "text": "Leer bien porque leo documentación todos los días en el"
+    },
+    {
+      "start": 84.32000000000001,
+      "end": 87.96000000000001,
+      "text": "instituto y llegué hasta el nivel intermedio."
+    },
+    {
+      "start": 87.96000000000001,
+      "end": 90.88000000000001,
+      "text": "Hablar me cuesta un poco más, sobre todo,"
+    },
+    {
+      "start": 90.88000000000001,
+      "end": 93.84,
+      "text": "en reuniones largas."
+    },
+    {
+      "start": 93.84,
+      "end": 95.0,
+      "text": "OK."
+    },
+    {
+      "start": 95.0,
+      "end": 98.4,
+      "text": "¿Cómo explicas tus resultados a personas que no son del"
+    },
+    {
+      "start": 98.4,
+      "end": 99.4,
+      "text": "área técnica?"
+    },
+    {
+      "start": 102.0,
+      "end": 105.36000000000001,
+      "text": "Empiezo por la conclusión y no por el método."
+    },
+    {
+      "start": 105.36,
+      "end": 112.03999999999999,
+      "text": "Primero muestro que agencias están atrasadas."
+    },
+    {
+      "start": 112.03999999999999,
+      "end": 118.28,
+      "text": "Y si me preguntan, explico cómo se calculó cada indicador."
+    },
+    {
+      "start": 118.28,
+      "end": 123.4,
+      "text": "¿Y qué haces cuando los datos llegan con errores?"
+    },
+    {
+      "start": 123.4,
+      "end": 127.16,
+      "text": "Hablo con quien genera la información para entender de"
+    },
+    {
+      "start": 127.16,
+      "end": 131.56,
+      "text": "dónde viene el error y dejo una validación automática"
+    },
+    {
+      "start": 131.56,
+      "end": 136.32,
+      "text": "para que no vuelva a pasar sin que nadie se entere."
+    },
+    {
+      "start": 136.32,
+      "end": 140.08,
+      "text": "¿Trabajas mejor con plazos ajustados o tal vez con"
+    },
+    {
+      "start": 140.08,
+      "end": 142.56,
+      "text": "proyectos largos?"
+    },
+    {
+      "start": 142.56,
+      "end": 146.52,
+      "text": "Con proyectos largos me organizo muchísimo mejor."
+    },
+    {
+      "start": 146.52,
+      "end": 150.8,
+      "text": "Pero en el banco aprendí a manejar los cierres de mes que"
+    },
+    {
+      "start": 150.8,
+      "end": 152.24,
+      "text": "siempre son urgentes."
+    },
+    {
+      "start": 152.24,
+      "end": 157.04,
+      "text": "Lo que hago es dejar listas las consultas con anticipación"
+    },
+    {
+      "start": 157.04,
+      "end": 160.68,
+      "text": "para que ese día sólo haya que revisar y no empezar"
+    },
+    {
+      "start": 160.68,
+      "end": 162.76000000000002,
+      "text": "desde cero."
+    },
+    {
+      "start": 162.76000000000002,
+      "end": 163.56,
+      "text": "OK."
+    },
+    {
+      "start": 163.56,
+      "end": 166.32,
+      "text": "Bueno, ahora hablemos de condiciones."
+    },
+    {
+      "start": 166.32,
+      "end": 169.64000000000001,
+      "text": "¿Cuánto te gustaría ganar?"
+    },
+    {
+      "start": 169.64000000000001,
+      "end": 173.48000000000002,
+      "text": "Actualmente gano 5,800."
+    },
+    {
+      "start": 173.48000000000002,
+      "end": 179.12,
+      "text": "Buscaría algo entre 7,000 y 7,500."
+    },
+    {
+      "start": 179.12,
+      "end": 184.24,
+      "text": "Pongámoslo 7,000 para empezar."
+    },
+    {
+      "start": 184.24,
+      "end": 185.16,
+      "text": "OK."
+    },
+    {
+      "start": 185.16,
+      "end": 190.56,
+      "text": "¿Y cuánto tiempo llevas trabajando en general?"
+    },
+    {
+      "start": 190.64000000000001,
+      "end": 196.24,
+      "text": "En el banco va a ser 5 años y antes estuve uno como"
+    },
+    {
+      "start": 196.24,
+      "end": 202.16,
+      "text": "practicante en una consultora, o sea, 6 en total."
+    },
+    {
+      "start": 202.16,
+      "end": 202.72,
+      "text": "OK."
+    },
+    {
+      "start": 202.72,
+      "end": 204.48,
+      "text": "¿Y cuándo podrías empezar?"
+    },
+    {
+      "start": 208.32,
+      "end": 212.92000000000002,
+      "text": "En el banco piden 15 días de preaviso,"
+    },
+    {
+      "start": 212.92000000000002,
+      "end": 217.56,
+      "text": "así que contando desde hoy a mediados de noviembre."
+    },
+    {
+      "start": 217.56,
+      "end": 218.72,
+      "text": "Perfecto."
+    },
+    {
+      "start": 218.72,
+      "end": 222.96,
+      "text": "¿Tienes alguna pregunta para nosotros?"
+    },
+    {
+      "start": 222.96,
+      "end": 228.72,
+      "text": "Sí, ¿cada cuánto presentan resultados a la gerencia?"
+    },
+    {
+      "start": 228.72,
+      "end": 229.64,
+      "text": "Ah, eso."
+    },
+    {
+      "start": 229.64,
+      "end": 231.8,
+      "text": "Una vez al mes."
+    },
+    {
+      "start": 231.8,
+      "end": 234.64,
+      "text": "Y, bueno, gracias por tu tiempo."
+    },
+    {
+      "start": 234.64,
+      "end": 237.48,
+      "text": "Te escribiremos esta semana."
+    }
+  ]
+}

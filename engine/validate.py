@@ -27,7 +27,6 @@ def classify_error(declared_by_level: dict[str, float | None], computed_l0: floa
       - el total declarado es el mismo en todos los niveles y no cuadra -> error_hablante
       - el total declarado cambia entre niveles                          -> error_asr
       - todos los niveles cuadran                                       -> sin_error
-    Esta regla es un punto de partida: compárala con tu ground truth y ajústala.
     """
     values = [v for v in declared_by_level.values() if v is not None]
     if not values:

@@ -9,7 +9,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
   "anios_experiencia": 12,
   "ultimo_puesto": "jefe de proyectos de datos",
   "tecnologias": ["python", "spark", "azure"],
-  "expectativa_salarial": 15500,
+  "pretension_salarial": 15500,
   "disponibilidad": "2026-11-29",
   "nivel_ingles": "avanzado"
 }

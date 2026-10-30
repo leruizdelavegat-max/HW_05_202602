@@ -36,7 +36,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": null,
         "estado": "sin_verificar"
       },
@@ -81,7 +81,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": 7000,
         "estado": "verificado"
       },
@@ -138,7 +138,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": null,
         "estado": "sin_verificar"
       },
@@ -188,7 +188,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": 9000,
         "estado": "verificado"
       },
@@ -235,7 +235,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": 4,
         "estado": "verificado"
       },
@@ -280,7 +280,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": 4200,
         "estado": "verificado"
       },
@@ -290,7 +290,7 @@
         "fecha": "2026-12-01"
       },
       "nivel_ingles": {
-        "valor": "Intermedio",
+        "valor": "Fluido",
         "estado": "sin_verificar"
       }
     }
@@ -327,7 +327,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": null,
         "estado": "sin_verificar"
       },
@@ -372,12 +372,12 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": 15500,
         "estado": "verificado"
       },
       "disponibilidad": {
-        "valor": "Tengo que dejar todo ordenado y entregar el equipo a mi reemplazo, así que necesitaría un mes más o menos.",
+        "valor": "Tengo que dejar todo ordenado y entregar el equipo a mi reemplazo, así que necesitaría un mes más o menos",
         "estado": "verificado",
         "fecha": "2026-11-29"
       },
@@ -424,7 +424,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": null,
         "estado": "sin_verificar"
       },
@@ -469,7 +469,7 @@
           }
         ]
       },
-      "expectativa_salarial": {
+      "pretension_salarial": {
         "valor": null,
         "estado": "sin_verificar"
       },

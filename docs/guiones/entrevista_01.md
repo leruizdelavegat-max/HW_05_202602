@@ -9,7 +9,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
   "anios_experiencia": 6,
   "ultimo_puesto": "analista de datos senior",
   "tecnologias": ["python", "sql", "power bi"],
-  "expectativa_salarial": 7000,
+  "pretension_salarial": 7000,
   "disponibilidad": "2026-11-13",
   "nivel_ingles": "intermedio"
 }

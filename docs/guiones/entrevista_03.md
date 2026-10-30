@@ -9,7 +9,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
   "anios_experiencia": 3,
   "ultimo_puesto": "asistente de inteligencia de negocios",
   "tecnologias": ["excel", "tableau", "sql"],
-  "expectativa_salarial": 4200,
+  "pretension_salarial": 4200,
   "disponibilidad": "2026-12-01",
   "nivel_ingles": "básico"
 }
