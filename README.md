@@ -77,6 +77,12 @@ streamlit run app.py
 
 Cada transcripción se cachea en `cache/transcripts/`; si vuelves a correr un paso, no se recalcula.
 
+Pruebas del motor y de la app (no requieren GPU, audio ni API key):
+
+```bash
+python -m pytest -q tests
+```
+
 ### Comparación con GPU (Google Colab)
 
 Este equipo no tiene GPU NVIDIA, así que las combinaciones `cuda` del grid se corren en Colab:
