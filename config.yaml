@@ -50,9 +50,13 @@ extraction:
     - pandas
     - streamlit
   llm:
-    model: claude-opus-5-5
-    effort: low
-    max_tokens: 4000
+    # ollama = modelo local gratuito (sin API key). anthropic = Claude por API (ANTHROPIC_API_KEY en .env).
+    provider: ollama
+    model: qwen2.5:3b              # ~2 GB; cabe en 8 GB de RAM. Con más RAM: qwen2.5:7b
+    base_url: http://localhost:11434
+    num_ctx: 4096                  # una transcripción de 4 min cabe holgada
+    timeout_s: 900
+    # Para usar Claude: provider: anthropic, model: claude-opus-5-5, effort: low, max_tokens: 4000
 
 calls:
   domain: restaurante              # restaurante | telefonia

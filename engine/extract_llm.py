@@ -1,12 +1,15 @@
-"""Extracción con LLM (Claude) usando salida estructurada (JSON Schema).
+"""Extracción con LLM usando salida estructurada (JSON Schema).
+
+Dos proveedores, según `extraction.llm.provider` en config.yaml:
+- `ollama`: modelo local y gratuito (sin API key); Ollama restringe la salida al esquema.
+- `anthropic`: Claude por API (requiere ANTHROPIC_API_KEY en .env).
 
 El LLM solo propone valores; después engine.verify comprueba que aparezcan literalmente
 en la transcripción. Lo que no aparezca queda como `sin_verificar`.
 """
 import json
+import urllib.request
 from datetime import date
-
-import anthropic
 
 _NULLABLE_STR = {"type": ["string", "null"]}
 _NULLABLE_INT = {"type": ["integer", "null"]}
@@ -89,6 +92,31 @@ Reglas:
 
 
 def _call(prompt: str, schema: dict, cfg: dict) -> dict:
+    if cfg.get("provider", "anthropic") == "ollama":
+        return _call_ollama(prompt, schema, cfg)
+    return _call_anthropic(prompt, schema, cfg)
+
+
+def _call_ollama(prompt: str, schema: dict, cfg: dict) -> dict:
+    body = {
+        "model": cfg["model"],
+        "messages": [{"role": "user", "content": prompt}],
+        "format": schema,  # Ollama genera solo JSON que cumple el esquema
+        "stream": False,
+        "options": {"temperature": 0, "num_ctx": cfg.get("num_ctx", 4096)},
+    }
+    request = urllib.request.Request(
+        f"{cfg.get('base_url', 'http://localhost:11434')}/api/chat",
+        data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(request, timeout=cfg.get("timeout_s", 900)) as response:
+        return json.loads(json.loads(response.read())["message"]["content"])
+
+
+def _call_anthropic(prompt: str, schema: dict, cfg: dict) -> dict:
+    import anthropic
+
     client = anthropic.Anthropic()
     response = client.beta.messages.create(
         model=cfg["model"],
