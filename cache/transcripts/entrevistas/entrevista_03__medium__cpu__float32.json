@@ -1,0 +1,142 @@
+{
+  "audio": "entrevista_03.mp3",
+  "model": "medium",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "float32",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 217.48,
+  "load_s": 0.0003187000038451515,
+  "transcribe_s": 818.6504303999973,
+  "rtf": 3.764256163325351,
+  "text": "Buenos días. Empecemos por tu experiencia. ¿Cuánto tiempo llevas en el área de datos? Buenos días. Tengo cuatro, perdón, tres años de experiencia. Empecé como practicante y luego me contrataron a tiempo completo. Antes de seguir, ¿desde cuándo podrías empezar? Necesitamos cubrir el puesto muy pronto. ¿Podría partir del 15 de noviembre? No, mejor desde el 1 de diciembre porque tengo que entregar un proyecto a fin de mes. Ok. ¿Qué herramientas usas? Empecé haciendo todo en Excel con tablas dinámicas, después aprendí Tableau para los tableros y SQL para sacar los datos directamente de la base sin pedírselo a sistemas. En tu CV pusiste inglés avanzado. ¿Podemos hacer un par de preguntas en inglés? Gracias por aclararlo. ¿Cuál era tu cargo en tu último trabajo? Mi cargo era asistente de inteligencia de negocios, aunque en la práctica hacía el trabajo de un analista. Preparaba los reportes de inventario y de ventas para la tienda. ¿Recuerdas algún problema que hayas resuelto con esos datos? Sí, algunas tiendas se quedaban sin productos de temporada, con un tablero de rotación semanal, los jefes de zona pidieron reposición antes y los quiebres de stock bajaron bastante. ¿Cómo te mantienes al día con nuevas herramientas? Sigo cursos en línea y trato de aplicar lo que aprendo en algo del trabajo, aunque sea pequeño. ¿Prefieres trabajar en equipo o por tu cuenta? Me gusta tener tareas claras que pueda avanzar por mi cuenta, pero siempre reviso el trabajo con alguien antes de presentarlo. ¿Cómo te vas presentando resultados frente a gerentes? Al principio me costaba mucho, hasta me temblaba la voz. Ahora preparo dos o tres mensajes clave y practico antes con alguien del equipo, con eso las reuniones salen mucho mejor. ¿Qué te gustaría aprender en este puesto? Me gustaría aprender a automatizar los reportes porque todavía hago muchas cosas a mano y también entender mejor cómo se usan los datos para decidir los precios. Por último, ¿cuál es tu pretensión salarial? Estaba pensando en algo entre 4.000 y 4.500 soles. Si me piden una cifra, 4.200. Muy bien. ¿Alguna pregunta? Sí, ¿el puesto incluye capacitaciones? Claro, tenemos un programa de formación interna en realidad. Bueno, eso es todo. Gracias por venir. Gracias a usted. Hasta luego.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "text": "Buenos días. Empecemos por tu experiencia. ¿Cuánto tiempo llevas en el área de datos?"
+    },
+    {
+      "start": 7.0,
+      "end": 16.0,
+      "text": "Buenos días. Tengo cuatro, perdón, tres años de experiencia. Empecé como practicante y luego me contrataron a tiempo completo."
+    },
+    {
+      "start": 17.0,
+      "end": 23.0,
+      "text": "Antes de seguir, ¿desde cuándo podrías empezar? Necesitamos cubrir el puesto muy pronto."
+    },
+    {
+      "start": 24.0,
+      "end": 34.0,
+      "text": "¿Podría partir del 15 de noviembre? No, mejor desde el 1 de diciembre porque tengo que entregar un proyecto a fin de mes."
+    },
+    {
+      "start": 35.0,
+      "end": 38.0,
+      "text": "Ok. ¿Qué herramientas usas?"
+    },
+    {
+      "start": 39.0,
+      "end": 54.0,
+      "text": "Empecé haciendo todo en Excel con tablas dinámicas, después aprendí Tableau para los tableros y SQL para sacar los datos directamente de la base sin pedírselo a sistemas."
+    },
+    {
+      "start": 55.0,
+      "end": 61.0,
+      "text": "En tu CV pusiste inglés avanzado. ¿Podemos hacer un par de preguntas en inglés?"
+    },
+    {
+      "start": 75.0,
+      "end": 80.0,
+      "text": "Gracias por aclararlo. ¿Cuál era tu cargo en tu último trabajo?"
+    },
+    {
+      "start": 84.0,
+      "end": 96.0,
+      "text": "Mi cargo era asistente de inteligencia de negocios, aunque en la práctica hacía el trabajo de un analista. Preparaba los reportes de inventario y de ventas para la tienda."
+    },
+    {
+      "start": 97.0,
+      "end": 101.0,
+      "text": "¿Recuerdas algún problema que hayas resuelto con esos datos?"
+    },
+    {
+      "start": 101.0,
+      "end": 116.0,
+      "text": "Sí, algunas tiendas se quedaban sin productos de temporada, con un tablero de rotación semanal, los jefes de zona pidieron reposición antes y los quiebres de stock bajaron bastante."
+    },
+    {
+      "start": 117.0,
+      "end": 122.0,
+      "text": "¿Cómo te mantienes al día con nuevas herramientas?"
+    },
+    {
+      "start": 123.0,
+      "end": 130.0,
+      "text": "Sigo cursos en línea y trato de aplicar lo que aprendo en algo del trabajo, aunque sea pequeño."
+    },
+    {
+      "start": 131.0,
+      "end": 135.0,
+      "text": "¿Prefieres trabajar en equipo o por tu cuenta?"
+    },
+    {
+      "start": 136.0,
+      "end": 144.0,
+      "text": "Me gusta tener tareas claras que pueda avanzar por mi cuenta, pero siempre reviso el trabajo con alguien antes de presentarlo."
+    },
+    {
+      "start": 145.0,
+      "end": 149.0,
+      "text": "¿Cómo te vas presentando resultados frente a gerentes?"
+    },
+    {
+      "start": 149.0,
+      "end": 165.0,
+      "text": "Al principio me costaba mucho, hasta me temblaba la voz. Ahora preparo dos o tres mensajes clave y practico antes con alguien del equipo, con eso las reuniones salen mucho mejor."
+    },
+    {
+      "start": 166.0,
+      "end": 169.0,
+      "text": "¿Qué te gustaría aprender en este puesto?"
+    },
+    {
+      "start": 170.0,
+      "end": 181.0,
+      "text": "Me gustaría aprender a automatizar los reportes porque todavía hago muchas cosas a mano y también entender mejor cómo se usan los datos para decidir los precios."
+    },
+    {
+      "start": 182.0,
+      "end": 186.0,
+      "text": "Por último, ¿cuál es tu pretensión salarial?"
+    },
+    {
+      "start": 187.0,
+      "end": 199.0,
+      "text": "Estaba pensando en algo entre 4.000 y 4.500 soles. Si me piden una cifra, 4.200."
+    },
+    {
+      "start": 200.0,
+      "end": 202.0,
+      "text": "Muy bien. ¿Alguna pregunta?"
+    },
+    {
+      "start": 203.0,
+      "end": 206.0,
+      "text": "Sí, ¿el puesto incluye capacitaciones?"
+    },
+    {
+      "start": 207.0,
+      "end": 214.0,
+      "text": "Claro, tenemos un programa de formación interna en realidad. Bueno, eso es todo. Gracias por venir."
+    },
+    {
+      "start": 214.0,
+      "end": 217.0,
+      "text": "Gracias a usted. Hasta luego."
+    }
+  ]
+}

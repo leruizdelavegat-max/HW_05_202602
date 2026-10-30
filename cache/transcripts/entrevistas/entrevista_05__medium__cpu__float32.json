@@ -1,0 +1,182 @@
+{
+  "audio": "entrevista_05.mp3",
+  "model": "medium",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "float32",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 213.6,
+  "load_s": 387.7071205,
+  "transcribe_s": 849.8224299,
+  "rtf": 3.9785694283707866,
+  "text": "Hola, buenos días. Parte de la entrevista va a ser en inglés, entonces te voy a preguntar qué nivel de inglés tienes. Buenos días. Tengo un certificado B, uno que vendría a ser intermedio. Leo documentación técnica todos los días. Hablar me cuesta un poco más. Perfecto. ¿Y cuándo podrías empezar? Desde mañana si quieren. La startup donde trabajaba cerró sus operaciones en Lima el mes pasado. Oh, lo siento. Cuéntame cómo fue tu paso por ahí. Estuve seis meses de prácticas en el área de operaciones y después, un año y medio ya con contrato en la misma startup de logística, analizaba los tiempos de entrega de los repartidores para encontrar rutas más eficientes. Bueno, ahora hablemos de salario. ¿Cuánto te gustaría ganar? En las prácticas me pagaban 1500 soles, pero eso no sirve como referencia. Preferiría conversarlo cuando conozca mejor las funciones y el horario del puesto. Claro, no hay problema. ¿Con qué herramientas trabajas? Programaba en Python, sobre todo con pandas. También armé una aplicación interna con Streamlit para que operaciones consultara los indicadores sin depender de nosotros. El código lo manejábamos en Git. ¿Cómo fue tener usuarios de otra área usando tu aplicación? Al principio me pedían muchos cambios, pero aprendí a preguntar primero qué decisión querían tomar con los datos. Eso hizo que la aplicación fuera mucho más simple. Claro. ¿Y qué fue lo más difícil de trabajar en una startup? Que todo cambiaba muy rápido. Un mes la prioridad era bajar los costos de reparto y al siguiente era abrir una ciudad nueva. Aprendí a no encariñarme con un análisis y a entregar algo útil aunque no fuera perfecto. ¿Y trabajas por tu cuenta o en equipo? Eramos tres en el área de datos. Nos repartíamos los pedidos cada lunes y los viernes mostrábamos lo que habíamos avanzado. ¿Cuál dirías que es tu mayor debilidad? A veces me cuesta pedir ayuda a tiempo. Ahora, si me quedo atascado un buen rato, consulto con alguien del equipo. ¿Y cómo te ves dentro de unos años? Me gustaría liderar proyectos de análisis de punta a punta, desde entender el problema del negocio hasta poner la solución en manos de los usuarios. Claro. Por último, ¿cuál fue tu último cargo? Empecé a trabajar en un negocio en el que trabajaba. Claro. Por último, ¿cuál fue tu último cargo? Empecé como practicante de operaciones, pero el cierre de la startup mi cargo era analista junior de datos. Muy bien. Gracias por la conversación. Te avisaremos sobre los siguientes pasos. Muchas gracias. Que tengan buen día.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "text": "Hola, buenos días. Parte de la entrevista va a ser en inglés, entonces te voy a preguntar qué nivel de inglés tienes."
+    },
+    {
+      "start": 9.0,
+      "end": 15.0,
+      "text": "Buenos días. Tengo un certificado B, uno que vendría a ser intermedio."
+    },
+    {
+      "start": 16.0,
+      "end": 21.0,
+      "text": "Leo documentación técnica todos los días. Hablar me cuesta un poco más."
+    },
+    {
+      "start": 22.0,
+      "end": 25.0,
+      "text": "Perfecto. ¿Y cuándo podrías empezar?"
+    },
+    {
+      "start": 26.0,
+      "end": 35.0,
+      "text": "Desde mañana si quieren. La startup donde trabajaba cerró sus operaciones en Lima el mes pasado."
+    },
+    {
+      "start": 36.0,
+      "end": 40.0,
+      "text": "Oh, lo siento. Cuéntame cómo fue tu paso por ahí."
+    },
+    {
+      "start": 42.0,
+      "end": 51.0,
+      "text": "Estuve seis meses de prácticas en el área de operaciones y después, un año y medio ya con contrato en la misma startup de logística,"
+    },
+    {
+      "start": 51.0,
+      "end": 57.0,
+      "text": "analizaba los tiempos de entrega de los repartidores para encontrar rutas más eficientes."
+    },
+    {
+      "start": 58.0,
+      "end": 62.0,
+      "text": "Bueno, ahora hablemos de salario. ¿Cuánto te gustaría ganar?"
+    },
+    {
+      "start": 63.0,
+      "end": 70.0,
+      "text": "En las prácticas me pagaban 1500 soles, pero eso no sirve como referencia."
+    },
+    {
+      "start": 71.0,
+      "end": 76.0,
+      "text": "Preferiría conversarlo cuando conozca mejor las funciones y el horario del puesto."
+    },
+    {
+      "start": 77.0,
+      "end": 80.0,
+      "text": "Claro, no hay problema. ¿Con qué herramientas trabajas?"
+    },
+    {
+      "start": 82.0,
+      "end": 85.0,
+      "text": "Programaba en Python, sobre todo con pandas."
+    },
+    {
+      "start": 86.0,
+      "end": 96.0,
+      "text": "También armé una aplicación interna con Streamlit para que operaciones consultara los indicadores sin depender de nosotros."
+    },
+    {
+      "start": 97.0,
+      "end": 100.0,
+      "text": "El código lo manejábamos en Git."
+    },
+    {
+      "start": 101.0,
+      "end": 105.0,
+      "text": "¿Cómo fue tener usuarios de otra área usando tu aplicación?"
+    },
+    {
+      "start": 107.0,
+      "end": 114.0,
+      "text": "Al principio me pedían muchos cambios, pero aprendí a preguntar primero qué decisión querían tomar con los datos."
+    },
+    {
+      "start": 115.0,
+      "end": 118.0,
+      "text": "Eso hizo que la aplicación fuera mucho más simple."
+    },
+    {
+      "start": 119.0,
+      "end": 123.0,
+      "text": "Claro. ¿Y qué fue lo más difícil de trabajar en una startup?"
+    },
+    {
+      "start": 124.0,
+      "end": 131.0,
+      "text": "Que todo cambiaba muy rápido. Un mes la prioridad era bajar los costos de reparto y al siguiente era abrir una ciudad nueva."
+    },
+    {
+      "start": 132.0,
+      "end": 138.0,
+      "text": "Aprendí a no encariñarme con un análisis y a entregar algo útil aunque no fuera perfecto."
+    },
+    {
+      "start": 139.0,
+      "end": 142.0,
+      "text": "¿Y trabajas por tu cuenta o en equipo?"
+    },
+    {
+      "start": 142.0,
+      "end": 149.0,
+      "text": "Eramos tres en el área de datos. Nos repartíamos los pedidos cada lunes y los viernes mostrábamos lo que habíamos avanzado."
+    },
+    {
+      "start": 150.0,
+      "end": 153.0,
+      "text": "¿Cuál dirías que es tu mayor debilidad?"
+    },
+    {
+      "start": 155.0,
+      "end": 164.0,
+      "text": "A veces me cuesta pedir ayuda a tiempo. Ahora, si me quedo atascado un buen rato, consulto con alguien del equipo."
+    },
+    {
+      "start": 164.0,
+      "end": 167.0,
+      "text": "¿Y cómo te ves dentro de unos años?"
+    },
+    {
+      "start": 169.0,
+      "end": 179.0,
+      "text": "Me gustaría liderar proyectos de análisis de punta a punta, desde entender el problema del negocio hasta poner la solución en manos de los usuarios."
+    },
+    {
+      "start": 180.0,
+      "end": 184.0,
+      "text": "Claro. Por último, ¿cuál fue tu último cargo?"
+    },
+    {
+      "start": 185.0,
+      "end": 188.0,
+      "text": "Empecé a trabajar en un negocio en el que trabajaba."
+    },
+    {
+      "start": 188.0,
+      "end": 192.0,
+      "text": "Claro. Por último, ¿cuál fue tu último cargo?"
+    },
+    {
+      "start": 193.0,
+      "end": 204.0,
+      "text": "Empecé como practicante de operaciones, pero el cierre de la startup mi cargo era analista junior de datos."
+    },
+    {
+      "start": 205.0,
+      "end": 209.0,
+      "text": "Muy bien. Gracias por la conversación. Te avisaremos sobre los siguientes pasos."
+    },
+    {
+      "start": 210.0,
+      "end": 213.0,
+      "text": "Muchas gracias. Que tengan buen día."
+    }
+  ]
+}

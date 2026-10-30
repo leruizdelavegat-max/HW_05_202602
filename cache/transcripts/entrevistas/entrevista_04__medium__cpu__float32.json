@@ -1,0 +1,142 @@
+{
+  "audio": "entrevista_04.mp3",
+  "model": "medium",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "float32",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 214.64,
+  "load_s": 2.1700005163438618e-05,
+  "transcribe_s": 658.5381653999939,
+  "rtf": 3.0681055040998597,
+  "text": "Buenas tardes, gracias por tu tiempo. Vi en LinkedIn que figuras como gerente de datos. ¿Ese es tu cargo actual? Buenas tardes, eso lo puse yo. La verdad, el cargo en el contrato es jefe de proyectos de datos en una aseguradora. Tengo un equipo de seis personas. Oh, entiendo. Antes de tragar en detalle, ¿qué expectativas al areal tienes? Estaba pensando en 15.000, no, 15.500 soles mensuales, considerando el nivel del puesto. Ok, ¿qué tecnología usa tu equipo? Los procesos de transformación se escriben en Python y los volúmenes grandes se procesan en Spark. Toda la infraestructura está en la nube de Azure. Antes teníamos servidores propios, pero lo apagamos el año pasado. ¿Qué logro destacarías de esa etapa? La migración a la nube. Tomó casi un año, pero el cierre del mes pasó de tardar dos días a estar listo en una mañana. ¿Cuándo podrías empezar? Tengo que dejar todo ordenado y entregar el equipo a mi reemplazo, así que necesitaría un mes más o menos. Ok, bueno, el cargo implica coordinar con la casa matriz. ¿Cómo está tu inglés? Viví dos años en Toronto por una maestría, así que lo hablo con fluidez. Diría que avanzado, aunque el acento no lo pierdo. ¿Cómo manejas los conflictos dentro del equipo? Trato de que las decisiones técnicas se discutan con datos y no por jerarquía. Si hay un desacuerdo, hacemos una prueba pequeña y decidimos según el resultado. ¿Y cómo priorizas cuando todas las áreas piden algo al mismo tiempo? Pido que cada área explique qué decisión depende de su pedido. Lo que impacta en clientes o en una regulación va primero. El resto entra en una lista que revisamos juntos cada quincena. Ok, ¿qué te gustaría encontrar en tu próximo equipo? Personas con ganas de proponer. Me interesa construir un equipo que plantee ideas al negocio y no solo que responda a pedidos. Para eso hace falta tiempo para explorar y es algo que siempre defiendo frente a la gerencia. ¿Y cómo sabes si tu equipo está haciendo un buen trabajo o no? Miro si las áreas usan lo que entregamos. Un tablero que nadie abre es un tablero que no debió hacerse, por más bonito que sea. Por último, ¿cuántos años llevas trabajando con datos? 13 si cuento la tesis, pero profesionalmente llevo 12 años. Empecé en Inteligencia Comercial y después pasé a Ingeniería de Datos. Perfecto. Eso sería todo. Gracias. Gracias a ustedes por la oportunidad.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "text": "Buenas tardes, gracias por tu tiempo. Vi en LinkedIn que figuras como gerente de datos. ¿Ese es tu cargo actual?"
+    },
+    {
+      "start": 7.0,
+      "end": 21.0,
+      "text": "Buenas tardes, eso lo puse yo. La verdad, el cargo en el contrato es jefe de proyectos de datos en una aseguradora. Tengo un equipo de seis personas."
+    },
+    {
+      "start": 22.0,
+      "end": 29.0,
+      "text": "Oh, entiendo. Antes de tragar en detalle, ¿qué expectativas al areal tienes?"
+    },
+    {
+      "start": 30.0,
+      "end": 39.0,
+      "text": "Estaba pensando en 15.000, no, 15.500 soles mensuales, considerando el nivel del puesto."
+    },
+    {
+      "start": 40.0,
+      "end": 44.0,
+      "text": "Ok, ¿qué tecnología usa tu equipo?"
+    },
+    {
+      "start": 45.0,
+      "end": 52.0,
+      "text": "Los procesos de transformación se escriben en Python y los volúmenes grandes se procesan en Spark."
+    },
+    {
+      "start": 53.0,
+      "end": 61.0,
+      "text": "Toda la infraestructura está en la nube de Azure. Antes teníamos servidores propios, pero lo apagamos el año pasado."
+    },
+    {
+      "start": 63.0,
+      "end": 66.0,
+      "text": "¿Qué logro destacarías de esa etapa?"
+    },
+    {
+      "start": 67.0,
+      "end": 77.0,
+      "text": "La migración a la nube. Tomó casi un año, pero el cierre del mes pasó de tardar dos días a estar listo en una mañana."
+    },
+    {
+      "start": 78.0,
+      "end": 80.0,
+      "text": "¿Cuándo podrías empezar?"
+    },
+    {
+      "start": 82.0,
+      "end": 89.0,
+      "text": "Tengo que dejar todo ordenado y entregar el equipo a mi reemplazo, así que necesitaría un mes más o menos."
+    },
+    {
+      "start": 90.0,
+      "end": 96.0,
+      "text": "Ok, bueno, el cargo implica coordinar con la casa matriz. ¿Cómo está tu inglés?"
+    },
+    {
+      "start": 98.0,
+      "end": 107.0,
+      "text": "Viví dos años en Toronto por una maestría, así que lo hablo con fluidez. Diría que avanzado, aunque el acento no lo pierdo."
+    },
+    {
+      "start": 109.0,
+      "end": 112.0,
+      "text": "¿Cómo manejas los conflictos dentro del equipo?"
+    },
+    {
+      "start": 113.0,
+      "end": 125.0,
+      "text": "Trato de que las decisiones técnicas se discutan con datos y no por jerarquía. Si hay un desacuerdo, hacemos una prueba pequeña y decidimos según el resultado."
+    },
+    {
+      "start": 127.0,
+      "end": 132.0,
+      "text": "¿Y cómo priorizas cuando todas las áreas piden algo al mismo tiempo?"
+    },
+    {
+      "start": 133.0,
+      "end": 147.0,
+      "text": "Pido que cada área explique qué decisión depende de su pedido. Lo que impacta en clientes o en una regulación va primero. El resto entra en una lista que revisamos juntos cada quincena."
+    },
+    {
+      "start": 149.0,
+      "end": 153.0,
+      "text": "Ok, ¿qué te gustaría encontrar en tu próximo equipo?"
+    },
+    {
+      "start": 154.0,
+      "end": 171.0,
+      "text": "Personas con ganas de proponer. Me interesa construir un equipo que plantee ideas al negocio y no solo que responda a pedidos. Para eso hace falta tiempo para explorar y es algo que siempre defiendo frente a la gerencia."
+    },
+    {
+      "start": 172.0,
+      "end": 176.0,
+      "text": "¿Y cómo sabes si tu equipo está haciendo un buen trabajo o no?"
+    },
+    {
+      "start": 177.0,
+      "end": 187.0,
+      "text": "Miro si las áreas usan lo que entregamos. Un tablero que nadie abre es un tablero que no debió hacerse, por más bonito que sea."
+    },
+    {
+      "start": 188.0,
+      "end": 192.0,
+      "text": "Por último, ¿cuántos años llevas trabajando con datos?"
+    },
+    {
+      "start": 193.0,
+      "end": 206.0,
+      "text": "13 si cuento la tesis, pero profesionalmente llevo 12 años. Empecé en Inteligencia Comercial y después pasé a Ingeniería de Datos."
+    },
+    {
+      "start": 207.0,
+      "end": 210.0,
+      "text": "Perfecto. Eso sería todo. Gracias."
+    },
+    {
+      "start": 211.0,
+      "end": 214.0,
+      "text": "Gracias a ustedes por la oportunidad."
+    }
+  ]
+}
