@@ -9,9 +9,15 @@ y validación aritmética para los pedidos.
 
 ## Declaración de audio y consentimiento
 
-TODO: confirma con tus palabras que grabaste todos los audios tú, que apareces en todos, que el
-contenido es inventado y que todas las personas grabadas dieron su consentimiento. Los audios no se
-suben al repo, solo sus transcripciones cacheadas en `cache/transcripts/`.
+- Grabé yo los 10 audios del corpus (5 entrevistas y 5 llamadas) y aparezco en todos como una de las
+  dos voces.
+- **Todo lo que se dice es inventado:** los candidatos, cargos, salarios, pedidos, precios y formas de
+  pago no corresponden a ninguna persona real. Las direcciones usan nombres de calles de Lima con
+  números inventados.
+- **Consentimiento:** la persona que grabó conmigo dio su consentimiento para aparecer en los audios y
+  en el video. No se la nombra en este repositorio.
+- Los audios no se suben al repo, solo sus transcripciones cacheadas en `cache/transcripts/`. Para
+  regenerar los resultados se pueden solicitar abriendo un issue en este repositorio.
 
 ## Corpus
 
@@ -26,7 +32,14 @@ Los guiones, el detalle de cómo se varió cada campo y la tabla de trampas est�
 
 ## Herramientas de IA declaradas
 
-TODO: lista los agentes de IA (por ejemplo Claude Code) y los servidores MCP que usaste, y para qué.
+| Herramienta | Tipo | Para qué se usó |
+|---|---|---|
+| Claude Code (app de escritorio, modelo Claude Opus) | Agente de código | Estructura del repo, código del motor, scripts, pruebas, app y redacción del README. Cada resultado se revisó y corrió en local |
+| `Claude_Browser` (navegador integrado de Claude Code) | Servidor MCP | Abrir la app de Streamlit en local y comprobar que cada pestaña carga sin errores |
+| Ollama + `qwen2.5:3b` | LLM local del pipeline (no es un agente) | Extracción de campos con salida JSON, sin API key y sin enviar datos fuera del equipo |
+
+No se usaron otros servidores MCP. Ningún agente generó audio ni ground truth: los audios los grabé yo
+y las referencias se corrigieron contra lo que se dijo en cada grabación.
 
 ## Estructura
 
