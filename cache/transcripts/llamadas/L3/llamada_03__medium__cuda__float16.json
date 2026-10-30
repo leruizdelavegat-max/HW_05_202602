@@ -1,0 +1,177 @@
+{
+  "audio": "llamada_03.wav",
+  "model": "medium",
+  "requested_device": "cuda",
+  "runtime_device": "cuda",
+  "compute_type": "float16",
+  "gpu_name": "Tesla T4",
+  "vram_peak_mib": 2646.1875,
+  "vram_delta_mib": 480.0,
+  "audio_duration_s": 188.31675,
+  "load_s": 1.5551000160485273e-05,
+  "transcribe_s": 10.2026819419998,
+  "rtf": 0.054178303002785456,
+  "text": "Don Lucio. Buenas noches. ¿En que le puedo ayudar? Buenas noches. Quiero hacer un pedido para llevar a casa. ¿Me podría decir qué platos de fondo tiene hoy? Bueno, tenemos lasaña de carne, fetuccini, alavancaína con lomo, ravioles de ricotta y risotto de hongos. ¿Cuál me recomienda? Laasaña es la más pedida. La hacemos con la receta de la abuela del dueño. El ristotto también sale mucho, pero demora un poco más. ¿Y la lasaña cuánta está? La porción individual está a 32 soles y la bandeja para 4 personas es a 110. Mejor dos lasañas de carne individuales. Ok, dos lasañas individuales a 32 soles cada una. ¿Veis que vale una entrada? ¿Qué ensaladas tiene? Tenemos la ensalada César y la caprese. La César personal está a 500 soles. Una ensalada César personal entonces. Ok, ensalada César personal 15 soles. ¿Y algo para tomar? Una jarra de limonada. La jarra de un litro de limonada está a 20 soles, pero como hoy es martes, tiene una promoción de 15 soles de descuento en pedidos de más de 70 soles. Qué bien. ¿Y cuánto me sale todo? Sería 99 y con la promoción les sale 94 soles. De acuerdo. ¿Cuándo demora? 45 minutos apasionadamente porque la lasaña se hornea al momento. No hay problema. Una pregunta. ¿La lasaña lleva algo de picante? Mi mamá no come nada de picante. No, no lleva nada. Yo solo salsa de tomate, carne molida, queso parmesano y bechamel. Si quieres, le mandamos el queso rallado a parte. Sí, mejor aparte. Gracias. Bueno, me da la dirección de entrega, por favor. Trae los pinos 789 en Churco. Es una casa de dos pisos con la puerta marrón. Ok, trae los pinos 789, Churco, casa de puerta marrón. ¿Cómo desea pagar? Políapes, si se puede. Sí. Cuando llegue el apartidor, yo le muestro el código y usted paga inicio. Perfecto. ¿Puede mandar cubiertos? Claro, le mandamos sus juegos de cubiertos y servilletas. Le provocaré un postre. Tenemos tiramisu y panacota. Hay seis soles cada uno. Hoy no, gracias. Será para la próxima. Ok. Gracias, muy amable.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.2,
+      "text": "Don Lucio. Buenas noches. ¿En que le puedo ayudar?"
+    },
+    {
+      "start": 4.8,
+      "end": 11.52,
+      "text": "Buenas noches. Quiero hacer un pedido para llevar a casa. ¿Me podría decir qué platos de fondo tiene hoy?"
+    },
+    {
+      "start": 12.92,
+      "end": 20.8,
+      "text": "Bueno, tenemos lasaña de carne, fetuccini, alavancaína con lomo, ravioles de ricotta y risotto de hongos."
+    },
+    {
+      "start": 22.400000000000002,
+      "end": 29.28,
+      "text": "¿Cuál me recomienda? Laasaña es la más pedida. La hacemos con la receta de la abuela del dueño."
+    },
+    {
+      "start": 29.76,
+      "end": 33.2,
+      "text": "El ristotto también sale mucho, pero demora un poco más."
+    },
+    {
+      "start": 34.72,
+      "end": 36.72,
+      "text": "¿Y la lasaña cuánta está?"
+    },
+    {
+      "start": 37.44,
+      "end": 43.52,
+      "text": "La porción individual está a 32 soles y la bandeja para 4 personas es a 110."
+    },
+    {
+      "start": 45.44,
+      "end": 48.400000000000006,
+      "text": "Mejor dos lasañas de carne individuales."
+    },
+    {
+      "start": 49.120000000000005,
+      "end": 54.72,
+      "text": "Ok, dos lasañas individuales a 32 soles cada una. ¿Veis que vale una entrada?"
+    },
+    {
+      "start": 55.68,
+      "end": 59.68,
+      "text": "¿Qué ensaladas tiene?"
+    },
+    {
+      "start": 60.64,
+      "end": 66.48,
+      "text": "Tenemos la ensalada César y la caprese. La César personal está a 500 soles."
+    },
+    {
+      "start": 67.68,
+      "end": 70.48,
+      "text": "Una ensalada César personal entonces."
+    },
+    {
+      "start": 71.52,
+      "end": 76.0,
+      "text": "Ok, ensalada César personal 15 soles. ¿Y algo para tomar?"
+    },
+    {
+      "start": 76.96000000000001,
+      "end": 78.96000000000001,
+      "text": "Una jarra de limonada."
+    },
+    {
+      "start": 79.92,
+      "end": 89.44000000000001,
+      "text": "La jarra de un litro de limonada está a 20 soles, pero como hoy es martes, tiene una promoción de 15 soles de descuento en pedidos de más de 70 soles."
+    },
+    {
+      "start": 91.2,
+      "end": 93.2,
+      "text": "Qué bien. ¿Y cuánto me sale todo?"
+    },
+    {
+      "start": 94.56,
+      "end": 100.4,
+      "text": "Sería 99 y con la promoción les sale 94 soles."
+    },
+    {
+      "start": 101.92000000000002,
+      "end": 103.92000000000002,
+      "text": "De acuerdo. ¿Cuándo demora?"
+    },
+    {
+      "start": 104.88,
+      "end": 110.88,
+      "text": "45 minutos apasionadamente porque la lasaña se hornea al momento."
+    },
+    {
+      "start": 111.92,
+      "end": 117.92,
+      "text": "No hay problema. Una pregunta. ¿La lasaña lleva algo de picante? Mi mamá no come nada de picante."
+    },
+    {
+      "start": 118.88,
+      "end": 128.88,
+      "text": "No, no lleva nada. Yo solo salsa de tomate, carne molida, queso parmesano y bechamel. Si quieres, le mandamos el queso rallado a parte."
+    },
+    {
+      "start": 129.92000000000002,
+      "end": 131.92000000000002,
+      "text": "Sí, mejor aparte. Gracias."
+    },
+    {
+      "start": 131.92000000000002,
+      "end": 133.92000000000002,
+      "text": "Bueno, me da la dirección de entrega, por favor."
+    },
+    {
+      "start": 135.92000000000002,
+      "end": 143.92000000000002,
+      "text": "Trae los pinos 789 en Churco. Es una casa de dos pisos con la puerta marrón."
+    },
+    {
+      "start": 145.92000000000002,
+      "end": 151.92000000000002,
+      "text": "Ok, trae los pinos 789, Churco, casa de puerta marrón. ¿Cómo desea pagar?"
+    },
+    {
+      "start": 153.92000000000002,
+      "end": 155.92000000000002,
+      "text": "Políapes, si se puede."
+    },
+    {
+      "start": 155.92000000000002,
+      "end": 161.92000000000002,
+      "text": "Sí. Cuando llegue el apartidor, yo le muestro el código y usted paga inicio."
+    },
+    {
+      "start": 161.92000000000002,
+      "end": 163.92000000000002,
+      "text": "Perfecto. ¿Puede mandar cubiertos?"
+    },
+    {
+      "start": 165.92000000000002,
+      "end": 175.92000000000002,
+      "text": "Claro, le mandamos sus juegos de cubiertos y servilletas. Le provocaré un postre. Tenemos tiramisu y panacota. Hay seis soles cada uno."
+    },
+    {
+      "start": 175.92000000000002,
+      "end": 179.92000000000002,
+      "text": "Hoy no, gracias. Será para la próxima."
+    },
+    {
+      "start": 179.92000000000002,
+      "end": 181.92000000000002,
+      "text": "Ok."
+    },
+    {
+      "start": 185.92000000000002,
+      "end": 187.92000000000002,
+      "text": "Gracias, muy amable."
+    }
+  ]
+}

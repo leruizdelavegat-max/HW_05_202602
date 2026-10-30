@@ -1,0 +1,167 @@
+{
+  "audio": "llamada_02.wav",
+  "model": "medium",
+  "requested_device": "cuda",
+  "runtime_device": "cuda",
+  "compute_type": "float16",
+  "gpu_name": "Tesla T4",
+  "vram_peak_mib": 2678.1875,
+  "vram_delta_mib": 512.0,
+  "audio_duration_s": 198.36,
+  "load_s": 1.5546999748039525e-05,
+  "transcribe_s": 11.329900152999926,
+  "rtf": 0.05711786727666831,
+  "text": "Yo haría el fogón. Buenas tardes. ¿En qué le puedo ayudar? Buenas tardes. Quería hacer un pedido para el almuerzo. ¿Cuánto está el pollo a la brasa? Sí, mire, el pollo entero está a 62 soles, el medio pollo a 34 y el cuarto a 19. Todos vienen con ensalada y cremas. ¿Un pollo entero entonces? Un pollo a la brasa entero. ¿Las papas las quiere familiares o personales? ¿Cuál es la diferencia de precio? Bueno, las personales están a 9 soles y las familiares a 18. Unas papas familiares, porque somos cuatro. Claro, entonces papas familiares, 18 soles. ¿Algo para tomar? Una gaseosa de litro y medio. Mejor tos, que en la casa siempre se acaba rápido. Ok, entonces dos gaseosas de litro y medio a 10 soles cada una. ¿De qué sabor? Los dos de cola, por favor. ¿Qué cremas le mando? Tenemos mayonesa, ají, huacatay y mostaza. Ají y huacatay. Bastante ají, por favor. Y que la ensalada venga aparte porque a mi hija no le gusta el tomate. Ok, anotado. Entonces ají, huacatay y la ensalada en un envase aparte. Hazle un postre. Hoy tenemos mazamorra morada a 6 soles. No, gracias. Así está bien. ¿Cuánto es? Le confirmo. Entonces un bollentero, 62, papas familiares a 18 y dos gaseosas a 20. En total son 100 soles. Perfecto. ¿Hay alguna promoción? Sí, los fines de semana regalamos una gaseosa, pero como hoy es miércoles no aplica. Uy, qué pena. Bueno, la dirección es Giron Junín 456, departamento 302, en el cercado. Ok, Giron Junín 456, departamento 302, cercado de Lima. ¿Tiene alguna referencia? Está en media cuadra de la plaza frente a una librería. Muy bien, ya lo vi. Una pregunta, ¿y el pollo viene cortado? Sí, vienen en ocho presas, pero si prefiere se lo podemos mandar en cuatro piezas grandes. En ocho está bien. ¿Y las papas llegan crocantes? La última vez que pedí en otro lado llegaron blandas. Por supuesto, las mandamos en una caja con agujeros para que no se humedezcan. Llegan bien, no se preocupen. ¿Cómo voy a pagar? En efectivo, voy a pagar con un billete de 200. ¿El motorizado lleva cambio? Sí, lleva cambio, no se preocupen. El pedido llega en aproximadamente unos 35 minutos. Perfecto. ¿Me podrían mandar servilletas extra? Claro, va en la bolsa junto a las cremas. Gracias a usted y buen provecho.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.28,
+      "text": "Yo haría el fogón. Buenas tardes. ¿En qué le puedo ayudar?"
+    },
+    {
+      "start": 5.28,
+      "end": 9.52,
+      "text": "Buenas tardes. Quería hacer un pedido para el almuerzo. ¿Cuánto está el pollo a la"
+    },
+    {
+      "start": 9.52,
+      "end": 14.8,
+      "text": "brasa? Sí, mire, el pollo entero está a 62 soles,"
+    },
+    {
+      "start": 14.8,
+      "end": 22.56,
+      "text": "el medio pollo a 34 y el cuarto a 19. Todos vienen con ensalada y cremas."
+    },
+    {
+      "start": 22.56,
+      "end": 28.36,
+      "text": "¿Un pollo entero entonces? Un pollo a la brasa entero. ¿Las papas las"
+    },
+    {
+      "start": 28.4,
+      "end": 34.08,
+      "text": "quiere familiares o personales? ¿Cuál es la diferencia de precio?"
+    },
+    {
+      "start": 34.08,
+      "end": 39.56,
+      "text": "Bueno, las personales están a 9 soles y las familiares a 18."
+    },
+    {
+      "start": 39.56,
+      "end": 47.84,
+      "text": "Unas papas familiares, porque somos cuatro. Claro, entonces papas familiares, 18 soles."
+    },
+    {
+      "start": 47.84,
+      "end": 52.519999999999996,
+      "text": "¿Algo para tomar? Una gaseosa de litro y medio."
+    },
+    {
+      "start": 52.519999999999996,
+      "end": 57.16,
+      "text": "Mejor tos, que en la casa siempre se acaba rápido."
+    },
+    {
+      "start": 58.6,
+      "end": 64.8,
+      "text": "Ok, entonces dos gaseosas de litro y medio a 10 soles cada una. ¿De qué sabor?"
+    },
+    {
+      "start": 64.8,
+      "end": 70.92,
+      "text": "Los dos de cola, por favor. ¿Qué cremas le mando? Tenemos mayonesa,"
+    },
+    {
+      "start": 70.92,
+      "end": 77.0,
+      "text": "ají, huacatay y mostaza. Ají y huacatay. Bastante ají, por favor."
+    },
+    {
+      "start": 77.0,
+      "end": 81.84,
+      "text": "Y que la ensalada venga aparte porque a mi hija no le gusta el tomate."
+    },
+    {
+      "start": 81.84,
+      "end": 86.28,
+      "text": "Ok, anotado. Entonces ají, huacatay y la ensalada en un"
+    },
+    {
+      "start": 86.28,
+      "end": 91.6,
+      "text": "envase aparte. Hazle un postre. Hoy tenemos mazamorra morada a 6 soles."
+    },
+    {
+      "start": 91.6,
+      "end": 99.8,
+      "text": "No, gracias. Así está bien. ¿Cuánto es? Le confirmo. Entonces un bollentero, 62,"
+    },
+    {
+      "start": 99.8,
+      "end": 106.24000000000001,
+      "text": "papas familiares a 18 y dos gaseosas a 20. En total son 100 soles."
+    },
+    {
+      "start": 108.04,
+      "end": 114.2,
+      "text": "Perfecto. ¿Hay alguna promoción? Sí, los fines de semana regalamos una"
+    },
+    {
+      "start": 114.2,
+      "end": 122.44,
+      "text": "gaseosa, pero como hoy es miércoles no aplica. Uy, qué pena. Bueno, la dirección es"
+    },
+    {
+      "start": 122.44,
+      "end": 134.0,
+      "text": "Giron Junín 456, departamento 302, en el cercado. Ok, Giron Junín 456, departamento 302,"
+    },
+    {
+      "start": 134.0,
+      "end": 141.4,
+      "text": "cercado de Lima. ¿Tiene alguna referencia? Está en media cuadra de la plaza frente a una"
+    },
+    {
+      "start": 141.4,
+      "end": 151.88,
+      "text": "librería. Muy bien, ya lo vi. Una pregunta, ¿y el pollo viene cortado? Sí, vienen en ocho"
+    },
+    {
+      "start": 151.88,
+      "end": 159.68,
+      "text": "presas, pero si prefiere se lo podemos mandar en cuatro piezas grandes. En ocho está bien. ¿Y"
+    },
+    {
+      "start": 159.68,
+      "end": 166.36,
+      "text": "las papas llegan crocantes? La última vez que pedí en otro lado llegaron blandas. Por supuesto,"
+    },
+    {
+      "start": 166.36,
+      "end": 172.28,
+      "text": "las mandamos en una caja con agujeros para que no se humedezcan. Llegan bien, no se preocupen."
+    },
+    {
+      "start": 172.28,
+      "end": 179.92000000000002,
+      "text": "¿Cómo voy a pagar? En efectivo, voy a pagar con un billete de 200. ¿El motorizado lleva cambio?"
+    },
+    {
+      "start": 179.92000000000002,
+      "end": 187.36,
+      "text": "Sí, lleva cambio, no se preocupen. El pedido llega en aproximadamente unos 35 minutos."
+    },
+    {
+      "start": 188.60000000000002,
+      "end": 195.88000000000002,
+      "text": "Perfecto. ¿Me podrían mandar servilletas extra? Claro, va en la bolsa junto a las cremas. Gracias"
+    },
+    {
+      "start": 195.88,
+      "end": 197.12,
+      "text": "a usted y buen provecho."
+    }
+  ]
+}
