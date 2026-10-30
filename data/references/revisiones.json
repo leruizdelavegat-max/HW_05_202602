@@ -6,5 +6,20 @@
   ],
   "entrevista_04": [
     {"minuto": "1:44", "guion": "fluido", "oido": "avanzado", "decision": "habla"}
+  ],
+  "llamada_01": [
+    {"minuto": "0:14", "guion": "pepperoni", "oido": "peperoni", "decision": "asr"},
+    {"minuto": "3:08", "guion": "anotamos", "oido": "notamos", "decision": "asr"}
+  ],
+  "llamada_02": [
+    {"minuto": "1:21", "guion": "anotado", "oido": "ok ha notado entonces", "decision": "asr"}
+  ],
+  "llamada_03": [
+    {"minuto": "0:19", "guion": "ricota", "oido": "ricotta", "decision": "asr"},
+    {"minuto": "1:03", "guion": "caprese", "oido": "capres", "decision": "asr"},
+    {"minuto": "1:53", "guion": "lasana", "oido": "lazana", "decision": "asr"}
+  ],
+  "llamada_04": [
+    {"minuto": "1:14", "guion": "mostaza", "oido": "mustaza", "decision": "asr"}
   ]
 }
