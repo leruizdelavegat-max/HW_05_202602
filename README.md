@@ -32,7 +32,9 @@ TODO: lista los agentes de IA (por ejemplo Claude Code) y los servidores MCP que
 
 ```
 config.yaml              Configuración única: modelos, grid ASR, campos, escalera de degradación
-engine/                  Motor compartido por ambas tareas
+engine/                  Motor compartido por ambas tareas (sin librerías de interfaz)
+  pipeline.py            process_audio(ruta) -> transcripción, campos, verificación, dispositivo,
+                         tiempo y error. Es lo único que llama el probador de la app
   asr.py                 Transcripción + tiempo, dispositivo reportado por el runtime y pico de VRAM
   metrics.py             WER / CER con normalización común
   numbers.py             "seis mil quinientos" -> 6500
@@ -42,7 +44,8 @@ engine/                  Motor compartido por ambas tareas
   degrade.py             Escalera L0-L3
   validate.py            Σ(cantidad × precio) − promoción = total; error ASR vs. hablante
 scripts/                 Pasos del pipeline (ver abajo)
-app.py                   App de Streamlit (4 pestañas)
+app.py                   App de Streamlit: problema y método, corpus (audio + transcripción),
+                         resultados (dos capas), pedidos (escalera, validación, trampas) y probador
 data/ground_truth/       Campos esperados por audio
 data/references/         Transcripciones manuales para WER/CER
 cache/transcripts/       Transcripciones cacheadas (se versionan)
