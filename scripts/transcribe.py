@@ -3,6 +3,7 @@
   python scripts/transcribe.py --set entrevistas            # grid completo (modelos × dispositivos × precisiones)
   python scripts/transcribe.py --set llamadas               # cada nivel L0-L3 con la config por defecto
   python scripts/transcribe.py --set llamadas --grid        # cada nivel con el grid completo
+  python scripts/transcribe.py --set entrevistas --device cuda   # solo las combinaciones GPU (Colab)
 
 Las combinaciones cuda se saltan si no hay GPU (córrelas en Colab y sube el cache).
 """
@@ -35,6 +36,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--set", choices=["entrevistas", "llamadas"], required=True)
     parser.add_argument("--grid", action="store_true", help="usar el grid completo también en llamadas")
+    parser.add_argument("--device", choices=["cpu", "cuda"], help="correr solo las combinaciones de este dispositivo")
     args = parser.parse_args()
 
     cfg = load_config()
@@ -46,6 +48,8 @@ def main():
         if use_grid
         else [(asr["default"]["model"], asr["default"]["device"], asr["default"]["compute_type"])]
     )
+    if args.device:
+        combos = [c for c in combos if c[1] == args.device]
     refs_dir = resolve(cfg["paths"]["references"])
 
     rows = []

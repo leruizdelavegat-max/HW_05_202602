@@ -12,7 +12,7 @@ import numpy as np
 
 from engine import extract_rules
 from engine.dates import to_absolute
-from engine.degrade import add_noise, measured_snr_db, phone
+from engine.degrade import add_noise, measured_snr_db, phone, whatsapp
 from engine.metrics import wer_cer
 from engine.numbers import normalize_numbers
 from engine.validate import check_total, classify_error
@@ -88,6 +88,8 @@ def test_degradation():
     x = (np.sin(np.linspace(0, 2000, 32000)) * 0.3).astype("float32")
     assert abs(measured_snr_db(x, add_noise(x, 10)) - 10) < 0.5
     assert len(phone(x, 16000)) == len(x)
+    compressed = whatsapp(x, 16000)
+    assert len(compressed) == len(x) and measured_snr_db(x, compressed) > 5
 
 
 if __name__ == "__main__":

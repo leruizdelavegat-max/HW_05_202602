@@ -73,5 +73,3 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
 **CANDIDATO:** Sí, ¿cada cuánto presentan resultados a la gerencia?
 
 **ENTREVISTADOR:** Una vez al mes. Gracias por tu tiempo, te escribiremos esta semana.
-
-**CANDIDATO:** Gracias a ustedes, que tengan buen día.

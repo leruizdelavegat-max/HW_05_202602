@@ -51,7 +51,8 @@ results/                 CSV y JSON generados
 
 ## Instalación
 
-Requisitos: Python 3.12 y [ffmpeg](https://ffmpeg.org/) en el PATH.
+Requisitos: Python 3.12. No hace falta instalar ffmpeg: PyAV (fijado en `requirements.txt`) trae
+sus librerías para leer audio y para la compresión Opus del nivel L1.
 
 ```bash
 python -m venv .venv
@@ -85,13 +86,13 @@ python -m pytest -q tests
 
 ### Comparación con GPU (Google Colab)
 
-Este equipo no tiene GPU NVIDIA, así que las combinaciones `cuda` del grid se corren en Colab:
+Este equipo no tiene GPU NVIDIA, así que las combinaciones `cuda` se corren en Colab con
+[`notebooks/colab_gpu.ipynb`](notebooks/colab_gpu.ipynb):
 
 1. Entorno de ejecución → Cambiar tipo → **T4 GPU**.
-2. Sube el repo (o clónalo) y los audios de `data/audio/`.
-3. `!apt-get install -y ffmpeg && pip install -r requirements.txt`
-4. `!python scripts/transcribe.py --set entrevistas` y `!python scripts/transcribe.py --set llamadas`
-5. Descarga `cache/transcripts/` y `results/` y cópialos al repo local.
+2. El notebook clona el repo, instala `requirements.txt` y pide subir `audios_colab.zip` (los audios no están en GitHub).
+3. Corre la degradación, `transcribe.py --set entrevistas --device cuda` y `transcribe.py --set llamadas`.
+4. Descarga `resultados_gpu.zip`; su contenido (`cache/transcripts/` y `results/`) se copia al repo local.
 
 Cada JSON del cache guarda `runtime_device` (lo que reporta CTranslate2 en ejecución), `gpu_name`
 y `vram_peak_mib` (medido con NVML), que son la prueba de uso de la GPU.

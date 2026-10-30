@@ -2,36 +2,49 @@
 
 L0 original -> L1 compresión tipo WhatsApp (Opus 16 kbps) -> L2 banda telefónica 8 kHz
 -> L3 ruido blanco a un SNR fijo. Cada nivel parte del anterior (acumulativo).
+
+Usa PyAV (las librerías de ffmpeg que trae faster-whisper), así que no hace falta ffmpeg instalado.
 """
-import subprocess
-import tempfile
+import io
 from pathlib import Path
 
+import av
 import numpy as np
 import soundfile as sf
+from faster_whisper.audio import decode_audio
 from scipy.signal import butter, resample_poly, sosfiltfilt
 
 
 def to_wav(src: Path, dst: Path, sample_rate: int = 16000) -> Path:
-    """Cualquier formato (m4a, ogg, mp3...) -> WAV mono PCM. Requiere ffmpeg."""
+    """Cualquier formato (m4a, ogg, mp3, mp4...) -> WAV mono PCM 16 kHz."""
     dst.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(
-        ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-ac", "1", "-ar", str(sample_rate), str(dst)],
-        check=True,
-    )
+    sf.write(dst, decode_audio(str(src), sampling_rate=sample_rate), sample_rate, subtype="PCM_16")
     return dst
 
 
+def _bitrate(value: str) -> int:
+    return int(float(value.lower().rstrip("k")) * 1000) if value.lower().endswith("k") else int(value)
+
+
 def whatsapp(audio: np.ndarray, sr: int, codec: str = "libopus", bitrate: str = "16k") -> np.ndarray:
-    with tempfile.TemporaryDirectory() as tmp:
-        wav_in, ogg, wav_out = Path(tmp, "in.wav"), Path(tmp, "c.ogg"), Path(tmp, "out.wav")
-        sf.write(wav_in, audio, sr)
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav_in),
-                        "-c:a", codec, "-b:a", bitrate, str(ogg)], check=True)
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(ogg),
-                        "-ac", "1", "-ar", str(sr), str(wav_out)], check=True)
-        out, _ = sf.read(wav_out, dtype="float32")
-    return out
+    """Codifica a Opus en un .ogg en memoria y lo vuelve a decodificar (como una nota de voz)."""
+    buffer = io.BytesIO()
+    with av.open(buffer, mode="w", format="ogg") as out:
+        stream = out.add_stream(codec, rate=48000)  # Opus solo acepta 8/12/16/24/48 kHz; 48k es lo estándar
+        stream.bit_rate = _bitrate(bitrate)
+        stream.layout = "mono"
+        pcm = (np.clip(audio, -1, 1) * 32767).astype("int16")[None, :]
+        frame = av.AudioFrame.from_ndarray(pcm, format="s16", layout="mono")
+        frame.sample_rate = sr
+        resampler = av.AudioResampler(format=stream.codec_context.format.name, layout="mono", rate=48000)
+        for resampled in resampler.resample(frame) + resampler.resample(None):
+            for packet in stream.encode(resampled):
+                out.mux(packet)
+        for packet in stream.encode(None):
+            out.mux(packet)
+    buffer.seek(0)
+    decoded = decode_audio(buffer, sampling_rate=sr)
+    return decoded[: len(audio)].astype("float32")
 
 
 def phone(audio: np.ndarray, sr: int, sample_rate: int = 8000,
@@ -71,7 +84,7 @@ def build_ladder(wav_path: Path, out_dir: Path, levels: dict) -> dict[str, Path]
             audio = phone(audio, sr, spec["sample_rate"], spec["low_hz"], spec["high_hz"])
         elif kind == "noise":
             audio = add_noise(audio, spec["snr_db"], spec.get("seed", 42))
-        dst = out_dir / name / wav_path.name
+        dst = out_dir / name / f"{wav_path.stem}.wav"
         dst.parent.mkdir(parents=True, exist_ok=True)
         sf.write(dst, audio, sr)
         paths[name] = dst
