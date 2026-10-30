@@ -4,9 +4,6 @@
   python scripts/transcribe.py --set llamadas               # cada nivel L0-L3 con la config por defecto
   python scripts/transcribe.py --set llamadas --grid        # cada nivel con el grid completo
   python scripts/transcribe.py --set entrevistas --device cuda   # solo las combinaciones GPU (Colab)
-  python scripts/transcribe.py --set entrevistas --device cpu --entorno colab_cpu --models small
-      # CPU del mismo Colab (procedimiento de la sesión 10: mismo código, solo cambia el entorno);
-      # cache y CSV aparte: cache/transcripts/entrevistas_colab_cpu, results/benchmark_entrevistas_colab_cpu.csv
 
 Las combinaciones cuda se saltan si no hay GPU (córrelas en Colab y sube el cache).
 """
@@ -26,9 +23,9 @@ from engine.metrics import wer_cer
 AUDIO_EXT = {".wav", ".m4a", ".mp3", ".ogg", ".flac"}
 
 
-def audio_jobs(cfg: dict, dataset: str, entorno: str | None = None) -> list[tuple[str, Path, Path]]:
+def audio_jobs(cfg: dict, dataset: str) -> list[tuple[str, Path, Path]]:
     """Lista de (nivel, carpeta_audio, carpeta_cache)."""
-    cache = resolve(cfg["paths"]["cache"]) / (f"{dataset}_{entorno}" if entorno else dataset)
+    cache = resolve(cfg["paths"]["cache"]) / dataset
     if dataset == "entrevistas":
         return [("-", resolve(cfg["paths"]["audio_raw"]) / dataset, cache)]
     base = resolve(cfg["paths"]["audio_degraded"])
@@ -41,7 +38,6 @@ def main():
     parser.add_argument("--grid", action="store_true", help="usar el grid completo también en llamadas")
     parser.add_argument("--device", choices=["cpu", "cuda"], help="correr solo las combinaciones de este dispositivo")
     parser.add_argument("--models", nargs="+", help="correr solo estos tamaños (p. ej. small)")
-    parser.add_argument("--entorno", help="nombre de la máquina (p. ej. colab_cpu): cache y CSV aparte")
     args = parser.parse_args()
 
     cfg = load_config()
@@ -60,7 +56,7 @@ def main():
     refs_dir = resolve(cfg["paths"]["references"])
 
     rows = []
-    for level, audio_dir, cache_dir in audio_jobs(cfg, args.set, args.entorno):
+    for level, audio_dir, cache_dir in audio_jobs(cfg, args.set):
         audios = sorted(p for p in audio_dir.glob("*") if p.suffix.lower() in AUDIO_EXT)
         if not audios:
             print(f"[aviso] no hay audios en {audio_dir}")
@@ -77,15 +73,14 @@ def main():
                     save_cached(path, result)
                 row = {k: v for k, v in result.items() if k not in ("text", "segments")}
                 row["level"] = level
-                row["entorno"] = args.entorno or ("colab" if device == "cuda" else "local")
+                row["entorno"] = "colab" if device == "cuda" else "local"
                 ref = refs_dir / f"{audio.stem}.txt"
                 if ref.exists():
                     row.update(wer_cer(ref.read_text(encoding="utf-8"), result["text"],
                                        cfg["metrics"]["normalize_numbers"]))
                 rows.append(row)
 
-    suffix = f"_{args.entorno}" if args.entorno else ""
-    out = resolve(cfg["paths"]["results"]) / f"benchmark_{args.set}{suffix}.csv"
+    out = resolve(cfg["paths"]["results"]) / f"benchmark_{args.set}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(rows).to_csv(out, index=False)
     print(f"[ok] {len(rows)} filas -> {out}")
