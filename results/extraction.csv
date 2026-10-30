@@ -1,0 +1,61 @@
+audio,metodo,campo,valor,esperado,estado,correcto
+entrevista_01,reglas,anios_experiencia,null,6,sin_verificar,False
+entrevista_01,reglas,ultimo_puesto,null,"""analista de datos senior""",sin_verificar,False
+entrevista_01,reglas,tecnologias,"[""python"", ""sql"", ""excel"", ""power bi""]","[""python"", ""sql"", ""power bi""]",verificado,False
+entrevista_01,reglas,expectativa_salarial,null,7000,sin_verificar,False
+entrevista_01,reglas,disponibilidad,"""2026-11-13""","""2026-11-13""",sin_verificar,True
+entrevista_01,reglas,nivel_ingles,null,"""intermedio""",sin_verificar,False
+entrevista_01,llm,anios_experiencia,6,6,verificado,True
+entrevista_01,llm,ultimo_puesto,"""Analista de datos senior""","""analista de datos senior""",verificado,True
+entrevista_01,llm,tecnologias,"[""Python"", ""SQL"", ""Power BI""]","[""python"", ""sql"", ""power bi""]",verificado,True
+entrevista_01,llm,expectativa_salarial,7000,7000,verificado,True
+entrevista_01,llm,disponibilidad,"""2026-11-15""","""2026-11-13""",verificado,False
+entrevista_01,llm,nivel_ingles,"""Intermedio""","""intermedio""",verificado,True
+entrevista_02,reglas,anios_experiencia,null,8,sin_verificar,False
+entrevista_02,reglas,ultimo_puesto,null,"""desarrollador backend""",sin_verificar,False
+entrevista_02,reglas,tecnologias,"[""python"", ""java"", ""aws"", ""docker"", ""git""]","[""java"", ""docker"", ""aws"", ""git""]",verificado,False
+entrevista_02,reglas,expectativa_salarial,null,9000,sin_verificar,False
+entrevista_02,reglas,disponibilidad,null,"""2026-11-02""",sin_verificar,False
+entrevista_02,reglas,nivel_ingles,null,"""avanzado""",sin_verificar,False
+entrevista_02,llm,anios_experiencia,4,8,sin_verificar,False
+entrevista_02,llm,ultimo_puesto,"""Desarrollador backend""","""desarrollador backend""",verificado,True
+entrevista_02,llm,tecnologias,"[""Java"", ""Docker"", ""AWS"", ""Git""]","[""java"", ""docker"", ""aws"", ""git""]",verificado,True
+entrevista_02,llm,expectativa_salarial,9000,9000,verificado,True
+entrevista_02,llm,disponibilidad,"""2026-11-02""","""2026-11-02""",verificado,True
+entrevista_02,llm,nivel_ingles,"""Avanzado""","""avanzado""",verificado,True
+entrevista_03,reglas,anios_experiencia,3,3,verificado,True
+entrevista_03,reglas,ultimo_puesto,null,"""asistente de inteligencia de negocios""",sin_verificar,False
+entrevista_03,reglas,tecnologias,"[""sql"", ""excel"", ""tableau""]","[""excel"", ""tableau"", ""sql""]",verificado,True
+entrevista_03,reglas,expectativa_salarial,4,4200,verificado,False
+entrevista_03,reglas,disponibilidad,null,"""2026-12-01""",sin_verificar,False
+entrevista_03,reglas,nivel_ingles,"""avanzado""","""básico""",verificado,False
+entrevista_03,llm,anios_experiencia,3,3,verificado,True
+entrevista_03,llm,ultimo_puesto,"""Asistente de inteligencia de negocios""","""asistente de inteligencia de negocios""",verificado,True
+entrevista_03,llm,tecnologias,"[""Excel"", ""Tableau"", ""SQL""]","[""excel"", ""tableau"", ""sql""]",verificado,True
+entrevista_03,llm,expectativa_salarial,4200,4200,verificado,True
+entrevista_03,llm,disponibilidad,"""2026-12-01""","""2026-12-01""",verificado,True
+entrevista_03,llm,nivel_ingles,"""Intermedio""","""básico""",sin_verificar,False
+entrevista_04,reglas,anios_experiencia,12,12,verificado,True
+entrevista_04,reglas,ultimo_puesto,null,"""jefe de proyectos de datos""",sin_verificar,False
+entrevista_04,reglas,tecnologias,"[""python"", ""azure"", ""spark""]","[""python"", ""spark"", ""azure""]",verificado,True
+entrevista_04,reglas,expectativa_salarial,null,15500,sin_verificar,False
+entrevista_04,reglas,disponibilidad,null,"""2026-11-29""",sin_verificar,False
+entrevista_04,reglas,nivel_ingles,null,"""avanzado""",sin_verificar,False
+entrevista_04,llm,anios_experiencia,12,12,verificado,True
+entrevista_04,llm,ultimo_puesto,"""Jefe de Proyectos de Datos""","""jefe de proyectos de datos""",verificado,True
+entrevista_04,llm,tecnologias,"[""Python"", ""Spark"", ""Azure""]","[""python"", ""spark"", ""azure""]",verificado,True
+entrevista_04,llm,expectativa_salarial,15500,15500,verificado,True
+entrevista_04,llm,disponibilidad,"""2026-11-29""","""2026-11-29""",verificado,True
+entrevista_04,llm,nivel_ingles,"""Avanzado""","""avanzado""",verificado,True
+entrevista_05,reglas,anios_experiencia,null,2,sin_verificar,False
+entrevista_05,reglas,ultimo_puesto,null,"""analista junior de datos""",sin_verificar,False
+entrevista_05,reglas,tecnologias,"[""python"", ""git"", ""pandas"", ""streamlit""]","[""python"", ""pandas"", ""streamlit"", ""git""]",verificado,True
+entrevista_05,reglas,expectativa_salarial,null,null,sin_verificar,True
+entrevista_05,reglas,disponibilidad,"""2026-10-30""","""2026-10-30""",verificado,True
+entrevista_05,reglas,nivel_ingles,null,"""intermedio""",sin_verificar,False
+entrevista_05,llm,anios_experiencia,2,2,sin_verificar,True
+entrevista_05,llm,ultimo_puesto,"""Analista junior de datos""","""analista junior de datos""",verificado,True
+entrevista_05,llm,tecnologias,"[""Python"", ""Streamlit"", ""Git""]","[""python"", ""pandas"", ""streamlit"", ""git""]",verificado,False
+entrevista_05,llm,expectativa_salarial,null,null,sin_verificar,True
+entrevista_05,llm,disponibilidad,"""2026-10-30""","""2026-10-30""",verificado,True
+entrevista_05,llm,nivel_ingles,"""Intermedio""","""intermedio""",verificado,True

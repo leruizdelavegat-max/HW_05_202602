@@ -11,6 +11,8 @@ import json
 import urllib.request
 from datetime import date
 
+from engine.dates import to_absolute
+
 _NULLABLE_STR = {"type": ["string", "null"]}
 _NULLABLE_INT = {"type": ["integer", "null"]}
 
@@ -67,8 +69,9 @@ Reglas:
 - Si el candidato se corrige, usa el valor final. Si da un rango y luego una cifra, usa la cifra.
 - `tecnologias`: solo las que usó en su trabajo, no las que quiere aprender o dejó de usar.
 - `nivel_ingles`: uno de básico, intermedio, avanzado o fluido, según lo que dice que habla realmente.
-- `disponibilidad`: la frase tal como la dice; `disponibilidad_fecha`: esa fecha en formato AAAA-MM-DD,
-  calculada desde la fecha de la entrevista ("inmediata" = el mismo día).
+- `disponibilidad`: copia literalmente las palabras de la transcripción en las que el candidato dice
+  cuándo puede empezar (su respuesta final si cambia de idea); `disponibilidad_fecha`: esa fecha en
+  formato AAAA-MM-DD, calculada desde la fecha de la entrevista.
 - Si un dato no se menciona, devuelve null (o lista vacía para tecnologías). No inventes.
 
 <transcripcion>
@@ -140,7 +143,13 @@ _WEEKDAYS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "d
 def extract_interview(transcript: str, cfg: dict, ref_date: date) -> dict:
     prompt = INTERVIEW_PROMPT.format(transcript=transcript, fecha=ref_date.isoformat(),
                                      dia_semana=_WEEKDAYS[ref_date.weekday()])
-    return _call(prompt, INTERVIEW_SCHEMA, cfg)
+    result = _call(prompt, INTERVIEW_SCHEMA, cfg)
+    # Los modelos pequeños fallan la aritmética de calendario ("el lunes" desde un jueves):
+    # el LLM aporta la frase y la fecha la calcula el mismo código que usan las reglas.
+    # Si ese código no entiende la frase, se queda la fecha que propuso el LLM.
+    result["disponibilidad_fecha"] = (to_absolute(result.get("disponibilidad"), ref_date)
+                                      or result.get("disponibilidad_fecha"))
+    return result
 
 
 def extract_order(transcript: str, domain: str, cfg: dict) -> dict:
