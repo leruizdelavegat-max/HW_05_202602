@@ -4,8 +4,8 @@ Pipeline que convierte entrevistas de trabajo y llamadas de venta grabadas en re
 y verificables. Usa Whisper (faster-whisper) para la transcripción, reglas y un LLM para la extracción,
 y validación aritmética para los pedidos.
 
-- **Documento del pipeline (público):** TODO enlace a Notion (contenido fuente en
-  [`docs/pipeline.md`](docs/pipeline.md))
+- **Documento del pipeline (público):** [Notion · Pipeline](https://sepia-cord-2c2.notion.site/pipeline-48f89b5903a083f09df78180bf501b4d)
+  (contenido fuente en [`docs/pipeline.md`](docs/pipeline.md))
 - **Video (≤ 8 min):** TODO enlace
 
 ## Declaración de audio y consentimiento
