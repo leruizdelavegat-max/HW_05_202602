@@ -6,7 +6,7 @@ y validación aritmética para los pedidos.
 
 - **Documento del pipeline (público):** [Notion · Pipeline](https://sepia-cord-2c2.notion.site/pipeline-48f89b5903a083f09df78180bf501b4d)
   (contenido fuente en [`docs/pipeline.md`](docs/pipeline.md))
-- **Video (≤ 8 min):** TODO enlace
+- **Video (≤ 8 min):** [Google Drive](https://drive.google.com/file/d/1zkQjucgdp5V6dwomQbM8WZrkG-MjIV16/view?usp=sharing)
 
 ## Declaración de audio y consentimiento
 
