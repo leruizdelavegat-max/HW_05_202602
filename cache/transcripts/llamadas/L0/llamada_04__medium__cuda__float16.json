@@ -1,0 +1,232 @@
+{
+  "audio": "llamada_04.wav",
+  "model": "medium",
+  "requested_device": "cuda",
+  "runtime_device": "cuda",
+  "compute_type": "float16",
+  "gpu_name": "Tesla T4",
+  "vram_peak_mib": 2678.1875,
+  "vram_delta_mib": 512.0,
+  "audio_duration_s": 199.1,
+  "load_s": 1.533700014988426e-05,
+  "transcribe_s": 11.342313272999945,
+  "rtf": 0.05696792201406301,
+  "text": "Hola, buenas tardes, es para el oficino, somos varios, ¿qué hamburguesas tiene? Tenemos la clásica con carne, queso y tomate, también la de pollo crispy y la parrillera que lleva chorizo. La clásica regular está a 22 soles y la doble a 30. ¿La parrillera pica mucho? Un poco, por el chorizo y la salsa de ají. Si en la oficina no le gusta el picante, la clásica es la más segura. Entonces la clásica, quiero cuatro hamburguesas clásicas, no, no, espere, que se suma uno más, cinco hamburguesas clásicas regulares. Ok, entonces cinco hamburguesas clásicas regulares a 22 soles cada una. ¿Las acompaña con papas? Sí, ¿qué tamaños hay? Las medianas a seis soles y las grandes a nueve. Tres papas fritas grandes para compartir. Ok, tres papas grandes a nueve soles cada una. ¿Qué salsas le mando? Tenemos ketchup, mayonesa, mustaza y la salsa de casa que es de ajo. La de la casa y ketchup. ¿La salsa de ajo tiene un costo? No, las salsas son gratis. ¿Hale una bebida? No, bebidas tenemos aquí. ¿Tiene alguna promoción? Sí, por ser pedido para empresa le descontamos 12 soles. Excelente, ¿cuántos haría entonces? Bueno, con el descuento son 135 soles. Perfecto. ¿Qué dirección se le enviamos? Avenida Brasil 2050 Interior 4 en Jesús María, es una oficina en el segundo piso. Avenida Brasil 2050 Interior 4, Jesús María, segundo piso. ¿Cómo va a pagar? Con tarjeta de crédito. ¿Me pueden dar factura? Claro, el repartidor le pide los datos de la empresa cuando entrega. Perfecto, ¿las hamburguesas llegan armadas o separadas? Armadas, pero las verduras van en un envase aparte para que el pan no se humedezca. Mejor así, ¿y cuánto demora? Tenemos una reunión a la una. Más o menos unos 30 minutos, si sale ahora llega antes de la una. Una cosa más, una de las hamburguesas sin cebolla, por favor. Ha notado, una sin cebolla. La marcamos con un sticker para que no se confundan. Hazlo más. ¿El repartidor puede subir hasta la oficina? Claro, si el edificio lo permite, sí. En caso no, le timbramos y usted baja a recoger. Está bien, eso es todo, gracias. Gracias a usted, que lo disfruten y que les vaya bien en la reunión.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 11.68,
+      "text": "Hola, buenas tardes, es para el oficino, somos varios, ¿qué hamburguesas tiene?"
+    },
+    {
+      "start": 11.68,
+      "end": 17.84,
+      "text": "Tenemos la clásica con carne, queso y tomate, también la de pollo crispy y la parrillera"
+    },
+    {
+      "start": 17.84,
+      "end": 19.6,
+      "text": "que lleva chorizo."
+    },
+    {
+      "start": 19.6,
+      "end": 25.2,
+      "text": "La clásica regular está a 22 soles y la doble a 30."
+    },
+    {
+      "start": 25.2,
+      "end": 27.92,
+      "text": "¿La parrillera pica mucho?"
+    },
+    {
+      "start": 27.92,
+      "end": 31.200000000000003,
+      "text": "Un poco, por el chorizo y la salsa de ají."
+    },
+    {
+      "start": 31.200000000000003,
+      "end": 36.96,
+      "text": "Si en la oficina no le gusta el picante, la clásica es la más segura."
+    },
+    {
+      "start": 36.96,
+      "end": 46.0,
+      "text": "Entonces la clásica, quiero cuatro hamburguesas clásicas, no, no, espere, que se suma uno"
+    },
+    {
+      "start": 46.0,
+      "end": 49.52,
+      "text": "más, cinco hamburguesas clásicas regulares."
+    },
+    {
+      "start": 49.52,
+      "end": 55.2,
+      "text": "Ok, entonces cinco hamburguesas clásicas regulares a 22 soles cada una."
+    },
+    {
+      "start": 55.28,
+      "end": 57.28,
+      "text": "¿Las acompaña con papas?"
+    },
+    {
+      "start": 57.28,
+      "end": 61.2,
+      "text": "Sí, ¿qué tamaños hay?"
+    },
+    {
+      "start": 61.2,
+      "end": 65.68,
+      "text": "Las medianas a seis soles y las grandes a nueve."
+    },
+    {
+      "start": 65.68,
+      "end": 68.16,
+      "text": "Tres papas fritas grandes para compartir."
+    },
+    {
+      "start": 68.16,
+      "end": 72.08,
+      "text": "Ok, tres papas grandes a nueve soles cada una."
+    },
+    {
+      "start": 72.08,
+      "end": 73.36,
+      "text": "¿Qué salsas le mando?"
+    },
+    {
+      "start": 73.36,
+      "end": 80.08,
+      "text": "Tenemos ketchup, mayonesa, mustaza y la salsa de casa que es de ajo."
+    },
+    {
+      "start": 80.08,
+      "end": 82.16,
+      "text": "La de la casa y ketchup."
+    },
+    {
+      "start": 82.16,
+      "end": 85.2,
+      "text": "¿La salsa de ajo tiene un costo?"
+    },
+    {
+      "start": 85.2,
+      "end": 88.08,
+      "text": "No, las salsas son gratis."
+    },
+    {
+      "start": 88.08,
+      "end": 90.08,
+      "text": "¿Hale una bebida?"
+    },
+    {
+      "start": 90.08,
+      "end": 92.72,
+      "text": "No, bebidas tenemos aquí."
+    },
+    {
+      "start": 92.72,
+      "end": 94.72,
+      "text": "¿Tiene alguna promoción?"
+    },
+    {
+      "start": 94.72,
+      "end": 100.72,
+      "text": "Sí, por ser pedido para empresa le descontamos 12 soles."
+    },
+    {
+      "start": 100.72,
+      "end": 103.92,
+      "text": "Excelente, ¿cuántos haría entonces?"
+    },
+    {
+      "start": 103.92,
+      "end": 109.19999999999999,
+      "text": "Bueno, con el descuento son 135 soles."
+    },
+    {
+      "start": 109.19999999999999,
+      "end": 111.19999999999999,
+      "text": "Perfecto."
+    },
+    {
+      "start": 113.11999999999999,
+      "end": 117.11999999999999,
+      "text": "¿Qué dirección se le enviamos?"
+    },
+    {
+      "start": 117.11999999999999,
+      "end": 125.6,
+      "text": "Avenida Brasil 2050 Interior 4 en Jesús María, es una oficina en el segundo piso."
+    },
+    {
+      "start": 125.6,
+      "end": 131.6,
+      "text": "Avenida Brasil 2050 Interior 4, Jesús María, segundo piso."
+    },
+    {
+      "start": 131.6,
+      "end": 133.6,
+      "text": "¿Cómo va a pagar?"
+    },
+    {
+      "start": 133.6,
+      "end": 138.88,
+      "text": "Con tarjeta de crédito. ¿Me pueden dar factura?"
+    },
+    {
+      "start": 139.28,
+      "end": 144.79999999999998,
+      "text": "Claro, el repartidor le pide los datos de la empresa cuando entrega."
+    },
+    {
+      "start": 144.79999999999998,
+      "end": 149.6,
+      "text": "Perfecto, ¿las hamburguesas llegan armadas o separadas?"
+    },
+    {
+      "start": 149.6,
+      "end": 156.56,
+      "text": "Armadas, pero las verduras van en un envase aparte para que el pan no se humedezca."
+    },
+    {
+      "start": 156.56,
+      "end": 161.51999999999998,
+      "text": "Mejor así, ¿y cuánto demora? Tenemos una reunión a la una."
+    },
+    {
+      "start": 161.51999999999998,
+      "end": 168.32,
+      "text": "Más o menos unos 30 minutos, si sale ahora llega antes de la una."
+    },
+    {
+      "start": 168.48,
+      "end": 172.95999999999998,
+      "text": "Una cosa más, una de las hamburguesas sin cebolla, por favor."
+    },
+    {
+      "start": 172.95999999999998,
+      "end": 180.4,
+      "text": "Ha notado, una sin cebolla. La marcamos con un sticker para que no se confundan. Hazlo más."
+    },
+    {
+      "start": 180.4,
+      "end": 184.16,
+      "text": "¿El repartidor puede subir hasta la oficina?"
+    },
+    {
+      "start": 184.16,
+      "end": 191.68,
+      "text": "Claro, si el edificio lo permite, sí. En caso no, le timbramos y usted baja a recoger."
+    },
+    {
+      "start": 191.68,
+      "end": 194.64,
+      "text": "Está bien, eso es todo, gracias."
+    },
+    {
+      "start": 194.64000000000001,
+      "end": 198.32000000000002,
+      "text": "Gracias a usted, que lo disfruten y que les vaya bien en la reunión."
+    }
+  ]
+}

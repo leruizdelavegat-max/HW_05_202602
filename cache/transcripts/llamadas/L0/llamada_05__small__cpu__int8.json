@@ -1,0 +1,252 @@
+{
+  "audio": "llamada_05.wav",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 205.84,
+  "load_s": 1.4999999621068127e-05,
+  "transcribe_s": 152.22149660000105,
+  "rtf": 0.7395136834434562,
+  "text": "¡Mixería en la plaza! ¡Buenas noches! ¿Es Delivery o recojo en la tienda? Delivery, por favor. ¿La pizza americana lleva solo jamón y queso? Jamón, queso mozzarella y orégano. Es la más pedida. ¿Y qué otras pizzas tiene? Tenemos hawayana, pepperoni, vegetariana y la de la casa que lleva tocino y champiñones. En mi casa solo comen la americana, así que vamos con esa. Entonces quiero las pizzas americanas medianas. Ok, dos americanas medianas a 38 soles cada una. Más adelgada o tradicional? Tradicional. ¿Le agregamos borde de queso? Cuesta 6 soles más por pizza. No, así está bien, gracias. Perfecto. ¿Algo para acompañar? ¿Quién cada tiene? Tenemos pan al ajo, alitas y palitos de queso. El pan al ajo está a 12 soles y trae seis unidades. Las alitas a 24. ¿Un pan al ajo? Ok, un pan al ajo, 12 soles. ¿Y debe haber que hay algo? ¿Tiene chicha morada? Sí, en jarra de 1 litro a 18 soles. ¿Una jarra de chicha morada entonces? ¿La quiere con el hielo aparte? Sí, aparte por favor, porque si no se diluye. Ok, le repito el pedido entonces. Dos pizzas americanas medianas, 76 soles, un pan al ajo a 12 y una jarra de chicha morada a 18. El total es 106 soles. ¿Hay algún descuento por pagar en efectivo? Pero ahora no tenemos promusiones, disculpe. Está bien, paga en efectivo con sencillo justo. Perfecto. ¿Cuál es la dirección? Avenida La Marina 3175 en San Miguel, es un condominio. El departamento es el 803 de la Torre V. Ok, entonces Avenida La Marina 3175, San Miguel, Torre V, departamento 803. ¿El repartidor puede subir? No, tiene que dejarlo en la recepción, yo bajo a recogerlo. Ok, entonces le digo que pregunte por el departamento 803 para que lo llamen desde recepción. Sí, así está bien. Muy bien, llega en aproximadamente unos 40 minutos. ¿Y si se demora más de una hora? Lo llamamos para avisarle, pero normalmente llega antes. ¿Le mandamos ají salsa de ajo? Sí, dos sobres de cada uno por favor, gracias. ¿Puede asegurarse de que llegue caliente por favor? Siempre sale del horno directo a la caja térmica. No se preocupe, buenas noches. Buenas noches, gracias.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": "¡Mixería en la plaza! ¡Buenas noches!"
+    },
+    {
+      "start": 2.0,
+      "end": 5.0,
+      "text": "¿Es Delivery o recojo en la tienda?"
+    },
+    {
+      "start": 5.5,
+      "end": 10.0,
+      "text": "Delivery, por favor. ¿La pizza americana lleva solo jamón y queso?"
+    },
+    {
+      "start": 11.0,
+      "end": 16.0,
+      "text": "Jamón, queso mozzarella y orégano. Es la más pedida."
+    },
+    {
+      "start": 17.0,
+      "end": 19.0,
+      "text": "¿Y qué otras pizzas tiene?"
+    },
+    {
+      "start": 19.0,
+      "end": 27.0,
+      "text": "Tenemos hawayana, pepperoni, vegetariana y la de la casa que lleva tocino y champiñones."
+    },
+    {
+      "start": 28.0,
+      "end": 32.0,
+      "text": "En mi casa solo comen la americana, así que vamos con esa."
+    },
+    {
+      "start": 32.0,
+      "end": 35.0,
+      "text": "Entonces quiero las pizzas americanas medianas."
+    },
+    {
+      "start": 36.0,
+      "end": 42.0,
+      "text": "Ok, dos americanas medianas a 38 soles cada una. Más adelgada o tradicional?"
+    },
+    {
+      "start": 43.0,
+      "end": 45.0,
+      "text": "Tradicional."
+    },
+    {
+      "start": 45.0,
+      "end": 50.0,
+      "text": "¿Le agregamos borde de queso? Cuesta 6 soles más por pizza."
+    },
+    {
+      "start": 51.0,
+      "end": 53.0,
+      "text": "No, así está bien, gracias."
+    },
+    {
+      "start": 54.0,
+      "end": 56.0,
+      "text": "Perfecto. ¿Algo para acompañar?"
+    },
+    {
+      "start": 57.0,
+      "end": 59.0,
+      "text": "¿Quién cada tiene?"
+    },
+    {
+      "start": 59.0,
+      "end": 63.0,
+      "text": "Tenemos pan al ajo, alitas y palitos de queso."
+    },
+    {
+      "start": 63.0,
+      "end": 67.0,
+      "text": "El pan al ajo está a 12 soles y trae seis unidades."
+    },
+    {
+      "start": 67.0,
+      "end": 69.0,
+      "text": "Las alitas a 24."
+    },
+    {
+      "start": 70.0,
+      "end": 72.0,
+      "text": "¿Un pan al ajo?"
+    },
+    {
+      "start": 73.0,
+      "end": 77.0,
+      "text": "Ok, un pan al ajo, 12 soles. ¿Y debe haber que hay algo?"
+    },
+    {
+      "start": 78.0,
+      "end": 80.0,
+      "text": "¿Tiene chicha morada?"
+    },
+    {
+      "start": 81.0,
+      "end": 84.0,
+      "text": "Sí, en jarra de 1 litro a 18 soles."
+    },
+    {
+      "start": 85.0,
+      "end": 88.0,
+      "text": "¿Una jarra de chicha morada entonces?"
+    },
+    {
+      "start": 89.0,
+      "end": 91.0,
+      "text": "¿La quiere con el hielo aparte?"
+    },
+    {
+      "start": 93.0,
+      "end": 96.0,
+      "text": "Sí, aparte por favor, porque si no se diluye."
+    },
+    {
+      "start": 97.0,
+      "end": 99.0,
+      "text": "Ok, le repito el pedido entonces."
+    },
+    {
+      "start": 99.0,
+      "end": 108.0,
+      "text": "Dos pizzas americanas medianas, 76 soles, un pan al ajo a 12 y una jarra de chicha morada a 18."
+    },
+    {
+      "start": 108.0,
+      "end": 110.0,
+      "text": "El total es 106 soles."
+    },
+    {
+      "start": 111.0,
+      "end": 114.0,
+      "text": "¿Hay algún descuento por pagar en efectivo?"
+    },
+    {
+      "start": 115.0,
+      "end": 118.0,
+      "text": "Pero ahora no tenemos promusiones, disculpe."
+    },
+    {
+      "start": 119.0,
+      "end": 123.0,
+      "text": "Está bien, paga en efectivo con sencillo justo."
+    },
+    {
+      "start": 124.0,
+      "end": 126.0,
+      "text": "Perfecto. ¿Cuál es la dirección?"
+    },
+    {
+      "start": 127.0,
+      "end": 133.0,
+      "text": "Avenida La Marina 3175 en San Miguel, es un condominio."
+    },
+    {
+      "start": 133.0,
+      "end": 137.0,
+      "text": "El departamento es el 803 de la Torre V."
+    },
+    {
+      "start": 138.0,
+      "end": 146.0,
+      "text": "Ok, entonces Avenida La Marina 3175, San Miguel, Torre V, departamento 803."
+    },
+    {
+      "start": 146.0,
+      "end": 148.0,
+      "text": "¿El repartidor puede subir?"
+    },
+    {
+      "start": 150.0,
+      "end": 153.0,
+      "text": "No, tiene que dejarlo en la recepción, yo bajo a recogerlo."
+    },
+    {
+      "start": 154.0,
+      "end": 160.0,
+      "text": "Ok, entonces le digo que pregunte por el departamento 803 para que lo llamen desde recepción."
+    },
+    {
+      "start": 161.0,
+      "end": 162.0,
+      "text": "Sí, así está bien."
+    },
+    {
+      "start": 163.0,
+      "end": 167.0,
+      "text": "Muy bien, llega en aproximadamente unos 40 minutos."
+    },
+    {
+      "start": 177.0,
+      "end": 179.0,
+      "text": "¿Y si se demora más de una hora?"
+    },
+    {
+      "start": 180.0,
+      "end": 184.0,
+      "text": "Lo llamamos para avisarle, pero normalmente llega antes."
+    },
+    {
+      "start": 186.0,
+      "end": 188.0,
+      "text": "¿Le mandamos ají salsa de ajo?"
+    },
+    {
+      "start": 189.0,
+      "end": 192.0,
+      "text": "Sí, dos sobres de cada uno por favor, gracias."
+    },
+    {
+      "start": 192.0,
+      "end": 195.0,
+      "text": "¿Puede asegurarse de que llegue caliente por favor?"
+    },
+    {
+      "start": 196.0,
+      "end": 199.0,
+      "text": "Siempre sale del horno directo a la caja térmica."
+    },
+    {
+      "start": 199.0,
+      "end": 201.0,
+      "text": "No se preocupe, buenas noches."
+    },
+    {
+      "start": 202.0,
+      "end": 204.0,
+      "text": "Buenas noches, gracias."
+    }
+  ]
+}

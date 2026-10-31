@@ -28,10 +28,15 @@ def main():
         wav = to_wav(src, out_dir / "_tmp" / f"{src.stem}.wav", sr)
         paths = build_ladder(wav, out_dir, levels)
         clean, _ = sf.read(paths["L0"], dtype="float32")
+        prev = clean
         for name, path in paths.items():
             audio, _ = sf.read(path, dtype="float32")
-            snr = None if name == "L0" else measured_snr_db(clean, audio)
-            rows.append({"audio": src.stem, "level": name, "snr_vs_L0_db": snr})
+            first = name == "L0"
+            # vs. L0: degradación acumulada; vs. nivel anterior: lo que agrega este paso (en L3, el SNR del ruido)
+            rows.append({"audio": src.stem, "level": name,
+                         "snr_vs_L0_db": None if first else measured_snr_db(clean, audio),
+                         "snr_vs_anterior_db": None if first else measured_snr_db(prev, audio)})
+            prev = audio
         print(f"[ok] {src.name} -> {', '.join(paths)}")
 
     out = resolve(cfg["paths"]["results"]) / "degradation.csv"

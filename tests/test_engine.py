@@ -12,7 +12,8 @@ import numpy as np
 
 from engine import extract_rules
 from engine.dates import to_absolute
-from engine.degrade import add_noise, measured_snr_db, phone
+from engine.degrade import add_noise, measured_snr_db, phone, whatsapp
+from engine.metrics import bootstrap_ci, wilson_ci
 from engine.metrics import wer_cer
 from engine.numbers import normalize_numbers
 from engine.validate import check_total, classify_error
@@ -39,7 +40,7 @@ def test_rules_extraction():
     assert r == {
         "anios_experiencia": 5,
         "ultimo_puesto": "analista de datos",
-        "expectativa_salarial": 6500,
+        "pretension_salarial": 6500,
         "disponibilidad": "en 2 semanas",
         "nivel_ingles": "intermedio",
         "tecnologias": ["python", "sql", "power bi"],
@@ -61,10 +62,10 @@ def test_relative_dates():
 
 
 def test_literal_verification():
-    v = verify_fields({"ultimo_puesto": "analista de datos", "expectativa_salarial": 6500,
+    v = verify_fields({"ultimo_puesto": "analista de datos", "pretension_salarial": 6500,
                        "tecnologias": ["python", "excel"], "nivel_ingles": "gerente general"}, INTERVIEW)
     assert v["ultimo_puesto"]["estado"] == "verificado"
-    assert v["expectativa_salarial"]["estado"] == "verificado"   # 6500 vs. "seis mil quinientos"
+    assert v["pretension_salarial"]["estado"] == "verificado"   # 6500 vs. "seis mil quinientos"
     assert v["tecnologias"]["estado"] == "sin_verificar"         # excel no se menciona
     assert v["nivel_ingles"]["estado"] == "sin_verificar"
 
@@ -88,8 +89,16 @@ def test_degradation():
     x = (np.sin(np.linspace(0, 2000, 32000)) * 0.3).astype("float32")
     assert abs(measured_snr_db(x, add_noise(x, 10)) - 10) < 0.5
     assert len(phone(x, 16000)) == len(x)
+    compressed = whatsapp(x, 16000)
+    assert len(compressed) == len(x) and measured_snr_db(x, compressed) > 5
 
 
+
+def test_confidence_intervals():
+    mean, lo, hi = bootstrap_ci([0.1, 0.2, 0.3, 0.4, 0.5], resamples=2000, seed=0)
+    assert abs(mean - 0.3) < 1e-9 and lo < mean < hi
+    p, lo, hi = wilson_ci(5, 5)
+    assert p == 1.0 and hi == 1.0 and 0.5 < lo < 0.6   # 5/5 no es "100 % seguro"
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

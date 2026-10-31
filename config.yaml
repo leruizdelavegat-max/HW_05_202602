@@ -21,16 +21,23 @@ asr:
     - {device: cuda, compute_type: int8_float16}
   # Transcripción que usa la extracción (Tarea 1) y la validación (Tarea 2)
   default: {model: medium, device: cuda, compute_type: float16}
+  # Glosario de dominio (Tarea 1, fase 2.4): misma config que el baseline del CPU local, solo cambia el glosario.
+  # faster-whisper 1.1.1 acepta hotwords (se antepone a cada ventana de 30 s) e initial_prompt (solo la primera).
+  glossary:
+    run: {model: small, device: cpu, compute_type: int8}
+    hotwords: "Python, SQL, Excel, Power BI, Tableau, pandas, Streamlit, Git, Docker, AWS, Azure, Spark, Java, backend, analista de datos, inteligencia de negocios"
+    initial_prompt: "Entrevista de trabajo para un puesto de datos. El candidato menciona Python, SQL, Excel, Power BI, Tableau, pandas, Streamlit, Git, Docker, AWS, Azure, Spark y Java."
 
 metrics:
   normalize_numbers: true          # "seis mil quinientos" == "6500" al calcular WER/CER
+  bootstrap: {resamples: 10000, seed: 42, confidence: 0.95}   # IC por remuestreo de clips
 
 extraction:
   fields:
     - anios_experiencia
     - ultimo_puesto
     - tecnologias
-    - expectativa_salarial
+    - pretension_salarial
     - disponibilidad
     - nivel_ingles
   technologies:                    # vocabulario para el extractor por reglas
@@ -50,9 +57,47 @@ extraction:
     - pandas
     - streamlit
   llm:
-    model: claude-opus-5-5
-    effort: low
-    max_tokens: 4000
+    # ollama = modelo local gratuito (sin API key). anthropic = Claude por API (ANTHROPIC_API_KEY en .env).
+    provider: ollama
+    model: qwen2.5:3b              # ~2 GB; cabe en 8 GB de RAM. Con más RAM: qwen2.5:7b
+    base_url: http://localhost:11434
+    num_ctx: 4096                  # una transcripción de 4 min cabe holgada
+    timeout_s: 900
+    # Prompts del LLM: {transcript}, {fecha}, {dia_semana} y {domain} se rellenan en engine/extract_llm.py
+    prompts:
+      entrevista: |-
+        Extrae los datos del candidato de esta transcripción de entrevista.
+        La entrevista se realizó el {fecha} ({dia_semana}).
+        Reglas:
+        - Copia los textos tal como aparecen en la transcripción; no parafrasees ni traduzcas.
+        - Convierte los números dichos en palabras a dígitos (ej. "seis mil quinientos" -> 6500).
+        - Si el candidato se corrige, usa el valor final. Si da un rango y luego una cifra, usa la cifra.
+        - `tecnologias`: solo las que usó en su trabajo, no las que quiere aprender o dejó de usar.
+        - `nivel_ingles`: uno de básico, intermedio, avanzado o fluido, según lo que dice que habla realmente.
+        - `disponibilidad`: copia literalmente las palabras de la transcripción en las que el candidato dice
+          cuándo puede empezar (su respuesta final si cambia de idea); `disponibilidad_fecha`: esa fecha en
+          formato AAAA-MM-DD, calculada desde la fecha de la entrevista.
+        - Si un dato no se menciona, devuelve null (o lista vacía para tecnologías). No inventes.
+
+        <transcripcion>
+        {transcript}
+        </transcripcion>
+      pedido: |-
+        Extrae el pedido de esta transcripción de una llamada de venta ({domain}).
+        Reglas:
+        - Si el cliente se corrige ("dos... no, mejor tres"), usa el valor FINAL y anota la corrección en `autocorrecciones`.
+        - `tamano` va aparte del producto ("pizza de jamón" + "familiar"); null si el producto no tiene tamaño.
+        - `precio_unitario` es el del tamaño que se pidió, no el de otros tamaños que se mencionan.
+        - `total_dicho` es el total que dice en voz alta el vendedor o el cliente, aunque esté mal calculado. No lo corrijas.
+        - `promocion` es el descuento en moneda (no porcentaje) que se aplica a este pedido; null si no hay o no aplica.
+        - `metodo_pago`: efectivo, tarjeta, Yape, etc.; null si no se dice.
+        - Copia direcciones y números de contrato tal como aparecen.
+        - Si un dato no se menciona, devuelve null. No inventes.
+
+        <transcripcion>
+        {transcript}
+        </transcripcion>
+    # Para usar Claude: provider: anthropic, model: claude-opus-5-5, effort: low, max_tokens: 4000
 
 calls:
   domain: restaurante              # restaurante | telefonia

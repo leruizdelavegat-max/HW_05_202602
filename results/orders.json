@@ -1,0 +1,618 @@
+{
+  "llamada_01/L0": {
+    "items": [
+      {
+        "producto": "pizza de jamón familiar",
+        "tamano": "familiar",
+        "cantidad": 3,
+        "precio_unitario": 45.0
+      },
+      {
+        "producto": "gaseosa de cola",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 8.0
+      },
+      {
+        "producto": "gaseosa de naranja",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 8.0
+      }
+    ],
+    "promocion": 10.0,
+    "direccion_o_contrato": "Avenida Arequipa 1234, Lince. Edificio verde al costado de la farmacia",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 155.0,
+    "autocorrecciones": [
+      "dijo 'dos... no, mejor tres', lo corrijo a 'tres'"
+    ]
+  },
+  "llamada_01/L1": {
+    "items": [
+      {
+        "producto": "pizza de jamón",
+        "tamano": "familiar",
+        "cantidad": 3,
+        "precio_unitario": 45.0
+      },
+      {
+        "producto": "gaseosa de cola",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 8.0
+      },
+      {
+        "producto": "gaseosa de naranja",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 8.0
+      }
+    ],
+    "promocion": 10.0,
+    "direccion_o_contrato": "Avenida Arequipa 1234 Lince. Edificio verde al costado de la farmacia",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 155.0,
+    "autocorrecciones": [
+      "dijo 'mejor que sean tres' y lo corregí a 'tres'"
+    ]
+  },
+  "llamada_01/L2": {
+    "items": [
+      {
+        "producto": "Tres pizzas familiares de jamón",
+        "tamano": "Familiar",
+        "cantidad": 3,
+        "precio_unitario": 45.0
+      },
+      {
+        "producto": "Dos gaseosos de naranja y cola",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 8.0
+      }
+    ],
+    "promocion": 10.0,
+    "direccion_o_contrato": "Avenida Arequipa 1234, Linse, edificio verde al costado de la farmacia",
+    "metodo_pago": "Tarjeta",
+    "total_dicho": 155.0,
+    "autocorrecciones": [
+      "dijo 'dos... no, mejor tres', lo corrijo a tres"
+    ]
+  },
+  "llamada_01/L3": {
+    "items": [
+      {
+        "producto": "Pizzas de Jamón",
+        "tamano": "familiar",
+        "cantidad": 3,
+        "precio_unitario": 45.0
+      }
+    ],
+    "promocion": 10.0,
+    "direccion_o_contrato": "Avenida Arequipa 1234-20, edificio verde al costado de la farmacia",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 155.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_02/L0": {
+    "items": [
+      {
+        "producto": "pollo a la brasa entero",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 62.0
+      },
+      {
+        "producto": "papas familiares",
+        "tamano": "familiares",
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      },
+      {
+        "producto": "gaseosa de cola",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 10.0
+      },
+      {
+        "producto": "ensalada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      },
+      {
+        "producto": "mazamorra morada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 6.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Jiron Junín 456, departamento 302, cercado de Lima",
+    "metodo_pago": "efectivo",
+    "total_dicho": 100.0,
+    "autocorrecciones": [
+      "dije 'dos... no, mejor tres', mejor tres"
+    ]
+  },
+  "llamada_02/L1": {
+    "items": [
+      {
+        "producto": "pollo a la brasa entero",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 62.0
+      },
+      {
+        "producto": "papas familiares",
+        "tamano": "familiares",
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      },
+      {
+        "producto": "gaseosa de cola",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 10.0
+      },
+      {
+        "producto": "ensalada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Jiron Junín 456, departamento 302, cercado de Lima",
+    "metodo_pago": "efectivo",
+    "total_dicho": 100.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_02/L2": {
+    "items": [
+      {
+        "producto": "pollo a la brasa entero",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 62.0
+      },
+      {
+        "producto": "papas familiares",
+        "tamano": "familiares",
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      },
+      {
+        "producto": "gaseosa de litro y medio",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 10.0
+      },
+      {
+        "producto": "ají y huacatay",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      },
+      {
+        "producto": "ensalada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Giron Junín 456, departamento 302, cercado de Lima",
+    "metodo_pago": "efectivo",
+    "total_dicho": 100.0,
+    "autocorrecciones": [
+      "Mejor tos, que en la casa siempre se acaba rápido."
+    ]
+  },
+  "llamada_02/L3": {
+    "items": [
+      {
+        "producto": "pollo a la brasa",
+        "tamano": "pollo entero",
+        "cantidad": 1,
+        "precio_unitario": 62.0
+      },
+      {
+        "producto": "papas",
+        "tamano": "papas familiares",
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      },
+      {
+        "producto": "gaseosa",
+        "tamano": null,
+        "cantidad": 2,
+        "precio_unitario": 10.0
+      },
+      {
+        "producto": "ensalada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Jiron Junín, 456, departamento 302, encercado de Lima",
+    "metodo_pago": "efectivo",
+    "total_dicho": 100.0,
+    "autocorrecciones": [
+      "dije 'dos... no, mejor tres', mejor tres"
+    ]
+  },
+  "llamada_03/L0": {
+    "items": [
+      {
+        "producto": "lasaña de carne",
+        "tamano": "individual",
+        "cantidad": 2,
+        "precio_unitario": 32.0
+      },
+      {
+        "producto": "ensalada César",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 15.0
+      },
+      {
+        "producto": "jarra de limonada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 20.0
+      }
+    ],
+    "promocion": 15.0,
+    "direccion_o_contrato": "Calle Los Pinos 789, Surco, casa de puerta marrón",
+    "metodo_pago": null,
+    "total_dicho": 94.0,
+    "autocorrecciones": [
+      "dijo 'dos... no, mejor tres' y lo corrigió a 'dos'"
+    ]
+  },
+  "llamada_03/L1": {
+    "items": [
+      {
+        "producto": "lasaña de carne",
+        "tamano": "individual",
+        "cantidad": 2,
+        "precio_unitario": 32.0
+      },
+      {
+        "producto": "ensalada César",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 15.0
+      },
+      {
+        "producto": "jarra de limonada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 20.0
+      }
+    ],
+    "promocion": 15.0,
+    "direccion_o_contrato": "Calle Los Pinos, 789, Surco, casa de puerta marrón",
+    "metodo_pago": "IAP",
+    "total_dicho": 94.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_03/L2": {
+    "items": [
+      {
+        "producto": "lasaña de carne",
+        "tamano": "individual",
+        "cantidad": 2,
+        "precio_unitario": 32.0
+      },
+      {
+        "producto": "ensalada César",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 15.0
+      },
+      {
+        "producto": "jarra de limonada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 20.0
+      }
+    ],
+    "promocion": 15.0,
+    "direccion_o_contrato": "Calle Los Pinos, 789, Surco. Casa de puerta marrón",
+    "metodo_pago": "IAP",
+    "total_dicho": 94.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_03/L3": {
+    "items": [
+      {
+        "producto": "lasaña de carne",
+        "tamano": "individual",
+        "cantidad": 2,
+        "precio_unitario": 32.0
+      },
+      {
+        "producto": "ensalada César",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 15.0
+      },
+      {
+        "producto": "jarra de limonada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 20.0
+      }
+    ],
+    "promocion": 15.0,
+    "direccion_o_contrato": "Churco, casa de puerta marrón, políapes",
+    "metodo_pago": "políapes",
+    "total_dicho": 94.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_04/L0": {
+    "items": [
+      {
+        "producto": "Hamburguesa Clásica",
+        "tamano": null,
+        "cantidad": 5,
+        "precio_unitario": 22.0
+      },
+      {
+        "producto": "Papas Fritas",
+        "tamano": "grande",
+        "cantidad": 3,
+        "precio_unitario": 9.0
+      }
+    ],
+    "promocion": 12.0,
+    "direccion_o_contrato": "Avenida Brasil 2050 Interior 4, Jesús María, segundo piso",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 135.0,
+    "autocorrecciones": [
+      "dónde se dice 'dos... no, mejor tres', se cambia a 'tres'"
+    ]
+  },
+  "llamada_04/L1": {
+    "items": [
+      {
+        "producto": "hamburguesa clásica",
+        "tamano": "regular",
+        "cantidad": 5,
+        "precio_unitario": 22
+      },
+      {
+        "producto": "hamburguesa clásica",
+        "tamano": "regular",
+        "cantidad": 1,
+        "precio_unitario": 22
+      },
+      {
+        "producto": "papas fritas",
+        "tamano": "grande",
+        "cantidad": 3,
+        "precio_unitario": 9
+      },
+      {
+        "producto": "salsa de casa",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0
+      },
+      {
+        "producto": "bebida",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0
+      }
+    ],
+    "promocion": 12,
+    "direccion_o_contrato": "Avenida Brasil, 2050, interior 4, Jesús María, segundo piso",
+    "metodo_pago": null,
+    "total_dicho": 135,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_04/L2": {
+    "items": [
+      {
+        "producto": "Hamburguesa Clásica",
+        "tamano": null,
+        "cantidad": 5,
+        "precio_unitario": 22.0
+      },
+      {
+        "producto": "Hamburguesa Parrillera",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 22.0
+      },
+      {
+        "producto": "Papas Fritas",
+        "tamano": "grande",
+        "cantidad": 3,
+        "precio_unitario": 9.0
+      },
+      {
+        "producto": "Salsa de Casa",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      },
+      {
+        "producto": "Ketchup",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0.0
+      }
+    ],
+    "promocion": 12.0,
+    "direccion_o_contrato": "Avenida Brasil 2050 interior 4, Jesús María, segundo piso",
+    "metodo_pago": "tarjeta de crédito",
+    "total_dicho": 135.0,
+    "autocorrecciones": [
+      "doble a 30 -> regular a 22"
+    ]
+  },
+  "llamada_04/L3": {
+    "items": [
+      {
+        "producto": "hamburguesa clásica",
+        "tamano": "regular",
+        "cantidad": 5,
+        "precio_unitario": 22
+      },
+      {
+        "producto": "papas fritas",
+        "tamano": "grande",
+        "cantidad": 3,
+        "precio_unitario": 9
+      },
+      {
+        "producto": "salsa de ajo",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 0
+      }
+    ],
+    "promocion": 12,
+    "direccion_o_contrato": "Avenida Brasil 2050 Interior 4, Jesús María, segundo piso",
+    "metodo_pago": null,
+    "total_dicho": 135,
+    "autocorrecciones": [
+      "cinco hamburguesas clásicas regulares"
+    ]
+  },
+  "llamada_05/L0": {
+    "items": [
+      {
+        "producto": "pizza americana",
+        "tamano": "mediana",
+        "cantidad": 2,
+        "precio_unitario": 38
+      },
+      {
+        "producto": "pan al ajo",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 12
+      },
+      {
+        "producto": "chicha morada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 18
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Avenida La Marina 3175, San Miguel, Torre B, departamento 803",
+    "metodo_pago": "efectivo",
+    "total_dicho": 106,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_05/L1": {
+    "items": [
+      {
+        "producto": "Pizza americana",
+        "tamano": "mediana",
+        "cantidad": 2,
+        "precio_unitario": 38
+      },
+      {
+        "producto": "Pan al ajo",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 12
+      },
+      {
+        "producto": "Chicha morada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 18
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Avenida La Marina 3175, San Miguel, Torre B, departamento 803",
+    "metodo_pago": "efectivo",
+    "total_dicho": 106,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_05/L2": {
+    "items": [
+      {
+        "producto": "pizza americana",
+        "tamano": "mediana",
+        "cantidad": 2,
+        "precio_unitario": 38.0
+      },
+      {
+        "producto": "pan al ajo",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 12.0
+      },
+      {
+        "producto": "chicha morada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Avenida La Marina 3175, San Miguel, Torre B, departamento 803",
+    "metodo_pago": "efectivo",
+    "total_dicho": 106.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  },
+  "llamada_05/L3": {
+    "items": [
+      {
+        "producto": "pizza americana",
+        "tamano": "mediana",
+        "cantidad": 2,
+        "precio_unitario": 38.0
+      },
+      {
+        "producto": "pan al ajo",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 12.0
+      },
+      {
+        "producto": "chicha morada",
+        "tamano": null,
+        "cantidad": 1,
+        "precio_unitario": 18.0
+      }
+    ],
+    "promocion": null,
+    "direccion_o_contrato": "Avenida La Marina 3175, San Miguel, Torre B, departamento 803",
+    "metodo_pago": "efectivo",
+    "total_dicho": 106.0,
+    "autocorrecciones": [
+      "dos... no, mejor tres"
+    ]
+  }
+}

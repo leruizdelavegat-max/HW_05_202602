@@ -1,0 +1,487 @@
+{
+  "entrevista_01": {
+    "reglas": {
+      "anios_experiencia": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "ultimo_puesto": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "tecnologias": {
+        "valor": [
+          "python",
+          "sql",
+          "excel",
+          "power bi"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "sql",
+            "estado": "verificado"
+          },
+          {
+            "valor": "excel",
+            "estado": "verificado"
+          },
+          {
+            "valor": "power bi",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "disponibilidad": {
+        "valor": "en 15 dias",
+        "estado": "sin_verificar",
+        "fecha": "2026-11-13"
+      },
+      "nivel_ingles": {
+        "valor": null,
+        "estado": "sin_verificar"
+      }
+    },
+    "llm": {
+      "anios_experiencia": {
+        "valor": 6,
+        "estado": "verificado"
+      },
+      "ultimo_puesto": {
+        "valor": "Analista de datos senior",
+        "estado": "verificado"
+      },
+      "tecnologias": {
+        "valor": [
+          "Python",
+          "SQL",
+          "Power BI"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "Python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "SQL",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Power BI",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": 7000,
+        "estado": "verificado"
+      },
+      "disponibilidad": {
+        "valor": "Mediados de noviembre",
+        "estado": "verificado",
+        "fecha": "2026-11-15"
+      },
+      "nivel_ingles": {
+        "valor": "Intermedio",
+        "estado": "verificado"
+      }
+    }
+  },
+  "entrevista_02": {
+    "reglas": {
+      "anios_experiencia": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "ultimo_puesto": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "tecnologias": {
+        "valor": [
+          "python",
+          "java",
+          "aws",
+          "docker",
+          "git"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "java",
+            "estado": "verificado"
+          },
+          {
+            "valor": "aws",
+            "estado": "verificado"
+          },
+          {
+            "valor": "docker",
+            "estado": "verificado"
+          },
+          {
+            "valor": "git",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "disponibilidad": {
+        "valor": null,
+        "estado": "sin_verificar",
+        "fecha": null
+      },
+      "nivel_ingles": {
+        "valor": null,
+        "estado": "sin_verificar"
+      }
+    },
+    "llm": {
+      "anios_experiencia": {
+        "valor": 4,
+        "estado": "sin_verificar"
+      },
+      "ultimo_puesto": {
+        "valor": "Desarrollador backend",
+        "estado": "verificado"
+      },
+      "tecnologias": {
+        "valor": [
+          "Java",
+          "Docker",
+          "AWS",
+          "Git"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "Java",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Docker",
+            "estado": "verificado"
+          },
+          {
+            "valor": "AWS",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Git",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": 9000,
+        "estado": "verificado"
+      },
+      "disponibilidad": {
+        "valor": "Mi contrato terminó la semana pasada, así que puedo empezar el lunes mismo.",
+        "estado": "verificado",
+        "fecha": "2026-11-02"
+      },
+      "nivel_ingles": {
+        "valor": "Avanzado",
+        "estado": "verificado"
+      }
+    }
+  },
+  "entrevista_03": {
+    "reglas": {
+      "anios_experiencia": {
+        "valor": 3,
+        "estado": "verificado"
+      },
+      "ultimo_puesto": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "tecnologias": {
+        "valor": [
+          "sql",
+          "excel",
+          "tableau"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "sql",
+            "estado": "verificado"
+          },
+          {
+            "valor": "excel",
+            "estado": "verificado"
+          },
+          {
+            "valor": "tableau",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": 4,
+        "estado": "verificado"
+      },
+      "disponibilidad": {
+        "valor": null,
+        "estado": "sin_verificar",
+        "fecha": null
+      },
+      "nivel_ingles": {
+        "valor": "avanzado",
+        "estado": "verificado"
+      }
+    },
+    "llm": {
+      "anios_experiencia": {
+        "valor": 3,
+        "estado": "verificado"
+      },
+      "ultimo_puesto": {
+        "valor": "Asistente de inteligencia de negocios",
+        "estado": "verificado"
+      },
+      "tecnologias": {
+        "valor": [
+          "Excel",
+          "Tableau",
+          "SQL"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "Excel",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Tableau",
+            "estado": "verificado"
+          },
+          {
+            "valor": "SQL",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": 4200,
+        "estado": "verificado"
+      },
+      "disponibilidad": {
+        "valor": "1 de diciembre",
+        "estado": "verificado",
+        "fecha": "2026-12-01"
+      },
+      "nivel_ingles": {
+        "valor": "Fluido",
+        "estado": "sin_verificar"
+      }
+    }
+  },
+  "entrevista_04": {
+    "reglas": {
+      "anios_experiencia": {
+        "valor": 12,
+        "estado": "verificado"
+      },
+      "ultimo_puesto": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "tecnologias": {
+        "valor": [
+          "python",
+          "azure",
+          "spark"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "azure",
+            "estado": "verificado"
+          },
+          {
+            "valor": "spark",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "disponibilidad": {
+        "valor": null,
+        "estado": "sin_verificar",
+        "fecha": null
+      },
+      "nivel_ingles": {
+        "valor": null,
+        "estado": "sin_verificar"
+      }
+    },
+    "llm": {
+      "anios_experiencia": {
+        "valor": 12,
+        "estado": "verificado"
+      },
+      "ultimo_puesto": {
+        "valor": "Jefe de Proyectos de Datos",
+        "estado": "verificado"
+      },
+      "tecnologias": {
+        "valor": [
+          "Python",
+          "Spark",
+          "Azure"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "Python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Spark",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Azure",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": 15500,
+        "estado": "verificado"
+      },
+      "disponibilidad": {
+        "valor": "Tengo que dejar todo ordenado y entregar el equipo a mi reemplazo, así que necesitaría un mes más o menos",
+        "estado": "verificado",
+        "fecha": "2026-11-29"
+      },
+      "nivel_ingles": {
+        "valor": "Avanzado",
+        "estado": "verificado"
+      }
+    }
+  },
+  "entrevista_05": {
+    "reglas": {
+      "anios_experiencia": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "ultimo_puesto": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "tecnologias": {
+        "valor": [
+          "python",
+          "git",
+          "pandas",
+          "streamlit"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "git",
+            "estado": "verificado"
+          },
+          {
+            "valor": "pandas",
+            "estado": "verificado"
+          },
+          {
+            "valor": "streamlit",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "disponibilidad": {
+        "valor": "desde manana",
+        "estado": "verificado",
+        "fecha": "2026-10-30"
+      },
+      "nivel_ingles": {
+        "valor": null,
+        "estado": "sin_verificar"
+      }
+    },
+    "llm": {
+      "anios_experiencia": {
+        "valor": 2,
+        "estado": "sin_verificar"
+      },
+      "ultimo_puesto": {
+        "valor": "Analista junior de datos",
+        "estado": "verificado"
+      },
+      "tecnologias": {
+        "valor": [
+          "Python",
+          "Streamlit",
+          "Git"
+        ],
+        "estado": "verificado",
+        "items": [
+          {
+            "valor": "Python",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Streamlit",
+            "estado": "verificado"
+          },
+          {
+            "valor": "Git",
+            "estado": "verificado"
+          }
+        ]
+      },
+      "pretension_salarial": {
+        "valor": null,
+        "estado": "sin_verificar"
+      },
+      "disponibilidad": {
+        "valor": "Desde mañana",
+        "estado": "verificado",
+        "fecha": "2026-10-30"
+      },
+      "nivel_ingles": {
+        "valor": "Intermedio",
+        "estado": "verificado"
+      }
+    }
+  }
+}

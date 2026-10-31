@@ -19,7 +19,7 @@ _PATTERNS = {
         r"(?:mi\s+ultimo\s+(?:puesto|cargo|trabajo)\s+(?:fue|era)\s+(?:de\s+|como\s+)?)([a-z ]{3,60}?)(?=[.,;]| en | para |$)",
         r"(?:trabaje|me desempene|estuve)\s+como\s+([a-z ]{3,60}?)(?=[.,;]| en | para |$)",
     ],
-    "expectativa_salarial": [
+    "pretension_salarial": [
         r"(?:expectativa|pretension|aspiracion)\s+salarial[^\d]{0,40}(\d+)",
         r"(?:espero|aspiro a|quisiera)\s+(?:ganar|recibir)?[^\d]{0,30}(\d+)",
     ],
@@ -52,7 +52,7 @@ def extract(transcript: str, technologies: list[str], ref_date: date | None = No
             if m:
                 value = m.group(1).strip()
                 break
-        if value is not None and field in ("anios_experiencia", "expectativa_salarial"):
+        if value is not None and field in ("anios_experiencia", "pretension_salarial"):
             value = int(value)
         result[field] = value
 

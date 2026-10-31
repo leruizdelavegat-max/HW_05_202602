@@ -1,0 +1,272 @@
+{
+  "audio": "entrevista_02.mp3",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 222.12,
+  "load_s": 171.20588750000024,
+  "transcribe_s": 140.49363450000055,
+  "rtf": 0.6325123109130225,
+  "text": "Hola, buenas tardes. Gracias por conectarte. Buenas tardes. Antes de empezar, puedo preguntar algo. En el anuncio decía que el rango era de 8 a 10.000 soles. ¿Sigue siendo así? Sí, ese es el rango. Más o menos, ¿cuánto ganas ahora y cuánto esperarías? Ahora ganó 7.000, con 9.000 estaría conforme, considerando que este puesto tiene personas a cargo. Ok, una parte de la entrevista técnica es en inglés, ¿te parece? Sí, sin problema. Mi equipo estaba en Estados Unidos y todas las reuniones eran en inglés. No tengo certificado, pero diría que mi nivel es avanzado. Ok, bueno. Ahora, cuéntame tu trayectoria. Programa profesionalmente desde el 2018, casi siempre en empresas de pagos digitales. Los últimos tres años estuve en una vintage. ¿Qué caro tenías ahí? Oficialmente era desarrollador backend, aunque cuando faltaba gente, también me tocaba arreglar cosas del front-end. ¿Con qué tecnologías trabajabas? El lenguaje principal era Java. En paqueta, vamos los servicios como Docker y todo ocurría en A, B, C. El código lo manejábamos en Git, con revisión obligatoria. Python lo he visto solo en un curso. Es algo que me gustaría aprender bien aquí. Ok, ¿cuál fue tu mayor reto técnico? Bajar el tiempo de respuesta en los días de quincena, cuando todos trascieren a la vez, separábamos la validación de fraude en un servicio aparte y la latencia bajó a la mitad. ¿Te ha tocado guiar a personas con menos experiencia? Sí, en el último año acompañé a dos practicantes, revisaba su código y les explicaba por qué pedía cada cambio, hasta que empezaron a tomar tareas grandes por su cuenta. Ok, ¿cómo reacciones cuando algo falla en producción? Primero estabilizo el servicio, aunque sea con una solución temporal. Después buscamos la causa con calma y escribimos un resumen para que todo el equipo aprenda. ¿Qué valores más en un equipo de trabajo? Que se pueda preguntar si miedo. En mi primer trabajo nadie revisaba lo que hacían los demás y los errores se descubrían cuando ya estaban en producción. Desde entonces prefiero equipos donde todo pasa por revisión, aunque tomo un poco más de tiempo. ¿Y por qué te interesa particularmente esta empresa? Porque trabajan con pagos para pequeños negocios. Es justo lo que hacía, pero con un impacto más directo en la gente. Muy bien, ¿cuándo podrías incorporarte? Mi contrato terminó la semana pasada, así que puedo empezar el lunes mismo. Perfecto, eso es todo por hoy. Te contactaremos pronto. Gracias, quedo a la espera de sus noticias.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.16,
+      "text": "Hola, buenas tardes. Gracias por conectarte."
+    },
+    {
+      "start": 4.42,
+      "end": 7.76,
+      "text": "Buenas tardes. Antes de empezar, puedo preguntar algo."
+    },
+    {
+      "start": 7.76,
+      "end": 12.86,
+      "text": "En el anuncio decía que el rango era de 8 a 10.000 soles."
+    },
+    {
+      "start": 12.86,
+      "end": 14.120000000000001,
+      "text": "¿Sigue siendo así?"
+    },
+    {
+      "start": 15.3,
+      "end": 17.46,
+      "text": "Sí, ese es el rango."
+    },
+    {
+      "start": 17.46,
+      "end": 21.12,
+      "text": "Más o menos, ¿cuánto ganas ahora y cuánto esperarías?"
+    },
+    {
+      "start": 22.66,
+      "end": 26.0,
+      "text": "Ahora ganó 7.000, con 9.000 estaría conforme,"
+    },
+    {
+      "start": 26.0,
+      "end": 29.7,
+      "text": "considerando que este puesto tiene personas a cargo."
+    },
+    {
+      "start": 30.76,
+      "end": 35.66,
+      "text": "Ok, una parte de la entrevista técnica es en inglés, ¿te parece?"
+    },
+    {
+      "start": 37.16,
+      "end": 43.26,
+      "text": "Sí, sin problema. Mi equipo estaba en Estados Unidos y todas las reuniones eran en inglés."
+    },
+    {
+      "start": 43.26,
+      "end": 47.760000000000005,
+      "text": "No tengo certificado, pero diría que mi nivel es avanzado."
+    },
+    {
+      "start": 48.760000000000005,
+      "end": 52.06,
+      "text": "Ok, bueno. Ahora, cuéntame tu trayectoria."
+    },
+    {
+      "start": 53.900000000000006,
+      "end": 58.36,
+      "text": "Programa profesionalmente desde el 2018,"
+    },
+    {
+      "start": 58.36,
+      "end": 61.36,
+      "text": "casi siempre en empresas de pagos digitales."
+    },
+    {
+      "start": 61.36,
+      "end": 64.36,
+      "text": "Los últimos tres años estuve en una vintage."
+    },
+    {
+      "start": 66.22,
+      "end": 67.62,
+      "text": "¿Qué caro tenías ahí?"
+    },
+    {
+      "start": 69.32,
+      "end": 73.02,
+      "text": "Oficialmente era desarrollador backend,"
+    },
+    {
+      "start": 73.02,
+      "end": 76.06,
+      "text": "aunque cuando faltaba gente,"
+    },
+    {
+      "start": 76.06,
+      "end": 80.52,
+      "text": "también me tocaba arreglar cosas del front-end."
+    },
+    {
+      "start": 81.96000000000001,
+      "end": 83.96000000000001,
+      "text": "¿Con qué tecnologías trabajabas?"
+    },
+    {
+      "start": 84.96000000000001,
+      "end": 87.46000000000001,
+      "text": "El lenguaje principal era Java."
+    },
+    {
+      "start": 87.46000000000001,
+      "end": 93.96000000000001,
+      "text": "En paqueta, vamos los servicios como Docker y todo ocurría en A, B, C."
+    },
+    {
+      "start": 94.96000000000001,
+      "end": 98.96000000000001,
+      "text": "El código lo manejábamos en Git, con revisión obligatoria."
+    },
+    {
+      "start": 98.96000000000001,
+      "end": 100.96000000000001,
+      "text": "Python lo he visto solo en un curso."
+    },
+    {
+      "start": 100.96000000000001,
+      "end": 104.46000000000001,
+      "text": "Es algo que me gustaría aprender bien aquí."
+    },
+    {
+      "start": 105.46000000000001,
+      "end": 108.96000000000001,
+      "text": "Ok, ¿cuál fue tu mayor reto técnico?"
+    },
+    {
+      "start": 109.96000000000001,
+      "end": 113.96000000000001,
+      "text": "Bajar el tiempo de respuesta en los días de quincena,"
+    },
+    {
+      "start": 113.96000000000001,
+      "end": 116.96000000000001,
+      "text": "cuando todos trascieren a la vez,"
+    },
+    {
+      "start": 116.96000000000001,
+      "end": 120.96000000000001,
+      "text": "separábamos la validación de fraude en un servicio aparte"
+    },
+    {
+      "start": 120.96000000000001,
+      "end": 122.96000000000001,
+      "text": "y la latencia bajó a la mitad."
+    },
+    {
+      "start": 123.96000000000001,
+      "end": 127.96000000000001,
+      "text": "¿Te ha tocado guiar a personas con menos experiencia?"
+    },
+    {
+      "start": 128.96,
+      "end": 132.96,
+      "text": "Sí, en el último año acompañé a dos practicantes,"
+    },
+    {
+      "start": 132.96,
+      "end": 136.96,
+      "text": "revisaba su código y les explicaba por qué pedía cada cambio,"
+    },
+    {
+      "start": 136.96,
+      "end": 140.96,
+      "text": "hasta que empezaron a tomar tareas grandes por su cuenta."
+    },
+    {
+      "start": 141.96,
+      "end": 145.96,
+      "text": "Ok, ¿cómo reacciones cuando algo falla en producción?"
+    },
+    {
+      "start": 147.96,
+      "end": 153.96,
+      "text": "Primero estabilizo el servicio, aunque sea con una solución temporal."
+    },
+    {
+      "start": 153.96,
+      "end": 156.96,
+      "text": "Después buscamos la causa con calma"
+    },
+    {
+      "start": 156.96,
+      "end": 160.96,
+      "text": "y escribimos un resumen para que todo el equipo aprenda."
+    },
+    {
+      "start": 162.96,
+      "end": 165.96,
+      "text": "¿Qué valores más en un equipo de trabajo?"
+    },
+    {
+      "start": 167.96,
+      "end": 170.96,
+      "text": "Que se pueda preguntar si miedo."
+    },
+    {
+      "start": 170.96,
+      "end": 174.96,
+      "text": "En mi primer trabajo nadie revisaba lo que hacían los demás"
+    },
+    {
+      "start": 174.96,
+      "end": 178.96,
+      "text": "y los errores se descubrían cuando ya estaban en producción."
+    },
+    {
+      "start": 178.96,
+      "end": 183.96,
+      "text": "Desde entonces prefiero equipos donde todo pasa por revisión,"
+    },
+    {
+      "start": 183.96,
+      "end": 186.96,
+      "text": "aunque tomo un poco más de tiempo."
+    },
+    {
+      "start": 187.96,
+      "end": 191.96,
+      "text": "¿Y por qué te interesa particularmente esta empresa?"
+    },
+    {
+      "start": 192.96,
+      "end": 195.96,
+      "text": "Porque trabajan con pagos para pequeños negocios."
+    },
+    {
+      "start": 195.96,
+      "end": 200.96,
+      "text": "Es justo lo que hacía, pero con un impacto más directo en la gente."
+    },
+    {
+      "start": 201.96,
+      "end": 204.96,
+      "text": "Muy bien, ¿cuándo podrías incorporarte?"
+    },
+    {
+      "start": 205.96,
+      "end": 211.96,
+      "text": "Mi contrato terminó la semana pasada, así que puedo empezar el lunes mismo."
+    },
+    {
+      "start": 212.96,
+      "end": 216.96,
+      "text": "Perfecto, eso es todo por hoy. Te contactaremos pronto."
+    },
+    {
+      "start": 217.96,
+      "end": 221.96,
+      "text": "Gracias, quedo a la espera de sus noticias."
+    }
+  ]
+}

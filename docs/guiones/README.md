@@ -58,7 +58,7 @@ para recontratar"), una entrevista trae una inconsistencia a propósito.
 | `anios_experiencia` | entero | años de trabajo profesional | el total, aunque se diga como suma o año de inicio |
 | `ultimo_puesto` | texto | cargo tal como se dice | el último cargo formal, no la función ni el título de LinkedIn |
 | `tecnologias` | lista | las de `config.yaml` | solo las que usó; no las que quiere aprender o dejó de usar |
-| `expectativa_salarial` | entero o null | soles mensuales | la cifra final; null si no la da |
+| `pretension_salarial` | entero o null | soles mensuales | la cifra final; null si no la da |
 | `disponibilidad` | fecha | AAAA-MM-DD | se dice relativa ("el lunes", "en un mes") y se guarda absoluta desde `fecha_entrevista` |
 | `nivel_ingles` | categoría | básico / intermedio / avanzado / fluido | lo que dice que habla, aunque el CV diga otra cosa |
 

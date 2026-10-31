@@ -1,0 +1,227 @@
+{
+  "audio": "llamada_04.wav",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 199.1,
+  "load_s": 1.5400000847876072e-05,
+  "transcribe_s": 173.83301729999948,
+  "rtf": 0.8730940095429407,
+  "text": "¡Burger barrio! ¡Buenas tardes! ¿Qué va a pedir? Hola, buenas tardes. Es para el oficín. No somos varios. ¿Qué hamburguesas tiene? Tenemos la clásica con carne, queso y tomate, también la de pollo crispy y la parrillera que lleva chorizo. La clásica regular está 22 soles y la doble a 30. ¿La parrillera pica mucho? Un poco, por el chorizo y la salsa de ají. Si en la oficina no le gusta el picante, la clásica es la más segura. Entonces la clásica. Quiero cuatro hamburguesas clásicas. No, no, espere. Que se suma uno más, cinco hamburguesas clásicas regulares. Ok, entonces cinco hamburguesas clásicas regulares a 22 soles cada una. ¿Las acompañan con papas? Si, ¿qué tamaños hay? Las medianas a seis soles y las grandes a nueve. Tres papas fritas grandes para compartir. Ok, tres papas grandes a nueve soles cada una. ¿Qué salsa le mando? Tenemos ketchup, mayonesa, mustaza y la salsa de casa que es de ajo. ¿La de la casa y ketchup? ¿La salsa de ajo tiene un costo? No, la salsa son gratis. ¿Ale una bebida? No, bebidas tenemos aquí. ¿Tiene alguna promoción? Si, por ser pedido para empresa le descontamos doce soles. Excelente, ¿cuánto salí entonces? Bueno, con el descuento son ciento treinta y cinco soles. Perfecto. ¿Qué dirección se le enviamos? Avenida Brasil dos mil cincuenta interior cuatro en Jesús María es una oficina en el segundo piso. ¿Cómo va a pagar? Contarjeta de crédito. ¿Me pueden dar factura? Claro, el repartidor le pide los datos de la empresa cuando entrega. Perfecto. Las hamburguesas llegan armadas o separadas. Armadas, pero la verdad es que no es una oficina en el segundo piso. Mejor así, ¿cuánto demora? Tenemos una reunión a la una. Más o menos unos treinta minutos. Si sale ahora, llega antes de la una. Una cosa más, una de las hamburguesas sin cebolla, por favor. Ha notado, una sin cebolla. No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no. Una cosa más, una de las hamburguesas sin cebolla, por favor. Ha notado, una sin cebolla. La marcamos con un sticker para que no se confundan. ¿Algo más? ¿El repartidor puede subir hasta la oficina? Claro, si el edificio lo permite, sí. En caso no, le timbramos y usted baja a recoger. Está bien, eso es todo, gracias. Gracias a usted que lo disfruten y que les vaya bien en la reunión. Subtítulos por la comunidad de Amara.org",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "text": "¡Burger barrio! ¡Buenas tardes! ¿Qué va a pedir?"
+    },
+    {
+      "start": 5.0,
+      "end": 10.0,
+      "text": "Hola, buenas tardes. Es para el oficín. No somos varios. ¿Qué hamburguesas tiene?"
+    },
+    {
+      "start": 11.0,
+      "end": 19.0,
+      "text": "Tenemos la clásica con carne, queso y tomate, también la de pollo crispy y la parrillera que lleva chorizo."
+    },
+    {
+      "start": 19.0,
+      "end": 24.0,
+      "text": "La clásica regular está 22 soles y la doble a 30."
+    },
+    {
+      "start": 25.0,
+      "end": 27.0,
+      "text": "¿La parrillera pica mucho?"
+    },
+    {
+      "start": 27.0,
+      "end": 35.0,
+      "text": "Un poco, por el chorizo y la salsa de ají. Si en la oficina no le gusta el picante, la clásica es la más segura."
+    },
+    {
+      "start": 36.0,
+      "end": 48.0,
+      "text": "Entonces la clásica. Quiero cuatro hamburguesas clásicas. No, no, espere. Que se suma uno más, cinco hamburguesas clásicas regulares."
+    },
+    {
+      "start": 49.0,
+      "end": 54.0,
+      "text": "Ok, entonces cinco hamburguesas clásicas regulares a 22 soles cada una."
+    },
+    {
+      "start": 54.0,
+      "end": 56.0,
+      "text": "¿Las acompañan con papas?"
+    },
+    {
+      "start": 57.0,
+      "end": 59.0,
+      "text": "Si, ¿qué tamaños hay?"
+    },
+    {
+      "start": 60.0,
+      "end": 63.0,
+      "text": "Las medianas a seis soles y las grandes a nueve."
+    },
+    {
+      "start": 64.0,
+      "end": 67.0,
+      "text": "Tres papas fritas grandes para compartir."
+    },
+    {
+      "start": 68.0,
+      "end": 71.0,
+      "text": "Ok, tres papas grandes a nueve soles cada una."
+    },
+    {
+      "start": 72.0,
+      "end": 77.0,
+      "text": "¿Qué salsa le mando? Tenemos ketchup, mayonesa, mustaza y la salsa de casa que es de ajo."
+    },
+    {
+      "start": 77.0,
+      "end": 82.0,
+      "text": "¿La de la casa y ketchup? ¿La salsa de ajo tiene un costo?"
+    },
+    {
+      "start": 83.0,
+      "end": 86.0,
+      "text": "No, la salsa son gratis. ¿Ale una bebida?"
+    },
+    {
+      "start": 87.0,
+      "end": 91.0,
+      "text": "No, bebidas tenemos aquí. ¿Tiene alguna promoción?"
+    },
+    {
+      "start": 92.0,
+      "end": 96.0,
+      "text": "Si, por ser pedido para empresa le descontamos doce soles."
+    },
+    {
+      "start": 98.0,
+      "end": 100.0,
+      "text": "Excelente, ¿cuánto salí entonces?"
+    },
+    {
+      "start": 100.0,
+      "end": 104.0,
+      "text": "Bueno, con el descuento son ciento treinta y cinco soles."
+    },
+    {
+      "start": 105.0,
+      "end": 106.0,
+      "text": "Perfecto."
+    },
+    {
+      "start": 111.0,
+      "end": 113.0,
+      "text": "¿Qué dirección se le enviamos?"
+    },
+    {
+      "start": 114.0,
+      "end": 121.0,
+      "text": "Avenida Brasil dos mil cincuenta interior cuatro en Jesús María es una oficina en el segundo piso."
+    },
+    {
+      "start": 122.0,
+      "end": 124.0,
+      "text": "¿Cómo va a pagar?"
+    },
+    {
+      "start": 125.0,
+      "end": 129.0,
+      "text": "Contarjeta de crédito. ¿Me pueden dar factura?"
+    },
+    {
+      "start": 130.0,
+      "end": 134.0,
+      "text": "Claro, el repartidor le pide los datos de la empresa cuando entrega."
+    },
+    {
+      "start": 135.0,
+      "end": 139.0,
+      "text": "Perfecto. Las hamburguesas llegan armadas o separadas."
+    },
+    {
+      "start": 140.0,
+      "end": 145.0,
+      "text": "Armadas, pero la verdad es que no es una oficina en el segundo piso."
+    },
+    {
+      "start": 145.0,
+      "end": 149.0,
+      "text": "Mejor así, ¿cuánto demora? Tenemos una reunión a la una."
+    },
+    {
+      "start": 150.0,
+      "end": 154.0,
+      "text": "Más o menos unos treinta minutos. Si sale ahora, llega antes de la una."
+    },
+    {
+      "start": 156.0,
+      "end": 159.0,
+      "text": "Una cosa más, una de las hamburguesas sin cebolla, por favor."
+    },
+    {
+      "start": 160.0,
+      "end": 162.0,
+      "text": "Ha notado, una sin cebolla."
+    },
+    {
+      "start": 163.0,
+      "end": 169.0,
+      "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no."
+    },
+    {
+      "start": 169.0,
+      "end": 172.0,
+      "text": "Una cosa más, una de las hamburguesas sin cebolla, por favor."
+    },
+    {
+      "start": 173.0,
+      "end": 178.0,
+      "text": "Ha notado, una sin cebolla. La marcamos con un sticker para que no se confundan."
+    },
+    {
+      "start": 179.0,
+      "end": 180.0,
+      "text": "¿Algo más?"
+    },
+    {
+      "start": 181.0,
+      "end": 183.0,
+      "text": "¿El repartidor puede subir hasta la oficina?"
+    },
+    {
+      "start": 184.0,
+      "end": 187.0,
+      "text": "Claro, si el edificio lo permite, sí."
+    },
+    {
+      "start": 188.0,
+      "end": 191.0,
+      "text": "En caso no, le timbramos y usted baja a recoger."
+    },
+    {
+      "start": 192.0,
+      "end": 194.0,
+      "text": "Está bien, eso es todo, gracias."
+    },
+    {
+      "start": 195.0,
+      "end": 198.0,
+      "text": "Gracias a usted que lo disfruten y que les vaya bien en la reunión."
+    },
+    {
+      "start": 199.0,
+      "end": 202.0,
+      "text": "Subtítulos por la comunidad de Amara.org"
+    }
+  ]
+}

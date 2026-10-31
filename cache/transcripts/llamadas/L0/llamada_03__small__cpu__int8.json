@@ -1,0 +1,217 @@
+{
+  "audio": "llamada_03.wav",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 188.31675,
+  "load_s": 1.5999999959603883e-05,
+  "transcribe_s": 134.10284200000024,
+  "rtf": 0.7121131922678159,
+  "text": "La teoría don Lucio, buenas noches, ¿en qué le puedo ayudar? Buenas noches, quiero hacer un pedido para llevar a casa, ¿me podría decir qué platos de fondo tiene hoy? Bueno, tenemos la hazaña de carne, fettuccini, a la bancaína con lomo, raviolas de ricotta y risotto de hongos. ¿Cuál me recomienda? La hazaña es la más pedida, la hacemos con la receta de la abuela del dueño, el risotto también sale mucho pero demora un poco más. ¿Y la hazaña cuánta está? La porción individual está a 32 soles y la bandeja para 4 personas a 110. Mejor 2 lazañas de carne individuales. Ok, 2 lazañas individuales a 32 soles cada una, ¿desea alguna entrada? ¿Qué ensaladas tiene? Tenemos la ensalada César y la Capres. La César personal está a 15 soles. ¿Una ensalada César personal entonces? Ok, ensalada César personal 15 soles y algo para tomar. ¿Una jarra de limonada? La jarra de un litro de limonada está a 20 soles, pero como ya es martes tiene una promoción de 15 soles de descuento en pedidos de más de 70 soles. ¿Qué bien y cuánto me sale todo? Sería 99 y con la promoción le sale 94 soles. ¿De acuerdo cuánto demora? 45 minutos aproximadamente porque la hazaña se hornea al momento. No hay problema, una pregunta, la lazaña lleva algo de picante, mi mamá no come nada de picante. No, me llevo nada, yo solo salsa de tomate, carne molida, queso permesano y bechamel, si quiere le mandamos el queso rallado aparte. Sí, mejor aparte, gracias. Bueno, me da la dirección de entrega, por favor. Calle Los Pinos, 789 en Surco. Es una casa de dos pisos con la puerta marrón. Ok, Calle Los Pinos, 789 en Surco, casa de puerta marrón. ¿Cómo desea pagar? Por diapes si se puede. Sí, cuando llega el apartidor suele mostrar el código y usted paga ahí mismo. Perfecto, ¿puede mandar cubiertos? Claro, le mandamos dos juegos de cubierto y servilletas. Le provoca yo un postre, tenemos tiramisub y panacota, ahí se hizo el escada uno. Hoy no, gracias, será para la próxima. Ok. Gracias, muy amable.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.46,
+      "text": "La teoría don Lucio, buenas noches, ¿en qué le puedo ayudar?"
+    },
+    {
+      "start": 5.04,
+      "end": 8.24,
+      "text": "Buenas noches, quiero hacer un pedido para llevar a casa,"
+    },
+    {
+      "start": 8.24,
+      "end": 11.74,
+      "text": "¿me podría decir qué platos de fondo tiene hoy?"
+    },
+    {
+      "start": 13.3,
+      "end": 16.04,
+      "text": "Bueno, tenemos la hazaña de carne, fettuccini,"
+    },
+    {
+      "start": 16.04,
+      "end": 21.2,
+      "text": "a la bancaína con lomo, raviolas de ricotta y risotto de hongos."
+    },
+    {
+      "start": 22.8,
+      "end": 23.84,
+      "text": "¿Cuál me recomienda?"
+    },
+    {
+      "start": 25.04,
+      "end": 29.44,
+      "text": "La hazaña es la más pedida, la hacemos con la receta de la abuela del dueño,"
+    },
+    {
+      "start": 29.84,
+      "end": 33.28,
+      "text": "el risotto también sale mucho pero demora un poco más."
+    },
+    {
+      "start": 34.88,
+      "end": 36.4,
+      "text": "¿Y la hazaña cuánta está?"
+    },
+    {
+      "start": 37.480000000000004,
+      "end": 43.44,
+      "text": "La porción individual está a 32 soles y la bandeja para 4 personas a 110."
+    },
+    {
+      "start": 45.480000000000004,
+      "end": 48.28,
+      "text": "Mejor 2 lazañas de carne individuales."
+    },
+    {
+      "start": 49.14,
+      "end": 54.480000000000004,
+      "text": "Ok, 2 lazañas individuales a 32 soles cada una, ¿desea alguna entrada?"
+    },
+    {
+      "start": 54.480000000000004,
+      "end": 59.480000000000004,
+      "text": "¿Qué ensaladas tiene?"
+    },
+    {
+      "start": 60.480000000000004,
+      "end": 63.480000000000004,
+      "text": "Tenemos la ensalada César y la Capres."
+    },
+    {
+      "start": 63.480000000000004,
+      "end": 66.48,
+      "text": "La César personal está a 15 soles."
+    },
+    {
+      "start": 67.48,
+      "end": 70.48,
+      "text": "¿Una ensalada César personal entonces?"
+    },
+    {
+      "start": 71.48,
+      "end": 75.48,
+      "text": "Ok, ensalada César personal 15 soles y algo para tomar."
+    },
+    {
+      "start": 76.48,
+      "end": 78.48,
+      "text": "¿Una jarra de limonada?"
+    },
+    {
+      "start": 79.48,
+      "end": 82.48,
+      "text": "La jarra de un litro de limonada está a 20 soles,"
+    },
+    {
+      "start": 82.48,
+      "end": 89.48,
+      "text": "pero como ya es martes tiene una promoción de 15 soles de descuento en pedidos de más de 70 soles."
+    },
+    {
+      "start": 90.48,
+      "end": 93.48,
+      "text": "¿Qué bien y cuánto me sale todo?"
+    },
+    {
+      "start": 94.48,
+      "end": 100.48,
+      "text": "Sería 99 y con la promoción le sale 94 soles."
+    },
+    {
+      "start": 101.48,
+      "end": 103.48,
+      "text": "¿De acuerdo cuánto demora?"
+    },
+    {
+      "start": 105.48,
+      "end": 110.48,
+      "text": "45 minutos aproximadamente porque la hazaña se hornea al momento."
+    },
+    {
+      "start": 111.48,
+      "end": 117.48,
+      "text": "No hay problema, una pregunta, la lazaña lleva algo de picante, mi mamá no come nada de picante."
+    },
+    {
+      "start": 118.48,
+      "end": 128.48000000000002,
+      "text": "No, me llevo nada, yo solo salsa de tomate, carne molida, queso permesano y bechamel, si quiere le mandamos el queso rallado aparte."
+    },
+    {
+      "start": 129.48000000000002,
+      "end": 131.48000000000002,
+      "text": "Sí, mejor aparte, gracias."
+    },
+    {
+      "start": 132.48000000000002,
+      "end": 134.48000000000002,
+      "text": "Bueno, me da la dirección de entrega, por favor."
+    },
+    {
+      "start": 135.48000000000002,
+      "end": 139.48000000000002,
+      "text": "Calle Los Pinos, 789 en Surco."
+    },
+    {
+      "start": 140.48,
+      "end": 143.48,
+      "text": "Es una casa de dos pisos con la puerta marrón."
+    },
+    {
+      "start": 144.48,
+      "end": 150.48,
+      "text": "Ok, Calle Los Pinos, 789 en Surco, casa de puerta marrón."
+    },
+    {
+      "start": 151.48,
+      "end": 152.48,
+      "text": "¿Cómo desea pagar?"
+    },
+    {
+      "start": 153.48,
+      "end": 154.48,
+      "text": "Por diapes si se puede."
+    },
+    {
+      "start": 155.48,
+      "end": 161.48,
+      "text": "Sí, cuando llega el apartidor suele mostrar el código y usted paga ahí mismo."
+    },
+    {
+      "start": 162.48,
+      "end": 164.48,
+      "text": "Perfecto, ¿puede mandar cubiertos?"
+    },
+    {
+      "start": 165.48,
+      "end": 168.48,
+      "text": "Claro, le mandamos dos juegos de cubierto y servilletas."
+    },
+    {
+      "start": 168.48,
+      "end": 175.48,
+      "text": "Le provoca yo un postre, tenemos tiramisub y panacota, ahí se hizo el escada uno."
+    },
+    {
+      "start": 176.48,
+      "end": 179.48,
+      "text": "Hoy no, gracias, será para la próxima."
+    },
+    {
+      "start": 180.48,
+      "end": 181.48,
+      "text": "Ok."
+    },
+    {
+      "start": 185.48,
+      "end": 187.48,
+      "text": "Gracias, muy amable."
+    }
+  ]
+}

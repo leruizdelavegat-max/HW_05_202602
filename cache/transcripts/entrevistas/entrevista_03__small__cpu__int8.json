@@ -1,0 +1,292 @@
+{
+  "audio": "entrevista_03.mp3",
+  "model": "small",
+  "requested_device": "cpu",
+  "runtime_device": "cpu",
+  "compute_type": "int8",
+  "gpu_name": null,
+  "vram_peak_mib": null,
+  "vram_delta_mib": null,
+  "audio_duration_s": 217.48,
+  "load_s": 0.013540900003135903,
+  "transcribe_s": 216.5331667999999,
+  "rtf": 0.9956463435718222,
+  "text": "Buenos días, empecemos por tu experiencia. ¿Cuánto tiempo llevas en el área de datos? Buenos días, tengo cuatro, perdón. Tres años de experiencia empecé como practicante y luego me contrataron a tiempo un poco completo. Antes de seguir, ¿desde cuándo podrías empezar? ¿Necesitamos cubrir el puesto muy pronto? Podría partir del 15 de noviembre, no, mejor, desde el primero de diciembre, porque tengo que entregar un proyecto a fin de mes. Ok, ¿qué herramientas usas? Empecé haciendo todo en Excel con tablas dinámicas, después aprendí TabLu para los tableros y SQL para sacar los datos directamente de la base sin pedírselo a sistemas. ¿En tu CV pusiste inglés avanzado? Podemos hacer un par de preguntas en inglés. Prefiero ser transparente, en el CV puse eso, pero en realidad mi inglés es básico, entiendo textos cortos con ayuda de tradutor y estoy en curso los sábados. Gracias por aclararlo. ¿Cuál era tu cargo en tu último trabajo? En una cadena de farmacias, mi cargo era asistente de inteligencia de negocios, aunque en la práctica hacía el trabajo de un analista, preparaba los reportes de inventario y de ventas para la tienda. ¿Recuerdas algún problema que hayas resuelto con esos datos? Sí, algunas tiendas se quedaban sin productos de temporada, con un tablero de rotación semanal, los jefes de zona pidieron reposición antes y los quiebres de stock bajaron bastante. ¿Cómo te mantienes al día con nuevas herramientas? Sigo a cursos en línea y trato de aplicar lo que aprendo en algo del trabajo, aunque sea pequeño. ¿Fieres trabajar en equipo o por tu cuenta? Me gusta tener tareas claras que pueda avanzar por mi cuenta, pero siempre reviso el trabajo con alguien antes de presentarlo. ¿Cómo te va presentando resultados frente a gerentes? Al principio me costaba mucho, hasta me temelaba la voz, ahora preparo dos o tres mensajes clave y practico antes con alguien del equipo, con eso las reuniones salen mucho, mucho mejor. ¿Qué te gustaría aprender en este puesto? Me gustaría aprender a automatizar los reportes, porque todavía hago muchas cosas a mano y también entender mejor cómo se usan los datos para decidir los precios. ¿Cuál es tu pretensión salarial? Estaba pensando en algo entre 4000 y 4500 soles, si me piden una cifra 4200. ¿Alguna pregunta? Si, el puesto incluye capacitaciones. Claro, tenemos un programa de formación interna en realidad. Bueno, eso es todo, gracias por venir. Gracias a usted, hasta luego.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "text": "Buenos días, empecemos por tu experiencia."
+    },
+    {
+      "start": 3.0,
+      "end": 6.0,
+      "text": "¿Cuánto tiempo llevas en el área de datos?"
+    },
+    {
+      "start": 7.0,
+      "end": 10.0,
+      "text": "Buenos días, tengo cuatro, perdón."
+    },
+    {
+      "start": 10.0,
+      "end": 13.0,
+      "text": "Tres años de experiencia empecé como practicante"
+    },
+    {
+      "start": 13.0,
+      "end": 16.0,
+      "text": "y luego me contrataron a tiempo un poco completo."
+    },
+    {
+      "start": 18.0,
+      "end": 21.0,
+      "text": "Antes de seguir, ¿desde cuándo podrías empezar?"
+    },
+    {
+      "start": 21.0,
+      "end": 24.0,
+      "text": "¿Necesitamos cubrir el puesto muy pronto?"
+    },
+    {
+      "start": 25.0,
+      "end": 28.0,
+      "text": "Podría partir del 15 de noviembre,"
+    },
+    {
+      "start": 28.0,
+      "end": 32.0,
+      "text": "no, mejor, desde el primero de diciembre,"
+    },
+    {
+      "start": 32.0,
+      "end": 35.0,
+      "text": "porque tengo que entregar un proyecto a fin de mes."
+    },
+    {
+      "start": 36.0,
+      "end": 39.0,
+      "text": "Ok, ¿qué herramientas usas?"
+    },
+    {
+      "start": 41.0,
+      "end": 44.0,
+      "text": "Empecé haciendo todo en Excel con tablas dinámicas,"
+    },
+    {
+      "start": 44.0,
+      "end": 47.0,
+      "text": "después aprendí TabLu para los tableros"
+    },
+    {
+      "start": 47.0,
+      "end": 51.0,
+      "text": "y SQL para sacar los datos directamente de la base"
+    },
+    {
+      "start": 51.0,
+      "end": 54.0,
+      "text": "sin pedírselo a sistemas."
+    },
+    {
+      "start": 55.0,
+      "end": 58.0,
+      "text": "¿En tu CV pusiste inglés avanzado?"
+    },
+    {
+      "start": 58.0,
+      "end": 61.0,
+      "text": "Podemos hacer un par de preguntas en inglés."
+    },
+    {
+      "start": 62.0,
+      "end": 66.0,
+      "text": "Prefiero ser transparente, en el CV puse eso,"
+    },
+    {
+      "start": 66.0,
+      "end": 69.0,
+      "text": "pero en realidad mi inglés es básico,"
+    },
+    {
+      "start": 69.0,
+      "end": 72.0,
+      "text": "entiendo textos cortos con ayuda de tradutor"
+    },
+    {
+      "start": 72.0,
+      "end": 74.0,
+      "text": "y estoy en curso los sábados."
+    },
+    {
+      "start": 75.0,
+      "end": 77.0,
+      "text": "Gracias por aclararlo."
+    },
+    {
+      "start": 77.0,
+      "end": 80.0,
+      "text": "¿Cuál era tu cargo en tu último trabajo?"
+    },
+    {
+      "start": 82.0,
+      "end": 84.0,
+      "text": "En una cadena de farmacias,"
+    },
+    {
+      "start": 84.0,
+      "end": 87.0,
+      "text": "mi cargo era asistente de inteligencia de negocios,"
+    },
+    {
+      "start": 87.0,
+      "end": 91.0,
+      "text": "aunque en la práctica hacía el trabajo de un analista,"
+    },
+    {
+      "start": 91.0,
+      "end": 96.0,
+      "text": "preparaba los reportes de inventario y de ventas para la tienda."
+    },
+    {
+      "start": 97.0,
+      "end": 101.0,
+      "text": "¿Recuerdas algún problema que hayas resuelto con esos datos?"
+    },
+    {
+      "start": 103.0,
+      "end": 107.0,
+      "text": "Sí, algunas tiendas se quedaban sin productos de temporada,"
+    },
+    {
+      "start": 107.0,
+      "end": 110.0,
+      "text": "con un tablero de rotación semanal,"
+    },
+    {
+      "start": 110.0,
+      "end": 113.0,
+      "text": "los jefes de zona pidieron reposición antes"
+    },
+    {
+      "start": 113.0,
+      "end": 116.0,
+      "text": "y los quiebres de stock bajaron bastante."
+    },
+    {
+      "start": 118.0,
+      "end": 122.0,
+      "text": "¿Cómo te mantienes al día con nuevas herramientas?"
+    },
+    {
+      "start": 123.0,
+      "end": 126.0,
+      "text": "Sigo a cursos en línea y trato de aplicar lo que aprendo"
+    },
+    {
+      "start": 126.0,
+      "end": 130.0,
+      "text": "en algo del trabajo, aunque sea pequeño."
+    },
+    {
+      "start": 131.0,
+      "end": 134.0,
+      "text": "¿Fieres trabajar en equipo o por tu cuenta?"
+    },
+    {
+      "start": 135.0,
+      "end": 139.0,
+      "text": "Me gusta tener tareas claras que pueda avanzar por mi cuenta,"
+    },
+    {
+      "start": 139.0,
+      "end": 143.0,
+      "text": "pero siempre reviso el trabajo con alguien antes de presentarlo."
+    },
+    {
+      "start": 145.0,
+      "end": 148.0,
+      "text": "¿Cómo te va presentando resultados frente a gerentes?"
+    },
+    {
+      "start": 149.0,
+      "end": 154.0,
+      "text": "Al principio me costaba mucho, hasta me temelaba la voz,"
+    },
+    {
+      "start": 154.0,
+      "end": 158.0,
+      "text": "ahora preparo dos o tres mensajes clave"
+    },
+    {
+      "start": 158.0,
+      "end": 161.0,
+      "text": "y practico antes con alguien del equipo,"
+    },
+    {
+      "start": 161.0,
+      "end": 165.0,
+      "text": "con eso las reuniones salen mucho, mucho mejor."
+    },
+    {
+      "start": 166.0,
+      "end": 169.0,
+      "text": "¿Qué te gustaría aprender en este puesto?"
+    },
+    {
+      "start": 170.0,
+      "end": 174.0,
+      "text": "Me gustaría aprender a automatizar los reportes,"
+    },
+    {
+      "start": 174.0,
+      "end": 176.0,
+      "text": "porque todavía hago muchas cosas a mano"
+    },
+    {
+      "start": 176.0,
+      "end": 180.0,
+      "text": "y también entender mejor cómo se usan los datos para decidir los precios."
+    },
+    {
+      "start": 182.0,
+      "end": 186.0,
+      "text": "¿Cuál es tu pretensión salarial?"
+    },
+    {
+      "start": 187.0,
+      "end": 194.0,
+      "text": "Estaba pensando en algo entre 4000 y 4500 soles,"
+    },
+    {
+      "start": 194.0,
+      "end": 199.0,
+      "text": "si me piden una cifra 4200."
+    },
+    {
+      "start": 200.0,
+      "end": 202.0,
+      "text": "¿Alguna pregunta?"
+    },
+    {
+      "start": 203.0,
+      "end": 206.0,
+      "text": "Si, el puesto incluye capacitaciones."
+    },
+    {
+      "start": 207.0,
+      "end": 211.0,
+      "text": "Claro, tenemos un programa de formación interna en realidad."
+    },
+    {
+      "start": 212.0,
+      "end": 214.0,
+      "text": "Bueno, eso es todo, gracias por venir."
+    },
+    {
+      "start": 215.0,
+      "end": 217.0,
+      "text": "Gracias a usted, hasta luego."
+    }
+  ]
+}

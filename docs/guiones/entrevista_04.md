@@ -9,9 +9,9 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
   "anios_experiencia": 12,
   "ultimo_puesto": "jefe de proyectos de datos",
   "tecnologias": ["python", "spark", "azure"],
-  "expectativa_salarial": 15500,
+  "pretension_salarial": 15500,
   "disponibilidad": "2026-11-29",
-  "nivel_ingles": "fluido"
+  "nivel_ingles": "avanzado"
 }
 ```
 
@@ -23,7 +23,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
 | 2 | Salario | "quince mil… no, quince mil quinientos soles" | Autocorrección |
 | 3 | Tecnologías | Python, Spark, Azure | "servidores propios" no es una tecnología de la lista |
 | 4 | Disponibilidad | "necesitaría un mes, más o menos" | Relativa y sin dígito: 29/10 + 1 mes = 29/11 |
-| 5 | Inglés | "lo hablo con fluidez… diría que fluido" | El "dos años en Toronto" puede confundirse con experiencia |
+| 5 | Inglés | "lo hablo con fluidez… diría que avanzado" | "Fluidez" sugiere *fluido*, pero la categoría que dice es avanzado; el "dos años en Toronto" puede confundirse con experiencia |
 | 6 | Experiencia | "Trece si cuento la tesis, pero profesionalmente llevo doce años" | Dos cifras; vale 12 |
 
 ---
@@ -50,7 +50,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
 
 **ENTREVISTADOR:** El cargo implica coordinar con la casa matriz. ¿Cómo está tu inglés?
 
-**CANDIDATO:** Viví dos años en Toronto por una maestría, así que lo hablo con fluidez. Diría que fluido, aunque el acento no lo pierdo.
+**CANDIDATO:** Viví dos años en Toronto por una maestría, así que lo hablo con fluidez. Diría que avanzado, aunque el acento no lo pierdo.
 
 **ENTREVISTADOR:** ¿Cómo manejas los conflictos dentro del equipo?
 

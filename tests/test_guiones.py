@@ -100,7 +100,14 @@ def test_call_records_are_complete_and_literal():
 
 
 def test_audio_length_fits_two_to_four_minutes():
-    # Hablando rápido (~170 palabras por minuto), 2 min ≈ 340 palabras; despacio (~140), 4 min ≈ 560.
+    # Con el audio ya transcrito se usa su duración real; si no, se estima por palabras:
+    # hablando rápido (~170 palabras por minuto), 2 min ≈ 340 palabras; despacio (~140), 4 min ≈ 560.
+    cache = ROOT / "cache" / "transcripts"
     for ref in sorted(REFS.glob("*_0*.txt")):
-        words = len(ref.read_text(encoding="utf-8").split())
-        assert 350 <= words <= 560, f"{ref.stem}: {words} palabras"
+        cached = sorted(cache.rglob(f"{ref.stem}__*.json"))
+        if cached:
+            seconds = json.loads(cached[0].read_text(encoding="utf-8"))["audio_duration_s"]
+            assert 120 <= seconds <= 240, f"{ref.stem}: {seconds:.0f} s"
+        else:
+            words = len(ref.read_text(encoding="utf-8").split())
+            assert 350 <= words <= 560, f"{ref.stem}: {words} palabras"

@@ -1,0 +1,192 @@
+{
+  "audio": "llamada_01.wav",
+  "model": "medium",
+  "requested_device": "cuda",
+  "runtime_device": "cuda",
+  "compute_type": "float16",
+  "gpu_name": "Tesla T4",
+  "vram_peak_mib": 2646.1875,
+  "vram_delta_mib": 2196.0,
+  "audio_duration_s": 203.82,
+  "load_s": 1.9385167650000312,
+  "transcribe_s": 11.990965393000124,
+  "rtf": 0.05883115196251656,
+  "text": "La esquina de Bruno. Buenas noches. ¿Es para delivery o para recoger? Buenas noches. Para delivery. Es la primera vez que pido. ¿Qué pizzas tiene? Bueno, tenemos americana, jaballana, de jamón, peperoni y el especial de la casa que lleva chorizo y aceitunas. Todas vienen en tamaño mediano o familiar. Ok. ¿Y cuánto cuesta? La mediana está a 32 soles y la familiar a 45. En cualquier sabor menos la especial, que cuesta 5 soles más. ¿La familiar para cuántas personas alcanza? Más o menos para unas 4 personas. Son 8 tajadas grandes. Somos varios en casa porque es el cumpleaños de mi hermano, entonces quiero dos pizzas familiares de jamón. No, mejor que sean tres pizzas familiares de jamón porque viene más gente. Perfecto. Entonces tres pizzas familiares de jamón cada una a 45 soles. ¿Algo para tomar? Sí. ¿Qué gaseosas tienen? De cola y de naranja. En botella de litro a 8 soles cada una. Dos gaseosas de litro, una de cola y otra de naranja. Ok. Dos gaseosas de litro a 8 soles cada una. Además, hoy tenemos una promoción. En pedidos de más de 100 soles les descontamos 10 soles. Qué bien. Entonces, ¿cuánto sería en total? Déjenme sumar. Con el descuento serían 155 soles. Ya, está bien. ¿A qué dirección se lo enviamos? A la Avenida Arequipa 1234 en Lince. Es un edificio verde al costado de una farmacia. Ok. Avenida Arequipa 1234, Lince. Edificio verde al costado de la farmacia. ¿Hay que tocar algún timbre? Sí, el del tercer piso. Anotado. ¿Paga en efectivo o con tarjeta? Con tarjeta, por favor. Listo. El repartidor lleva el POS. ¿El POS? Bueno, a esta hora hay bastantes pedidos, pero le daré prioridad. Si se demora, nos vuelve a llamar a este mismo número. Otra cosa. ¿Paga en efectivo o con tarjeta? Con tarjeta, por favor. Listo. El repartidor lleva el POS. El pedido llega en unos 40 minutos aproximadamente. ¿40? Es que los invitados llegan a las 9. Otra cosa. ¿Puede escribir feliz cumpleaños en la caja de una de las pizzas? Claro. Le pedimos al cocinero que lo escriba con plumón en la tapa. ¿Le ponemos algún nombre? No. Solo feliz cumpleaños, por favor. Es sorpresa. Perfecto. Así lo notamos. Y si quiere, le mandamos una vela pequeña sin costo. Sí. Mándamela, por favor. Muchas gracias. Gracias a usted por su pedido y feliz cumpleaños a su hermano.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.48,
+      "text": "La esquina de Bruno. Buenas noches. ¿Es para delivery o para recoger?"
+    },
+    {
+      "start": 5.88,
+      "end": 10.36,
+      "text": "Buenas noches. Para delivery. Es la primera vez que pido. ¿Qué pizzas tiene?"
+    },
+    {
+      "start": 11.76,
+      "end": 20.400000000000002,
+      "text": "Bueno, tenemos americana, jaballana, de jamón, peperoni y el especial de la casa que lleva chorizo y aceitunas."
+    },
+    {
+      "start": 21.0,
+      "end": 23.6,
+      "text": "Todas vienen en tamaño mediano o familiar."
+    },
+    {
+      "start": 25.96,
+      "end": 27.64,
+      "text": "Ok. ¿Y cuánto cuesta?"
+    },
+    {
+      "start": 28.64,
+      "end": 38.64,
+      "text": "La mediana está a 32 soles y la familiar a 45. En cualquier sabor menos la especial, que cuesta 5 soles más."
+    },
+    {
+      "start": 40.68,
+      "end": 49.92,
+      "text": "¿La familiar para cuántas personas alcanza? Más o menos para unas 4 personas. Son 8 tajadas grandes."
+    },
+    {
+      "start": 50.92,
+      "end": 58.92,
+      "text": "Somos varios en casa porque es el cumpleaños de mi hermano, entonces quiero dos pizzas familiares de jamón."
+    },
+    {
+      "start": 59.92,
+      "end": 65.92,
+      "text": "No, mejor que sean tres pizzas familiares de jamón porque viene más gente."
+    },
+    {
+      "start": 66.92,
+      "end": 73.92,
+      "text": "Perfecto. Entonces tres pizzas familiares de jamón cada una a 45 soles. ¿Algo para tomar?"
+    },
+    {
+      "start": 75.92,
+      "end": 76.92,
+      "text": "Sí. ¿Qué gaseosas tienen?"
+    },
+    {
+      "start": 76.92,
+      "end": 80.92,
+      "text": "De cola y de naranja. En botella de litro a 8 soles cada una."
+    },
+    {
+      "start": 82.92,
+      "end": 85.92,
+      "text": "Dos gaseosas de litro, una de cola y otra de naranja."
+    },
+    {
+      "start": 87.92,
+      "end": 96.92,
+      "text": "Ok. Dos gaseosas de litro a 8 soles cada una. Además, hoy tenemos una promoción. En pedidos de más de 100 soles les descontamos 10 soles."
+    },
+    {
+      "start": 98.92,
+      "end": 100.92,
+      "text": "Qué bien. Entonces, ¿cuánto sería en total?"
+    },
+    {
+      "start": 100.92,
+      "end": 104.92,
+      "text": "Déjenme sumar. Con el descuento serían 155 soles."
+    },
+    {
+      "start": 108.92,
+      "end": 109.92,
+      "text": "Ya, está bien."
+    },
+    {
+      "start": 111.92,
+      "end": 112.92,
+      "text": "¿A qué dirección se lo enviamos?"
+    },
+    {
+      "start": 114.92,
+      "end": 121.92,
+      "text": "A la Avenida Arequipa 1234 en Lince. Es un edificio verde al costado de una farmacia."
+    },
+    {
+      "start": 121.92,
+      "end": 128.92000000000002,
+      "text": "Ok. Avenida Arequipa 1234, Lince. Edificio verde al costado de la farmacia. ¿Hay que tocar algún timbre?"
+    },
+    {
+      "start": 129.92000000000002,
+      "end": 131.92000000000002,
+      "text": "Sí, el del tercer piso."
+    },
+    {
+      "start": 132.92000000000002,
+      "end": 135.92000000000002,
+      "text": "Anotado. ¿Paga en efectivo o con tarjeta?"
+    },
+    {
+      "start": 136.92000000000002,
+      "end": 137.92000000000002,
+      "text": "Con tarjeta, por favor."
+    },
+    {
+      "start": 138.92000000000002,
+      "end": 142.92000000000002,
+      "text": "Listo. El repartidor lleva el POS. ¿El POS?"
+    },
+    {
+      "start": 142.92000000000002,
+      "end": 149.92000000000002,
+      "text": "Bueno, a esta hora hay bastantes pedidos, pero le daré prioridad. Si se demora, nos vuelve a llamar a este mismo número."
+    },
+    {
+      "start": 151.92000000000002,
+      "end": 154.92000000000002,
+      "text": "Otra cosa. ¿Paga en efectivo o con tarjeta?"
+    },
+    {
+      "start": 155.92000000000002,
+      "end": 156.92000000000002,
+      "text": "Con tarjeta, por favor."
+    },
+    {
+      "start": 157.92000000000002,
+      "end": 164.92000000000002,
+      "text": "Listo. El repartidor lleva el POS. El pedido llega en unos 40 minutos aproximadamente."
+    },
+    {
+      "start": 165.92000000000002,
+      "end": 170.92000000000002,
+      "text": "¿40? Es que los invitados llegan a las 9."
+    },
+    {
+      "start": 171.92000000000002,
+      "end": 176.92000000000002,
+      "text": "Otra cosa. ¿Puede escribir feliz cumpleaños en la caja de una de las pizzas?"
+    },
+    {
+      "start": 177.92000000000002,
+      "end": 183.92000000000002,
+      "text": "Claro. Le pedimos al cocinero que lo escriba con plumón en la tapa. ¿Le ponemos algún nombre?"
+    },
+    {
+      "start": 184.92000000000002,
+      "end": 188.92000000000002,
+      "text": "No. Solo feliz cumpleaños, por favor. Es sorpresa."
+    },
+    {
+      "start": 189.92000000000002,
+      "end": 194.92000000000002,
+      "text": "Perfecto. Así lo notamos. Y si quiere, le mandamos una vela pequeña sin costo."
+    },
+    {
+      "start": 195.92000000000002,
+      "end": 197.92000000000002,
+      "text": "Sí. Mándamela, por favor. Muchas gracias."
+    },
+    {
+      "start": 197.92000000000002,
+      "end": 200.92000000000002,
+      "text": "Gracias a usted por su pedido y feliz cumpleaños a su hermano."
+    }
+  ]
+}

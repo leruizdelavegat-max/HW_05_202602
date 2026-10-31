@@ -3,6 +3,7 @@
   python scripts/transcribe.py --set entrevistas            # grid completo (modelos × dispositivos × precisiones)
   python scripts/transcribe.py --set llamadas               # cada nivel L0-L3 con la config por defecto
   python scripts/transcribe.py --set llamadas --grid        # cada nivel con el grid completo
+  python scripts/transcribe.py --set entrevistas --device cuda   # solo las combinaciones GPU (Colab)
 
 Las combinaciones cuda se saltan si no hay GPU (córrelas en Colab y sube el cache).
 """
@@ -35,6 +36,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--set", choices=["entrevistas", "llamadas"], required=True)
     parser.add_argument("--grid", action="store_true", help="usar el grid completo también en llamadas")
+    parser.add_argument("--device", choices=["cpu", "cuda"], help="correr solo las combinaciones de este dispositivo")
+    parser.add_argument("--models", nargs="+", help="correr solo estos tamaños (p. ej. small)")
     args = parser.parse_args()
 
     cfg = load_config()
@@ -46,6 +49,10 @@ def main():
         if use_grid
         else [(asr["default"]["model"], asr["default"]["device"], asr["default"]["compute_type"])]
     )
+    if args.device:
+        combos = [c for c in combos if c[1] == args.device]
+    if args.models:
+        combos = [c for c in combos if c[0] in args.models]
     refs_dir = resolve(cfg["paths"]["references"])
 
     rows = []
@@ -66,6 +73,7 @@ def main():
                     save_cached(path, result)
                 row = {k: v for k, v in result.items() if k not in ("text", "segments")}
                 row["level"] = level
+                row["entorno"] = "colab" if device == "cuda" else "local"
                 ref = refs_dir / f"{audio.stem}.txt"
                 if ref.exists():
                     row.update(wer_cer(ref.read_text(encoding="utf-8"), result["text"],

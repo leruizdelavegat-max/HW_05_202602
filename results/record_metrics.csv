@@ -1,0 +1,7 @@
+metodo,metrica,valor,n,nota
+llm,f1_macro_nivel_ingles,0.6666666666666666,5,"clases: avanzado, basico, intermedio"
+llm,error_abs_medio_anios_experiencia,0.8,5,"0 sin valor extraído; errores: [0, 4, 0, 0, 0]"
+llm,error_abs_medio_pretension_salarial,0.0,4,"0 sin valor extraído; errores: [0, 0, 0, 0]"
+reglas,f1_macro_nivel_ingles,0.0,5,"clases: avanzado, basico, intermedio"
+reglas,error_abs_medio_anios_experiencia,0.0,2,"3 sin valor extraído; errores: [0, 0]"
+reglas,error_abs_medio_pretension_salarial,4196.0,1,3 sin valor extraído; errores: [4196]

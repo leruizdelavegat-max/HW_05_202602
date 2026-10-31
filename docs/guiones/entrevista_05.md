@@ -9,7 +9,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 2:55 min
   "anios_experiencia": 2,
   "ultimo_puesto": "analista junior de datos",
   "tecnologias": ["python", "pandas", "streamlit", "git"],
-  "expectativa_salarial": null,
+  "pretension_salarial": null,
   "disponibilidad": "2026-10-30",
   "nivel_ingles": "intermedio"
 }

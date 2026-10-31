@@ -9,7 +9,7 @@ Fecha de la entrevista: 2026-10-29 (jueves) · Duración estimada: 3:00 min
   "anios_experiencia": 8,
   "ultimo_puesto": "desarrollador backend",
   "tecnologias": ["java", "docker", "aws", "git"],
-  "expectativa_salarial": 9000,
+  "pretension_salarial": 9000,
   "disponibilidad": "2026-11-02",
   "nivel_ingles": "avanzado"
 }
