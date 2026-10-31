@@ -35,6 +35,23 @@ def trap_caught(trap: dict, order: dict, check: dict, classification: str) -> bo
     raise ValueError(f"tipo de trampa desconocido: {kind}")
 
 
+def item_matches(expected: dict, item: dict) -> bool:
+    want, got = normalize_text(expected["tamano"] or ""), normalize_text(item.get("tamano") or "")
+    size_ok = not want or (bool(got) and (want in got or got in want))  # "familiares" ~ "familiar"
+    return (normalize_text(expected["producto"]) in normalize_text(item["producto"]) and size_ok
+            and item["cantidad"] == expected["cantidad"] and item["precio_unitario"] == expected["precio_unitario"])
+
+
+def record_fields(expected: dict, order: dict) -> dict:
+    """Aciertos del registro completo, no solo de las trampas."""
+    found = sum(any(item_matches(e, i) for i in order["items"]) for e in expected["items"])
+    return {
+        "items_ok": f"{found}/{len(expected['items'])}",
+        "promocion_ok": (order.get("promocion") or None) == expected["promocion"],
+        "pago_ok": normalize_text(expected["metodo_pago"]) in normalize_text(order.get("metodo_pago") or ""),
+    }
+
+
 def main():
     cfg = load_config()
     d = cfg["asr"]["default"]
@@ -66,12 +83,12 @@ def main():
         if "L0" not in per_level:
             continue
         classification = classify_error(
-            {lvl: chk["total_declarado"] for lvl, (_, chk) in per_level.items()},
+            {lvl: chk["total_dicho"] for lvl, (_, chk) in per_level.items()},
             per_level["L0"][1]["total_calculado"], tol,
         )
         for lvl, (order, chk) in per_level.items():
             level_rows.append({"llamada": call_id, "level": lvl, **{k: v for k, v in chk.items() if k != "items_sin_precio"},
-                               "clasificacion": classification})
+                               **record_fields(expected, order), "clasificacion": classification})
             for trap in expected.get("trampas", []):
                 trap_rows.append({"llamada": call_id, "level": lvl, "trampa": trap["id"], "tipo": trap["tipo"],
                                   "detectada": trap_caught(trap, order, chk, classification)})

@@ -2,16 +2,16 @@
 
 
 def check_total(order: dict, tolerance: float = 0.01) -> dict:
-    """Σ(cantidad × precio) − promoción == total declarado."""
+    """Σ(cantidad × precio) − promoción == total dicho."""
     missing = [i["producto"] for i in order["items"] if i.get("precio_unitario") is None]
     subtotal = sum(i["cantidad"] * (i["precio_unitario"] or 0) for i in order["items"])
     computed = subtotal - (order.get("promocion") or 0)
-    declared = order.get("total_declarado")
+    declared = order.get("total_dicho")
     ok = declared is not None and not missing and abs(computed - declared) <= tolerance
     return {
         "subtotal": subtotal,
         "total_calculado": computed,
-        "total_declarado": declared,
+        "total_dicho": declared,
         "diferencia": None if declared is None else declared - computed,
         "cuadra": ok,
         "items_sin_precio": missing,

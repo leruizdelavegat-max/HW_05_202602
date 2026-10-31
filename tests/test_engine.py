@@ -3,6 +3,7 @@
   python -m pytest tests      (o simplemente: python tests/test_engine.py)
 """
 import sys
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -10,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import numpy as np
 
 from engine import extract_rules
+from engine.dates import to_absolute
 from engine.degrade import add_noise, measured_snr_db, phone
 from engine.metrics import wer_cer
 from engine.numbers import normalize_numbers
@@ -44,6 +46,20 @@ def test_rules_extraction():
     }
 
 
+def test_relative_dates():
+    jueves = date(2026, 10, 29)
+    assert to_absolute("inmediata", jueves) == "2026-10-29"
+    assert to_absolute("desde mañana", jueves) == "2026-10-30"
+    assert to_absolute("el lunes mismo", jueves) == "2026-11-02"
+    assert to_absolute("en dos semanas", jueves) == "2026-11-12"
+    assert to_absolute("necesitaría un mes", jueves) == "2026-11-29"
+    assert to_absolute("a partir del primero de diciembre", jueves) == "2026-12-01"
+    assert to_absolute("15 de enero", jueves) == "2027-01-15"
+    assert to_absolute("cuando pueda", jueves) is None
+    r = extract_rules.extract(INTERVIEW, ["python"], jueves)
+    assert r["disponibilidad_fecha"] == "2026-11-12"
+
+
 def test_literal_verification():
     v = verify_fields({"ultimo_puesto": "analista de datos", "expectativa_salarial": 6500,
                        "tecnologias": ["python", "excel"], "nivel_ingles": "gerente general"}, INTERVIEW)
@@ -60,7 +76,7 @@ def test_metrics_normalize_numbers():
 def test_arithmetic_and_classification():
     order = {"items": [{"producto": "pizza", "cantidad": 3, "precio_unitario": 45},
                        {"producto": "gaseosa", "cantidad": 2, "precio_unitario": 8}],
-             "promocion": 10, "total_declarado": 155}
+             "promocion": 10, "total_dicho": 155}
     c = check_total(order)
     assert c["total_calculado"] == 141 and not c["cuadra"]
     assert classify_error({"L0": 155, "L1": 155, "L2": 155}, 141) == "error_hablante"

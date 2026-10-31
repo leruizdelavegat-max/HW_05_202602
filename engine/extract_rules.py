@@ -4,7 +4,9 @@ Trabaja sobre el texto con números normalizados, así "seis mil quinientos" ya 
 Ajusta los patrones a cómo hablas tú en tus grabaciones.
 """
 import re
+from datetime import date
 
+from engine.dates import to_absolute
 from engine.numbers import normalize_numbers, strip_accents
 
 _PATTERNS = {
@@ -23,7 +25,9 @@ _PATTERNS = {
     ],
     "disponibilidad": [
         r"(inmediata)",
+        r"(desde\s+manana|manana\s+mismo)",
         r"(en\s+\d+\s+(?:semanas?|mes(?:es)?|dias?))",
+        r"(\d+\s+dias\s+de\s+preaviso)",
         r"(a\s+partir\s+del?\s+[a-z0-9 ]{3,30}?)(?=[.,;]|$)",
     ],
     "nivel_ingles": [
@@ -37,7 +41,8 @@ def _prepare(transcript: str) -> str:
     return strip_accents(normalize_numbers(transcript).lower())
 
 
-def extract(transcript: str, technologies: list[str]) -> dict:
+def extract(transcript: str, technologies: list[str], ref_date: date | None = None) -> dict:
+    """Con `ref_date` (fecha de la entrevista) agrega `disponibilidad_fecha` en formato ISO."""
     text = _prepare(transcript)
     result = {}
     for field, patterns in _PATTERNS.items():
@@ -55,4 +60,6 @@ def extract(transcript: str, technologies: list[str]) -> dict:
         tech for tech in technologies
         if re.search(rf"(?<!\w){re.escape(strip_accents(tech.lower()))}(?!\w)", text)
     ]
+    if ref_date is not None:
+        result["disponibilidad_fecha"] = to_absolute(result["disponibilidad"], ref_date)
     return result

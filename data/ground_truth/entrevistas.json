@@ -1,11 +1,83 @@
 {
-  "_instrucciones": "Una clave por audio (mismo nombre que el archivo sin extensión, ej. data/audio/entrevistas/entrevista_01.wav). Usa null si el dato no se menciona. Borra este campo y el ejemplo cuando cargues tus datos reales.",
+  "_instrucciones": "Una clave por audio (mismo nombre que data/audio/entrevistas/<id>). Valores tomados de docs/guiones/. Los seis campos guardan el valor normalizado que debe tener el registro (disponibilidad como fecha AAAA-MM-DD, calculada desde fecha_entrevista). `evidencia` es la frase literal del audio de la que sale cada valor. Si al grabar cambias un dato, actualízalo aquí. null = el dato no se menciona.",
   "entrevista_01": {
-    "anios_experiencia": 5,
-    "ultimo_puesto": "analista de datos",
+    "fecha_entrevista": "2026-10-29",
+    "anios_experiencia": 6,
+    "ultimo_puesto": "analista de datos senior",
     "tecnologias": ["python", "sql", "power bi"],
-    "expectativa_salarial": 6500,
-    "disponibilidad": "en 2 semanas",
-    "nivel_ingles": "intermedio"
+    "expectativa_salarial": 7000,
+    "disponibilidad": "2026-11-13",
+    "nivel_ingles": "intermedio",
+    "evidencia": {
+      "anios_experiencia": "seis en total",
+      "ultimo_puesto": "ahora el cargo es analista de datos senior",
+      "expectativa_salarial": "pongamos siete mil",
+      "disponibilidad": "quince días de preaviso",
+      "nivel_ingles": "llegué hasta el nivel intermedio"
+    }
+  },
+  "entrevista_02": {
+    "fecha_entrevista": "2026-10-29",
+    "anios_experiencia": 8,
+    "ultimo_puesto": "desarrollador backend",
+    "tecnologias": ["java", "docker", "aws", "git"],
+    "expectativa_salarial": 9000,
+    "disponibilidad": "2026-11-02",
+    "nivel_ingles": "avanzado",
+    "evidencia": {
+      "anios_experiencia": "programo profesionalmente desde el dos mil dieciocho",
+      "ultimo_puesto": "oficialmente era desarrollador backend",
+      "expectativa_salarial": "con nueve mil estaría conforme",
+      "disponibilidad": "el lunes mismo",
+      "nivel_ingles": "mi nivel es avanzado"
+    }
+  },
+  "entrevista_03": {
+    "fecha_entrevista": "2026-10-29",
+    "anios_experiencia": 3,
+    "ultimo_puesto": "asistente de inteligencia de negocios",
+    "tecnologias": ["excel", "tableau", "sql"],
+    "expectativa_salarial": 4200,
+    "disponibilidad": "2026-12-01",
+    "nivel_ingles": "básico",
+    "evidencia": {
+      "anios_experiencia": "cuatro perdón tres años de experiencia",
+      "ultimo_puesto": "mi cargo era asistente de inteligencia de negocios",
+      "expectativa_salarial": "si me pide una cifra cuatro mil doscientos",
+      "disponibilidad": "mejor desde el primero de diciembre",
+      "nivel_ingles": "en realidad mi inglés es básico"
+    }
+  },
+  "entrevista_04": {
+    "fecha_entrevista": "2026-10-29",
+    "anios_experiencia": 12,
+    "ultimo_puesto": "jefe de proyectos de datos",
+    "tecnologias": ["python", "spark", "azure"],
+    "expectativa_salarial": 15500,
+    "disponibilidad": "2026-11-29",
+    "nivel_ingles": "fluido",
+    "evidencia": {
+      "anios_experiencia": "profesionalmente llevo doce años",
+      "ultimo_puesto": "el cargo en el contrato es jefe de proyectos de datos",
+      "expectativa_salarial": "no quince mil quinientos soles mensuales",
+      "disponibilidad": "necesitaría un mes",
+      "nivel_ingles": "diría que fluido"
+    }
+  },
+  "entrevista_05": {
+    "fecha_entrevista": "2026-10-29",
+    "anios_experiencia": 2,
+    "ultimo_puesto": "analista junior de datos",
+    "tecnologias": ["python", "pandas", "streamlit", "git"],
+    "expectativa_salarial": null,
+    "disponibilidad": "2026-10-30",
+    "nivel_ingles": "intermedio",
+    "evidencia": {
+      "anios_experiencia": "seis meses de prácticas en el área de operaciones y después un año y medio ya con contrato",
+      "ultimo_puesto": "mi cargo era analista junior de datos",
+      "expectativa_salarial": null,
+      "disponibilidad": "desde mañana",
+      "nivel_ingles": "vendría a ser intermedio"
+    }
   }
 }

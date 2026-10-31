@@ -6,6 +6,7 @@
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -37,10 +38,10 @@ def main():
     gt = json.loads((resolve(cfg["paths"]["ground_truth"]) / "entrevistas.json").read_text(encoding="utf-8"))
     cache_dir = resolve(cfg["paths"]["cache"]) / "entrevistas"
 
-    methods = {"reglas": lambda t: extract_rules.extract(t, cfg["extraction"]["technologies"])}
+    methods = {"reglas": lambda t, ref: extract_rules.extract(t, cfg["extraction"]["technologies"], ref)}
     if not args.no_llm:
         from engine.extract_llm import extract_interview
-        methods["llm"] = lambda t: extract_interview(t, cfg["extraction"]["llm"])
+        methods["llm"] = lambda t, ref: extract_interview(t, cfg["extraction"]["llm"], ref)
 
     rows, details = [], {}
     for audio_id, expected in gt.items():
@@ -51,18 +52,23 @@ def main():
             print(f"[aviso] sin transcripción cacheada para {audio_id}; corre scripts/transcribe.py")
             continue
         transcript = cached["text"]
+        ref = date.fromisoformat(expected["fecha_entrevista"])
         details[audio_id] = {}
         for method, fn in methods.items():
-            verified = verify_fields(fn(transcript), transcript)
+            predicted = fn(transcript, ref)
+            # La frase de disponibilidad se verifica literal; la fecha es lo que se compara
+            verified = verify_fields({f: predicted.get(f) for f in cfg["extraction"]["fields"]}, transcript)
+            verified["disponibilidad"]["fecha"] = predicted.get("disponibilidad_fecha")
             details[audio_id][method] = verified
             for field in cfg["extraction"]["fields"]:
                 v = verified[field]
+                value = v["fecha"] if field == "disponibilidad" else v["valor"]
                 rows.append({
                     "audio": audio_id, "metodo": method, "campo": field,
-                    "valor": json.dumps(v["valor"], ensure_ascii=False),
+                    "valor": json.dumps(value, ensure_ascii=False),
                     "esperado": json.dumps(expected.get(field), ensure_ascii=False),
                     "estado": v["estado"],
-                    "correcto": matches(v["valor"], expected.get(field)),
+                    "correcto": matches(value, expected.get(field)),
                 })
 
     out_dir = resolve(cfg["paths"]["results"])
